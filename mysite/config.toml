@@ -1,0 +1,47 @@
+baseurl = "https://example.org/"
+languageCode = "en-us"
+PygmentsCodeFences = true
+PygmentsStyle = "monokai" # Use "igor" for light backgrounds
+title = "Leonidas Simopoulos's blog"
+# Define how many pages appear per site
+paginate = 10
+# Enable comments powered by Disqus by entering your disqus shortname
+disqusShortname = "lsimopoulos"
+# Enable gogle analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-minimalist-theme"
+# Remove this line if you use this theme for a real website.
+# It allows you to preview the theme within the exampleSite folder
+# with the hugo server command
+#themesDir = "../.."
+publishDir = "docs"
+
+
+
+[params]
+    site_author = "Leonidas Simopoulos"
+    site_description = "The awesome blog of me."
+    location = "Sweden"
+    # Link custom assets relative to /static
+    avatar = "img/profile-image.jpg"
+    header_background = "img/desk.jpg"
+    header_title = "My odyssey into programming"
+    copyright = "Powered by [Hugo](http://gohugo.io)."
+    custom_css = []
+    custom_js  = []
+
+    # Enable gogle analytics by entering your tracking code
+    google_analytics = ""
+
+[social]
+    # Add your social network accounts to the profile section on the left
+    # by entering your username. The links to your account will be
+    # create automatically.
+    twitter   = "leonsim83"
+    facebook  = ""
+    linkedin  = "leonidassimopoulos"
+    behance   = ""
+    dribbble  = ""
+    instagram = ""
+    github    = "lsimopoulos"
+    gplus     = ""
