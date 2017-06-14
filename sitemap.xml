@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/post/first_post/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/blog/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/git-hub-pages/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/post/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Leonidas Simopoulos&#39;s blog</title>
+    <link>https://lsimopoulos.github.io/categories/</link>
+    <description>Recent content in Categories on Leonidas Simopoulos&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Wed, 14 Jun 2017 17:35:12 +0200</lastBuildDate>
+    
+	<atom:link href="https://lsimopoulos.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog</title>
+      <link>https://lsimopoulos.github.io/categories/blog/</link>
+      <pubDate>Wed, 14 Jun 2017 17:35:12 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
