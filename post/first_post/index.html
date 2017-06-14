@@ -53,7 +53,9 @@
         
         <a href="https://lsimopoulos.github.io/tags/hugo">hugo</a>, 
         
-        <a href="https://lsimopoulos.github.io/tags/git-hub-pages">git hub pages</a>
+        <a href="https://lsimopoulos.github.io/tags/git-hub-pages">git hub pages</a>, 
+        
+        <a href="https://lsimopoulos.github.io/tags/hosting">hosting</a>
         
     
 
@@ -62,30 +64,31 @@
 
             
 
-<p>This is my first post. I used hugo to make this blog. I totally recommend it. Its easy and really quick to create a blog without the need to install anything.  This was the easy part.</p>
+<p>This is my first post. I used hugo to make this blog. I totally recommend it. Its easy and really quick to create a blog without the need to install anything extra(no plugins etc).  This was the easy part.</p>
 
-<p>I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&rsquo;t work.
-Then I decided to separate the hugo code and generated output in two different repositories.  I googled around and i decided to follow the approach of hosting Personal/Organization Pages from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a></p>
+<p>I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&rsquo;t work. Apparently having docs foler and hugo code on the same branch it does not work. The docs folder needs to be in a repo that it does not have name username.github.io.
+Then I decided to separate the hugo code and generated output in two different repositories.  I googled around and I decided to follow the approach of hosting Personal/Organization Pages from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a>.</p>
 
-<p><strong><em>Here are the steps I did in order to make it work:</em></strong></p>
+<h2 id="how-to-host-hugo-pages-on-github-pages">How to host hugo pages on github pages</h2>
 
 <ul>
-<li>1. Created a repo with the name <username>.github.io for the hugo content.</li>
-<li>2. Created a repo with the name <username>.github.io-hugo for the generated static website.</li>
-<li>3. Build by using :  hugo.  Since the theme is defined config.toml there is no need to use the argument -t <theme>.</li>
-<li>4. Delete the public folder that was created</li>
-<li>5. git submodule add -b master <a href="https://github.com/">https://github.com/</a><username>/<username>.github.io.git public</li>
-<li>6. add a deploy.sh and copy the content from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a>. <strong><em>IMPORTANT</em></strong>  change the line hugo to ./hugo in order the script to work.</li>
-<li>7. add and commit all the related files to hugo and push them to <username>.github.io-hugo</li>
-<li>8. open cmd and use &ldquo;icacls deploy.sh /reset&rdquo; in order to remove any permission on this script. Or use <a href="http://cmder.net/">cmder</a> and execute the command : chmod +x deploy.sh</li>
-<li>9. deploy.sh &ldquo;Your optional commit message&rdquo; Note: you need to have bash installed. It is usally installed when git is isntalled.</li>
+<li>1. Created a repo with the name username.github.io for the hugo content.</li>
+<li>2. Created a repo with the name username.github.io-hugo for the generated static website.</li>
+<li>3. Build by using :  hugo in the cmd.  Since the theme is defined in config.toml, there is no need to use the argument -t theme.</li>
+<li>4. Delete the public folder that was created.</li>
+<li>5. &ldquo;git submodule add -b master <a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a> public&rdquo;.</li>
+<li>6. add a deploy.sh and copy the content from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a>. <strong><em>IMPORTANT</em></strong>  change  hugo to ./hugo in order the script to work.</li>
+<li>7. add and commit all the related files to hugo and push them to username.github.io-hugo</li>
+<li>8. open cmd and use &ldquo;icacls deploy.sh /reset&rdquo; in order to remove any permission on this script. Or use <a href="http://cmder.net/">cmder</a> and execute the command : &ldquo;chmod +x deploy.sh&rdquo;.</li>
+<li>9. deploy.sh &ldquo;Your optional commit message&rdquo; Note: you need to have bash installed. I am using git bash which was installed together with git.</li>
 </ul>
 
-<h2 id="ending-notes"><strong><em>ENDING NOTES</em></strong></h2>
+<h2 id="ending-notes">ENDING NOTES</h2>
 
 <ul>
 <li>I preferred to have two separate repo for separation of concern.One repo responsible for code and repo for hosting.</li>
 <li>I am using the hugo version <a href="https://github.com/gohugoio/hugo/releases/tag/v0.22.1">0.22.1</a>.</li>
+<li>The source code of blog can be found on <a href="https://github.com/lsimopoulos/lsimopoulos.github.io-hugo">GitHub</a>.</li>
 </ul>
 
 <pre><code>public class Application
