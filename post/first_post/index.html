@@ -64,19 +64,19 @@
 
             
 
-<p>This is my first post. I used hugo to make this blog. I totally recommend it. Its easy and really quick to create a blog without the need to install anything extra(no plugins etc).  This was the easy part.</p>
+<p>This is my first post. I used hugo to make this blog. I totally recommend it. It&rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).</p>
 
-<p>I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch. The docs folder needs to be in a repo that it does not have name username.github.io.
+<p>It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch. The docs folder needs to be in a repo that it does not have name username.github.io.
 Then I decided to separate the hugo code and generated output in two different repositories.  I decided to follow the approach of hosting Personal/Organization Pages from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a>.</p>
 
-<h2 id="how-to-host-hugo-pages-on-github-pages">How to host hugo pages on github pages</h2>
+<h2 id="how-to-host-hugo-pages-on-github-pages-using-windows-os">How to host hugo pages on github pages using windows os:</h2>
 
 <ul>
-<li>1. Created a repo with the name username.github.io for the hugo content.</li>
-<li>2. Created a repo with the name username.github.io-hugo for the generated static website.</li>
+<li>1. Create a repo with the name username.github.io for the hugo content.</li>
+<li>2. Create a repo with the name username.github.io-hugo for the generated static website.</li>
 <li>3. Build by using :  hugo in the cmd.  Since the theme is defined in config.toml, there is no need to use the argument -t theme.</li>
 <li>4. Delete the public folder that was created.</li>
-<li>5. &ldquo;git submodule add -b master <a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a> public&rdquo;.</li>
+<li>5. &ldquo;git submodule add -b master <a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a> public&rdquo;.  this line A you to keep username.github.io repository in a subdirectory of username.github.io-hugo.</li>
 <li>6. add a deploy.sh and copy the content from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a>. <strong><em>IMPORTANT</em></strong>  change  hugo to ./hugo in order the script to work.</li>
 <li>7. add and commit all the related files to hugo and push them to username.github.io-hugo</li>
 <li>8. open cmd and use &ldquo;icacls deploy.sh /reset&rdquo; in order to remove any permission on this script. Or use <a href="http://cmder.net/">cmder</a> and execute the command : &ldquo;chmod +x deploy.sh&rdquo;.</li>
@@ -87,7 +87,7 @@ Then I decided to separate the hugo code and generated output in two different r
 
 <ul>
 <li>I preferred to have two separate repo for separation of concern.One repo responsible for code and repo for hosting.</li>
-<li>I am using the hugo version <a href="https://github.com/gohugoio/hugo/releases/tag/v0.22.1">0.22.1</a>.</li>
+<li>I am using the hugo version <a href="https://github.com/gohugoio/hugo/releases/tag/v0.23">0.23</a>.</li>
 <li>The source code of blog can be found on <a href="https://github.com/lsimopoulos/lsimopoulos.github.io-hugo">GitHub</a>.</li>
 </ul>
 

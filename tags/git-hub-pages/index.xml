@@ -18,8 +18,8 @@
       <pubDate>Wed, 14 Jun 2017 17:35:12 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/post/first_post/</guid>
-      <description>This is my first post. I used hugo to make this blog. I totally recommend it. Its easy and really quick to create a blog without the need to install anything extra(no plugins etc). This was the easy part.
-I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&amp;rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.</description>
+      <description>This is my first post. I used hugo to make this blog. I totally recommend it. It&amp;rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
+It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&amp;rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.</description>
     </item>
     
   </channel>
