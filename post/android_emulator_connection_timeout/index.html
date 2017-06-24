@@ -45,17 +45,17 @@
         <article class="post">
             <a class="btn home" href="https://lsimopoulos.github.io/" title="">&laquo; </a>
             
-<h1><a href="https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/" title="Host Hugo on github pages">Host Hugo on github pages</a></h1>
+<h1><a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" title="Android: connection timeout error on emulator">Android: connection timeout error on emulator</a></h1>
 
-<footer class="post-info"> <span class="post-meta"><time datetime="2017.06.14">2017.06.14</time>
+<footer class="post-info"> <span class="post-meta"><time datetime="2017.06.24">2017.06.24</time>
 
     &middot; 
         
-        <a href="https://lsimopoulos.github.io/tags/hugo">hugo</a>, 
+        <a href="https://lsimopoulos.github.io/tags/android">android</a>, 
         
-        <a href="https://lsimopoulos.github.io/tags/git-hub-pages">git hub pages</a>, 
+        <a href="https://lsimopoulos.github.io/tags/emulator">emulator</a>, 
         
-        <a href="https://lsimopoulos.github.io/tags/hosting">hosting</a>
+        <a href="https://lsimopoulos.github.io/tags/connection-timeout-error">connection timeout error</a>
         
     
 
@@ -64,55 +64,46 @@
 
             
 
-<p>This is my first post. I used hugo to make this blog. I totally recommend it. It&rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).</p>
+<p>Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&rsquo;m developing the android app.
+When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.</p>
 
-<p>It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch. The docs folder needs to be in a repo that it does not have name username.github.io.
-Then I decided to separate the hugo code and generated output in two different repositories.  I decided to follow the approach of hosting Personal/Organization Pages from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a>.</p>
-
-<h2 id="how-to-host-hugo-pages-on-github-pages-using-windows-os">How to host hugo pages on github pages using windows os:</h2>
+<h2 id="what-did-i-try-and-it-did-not-work">What did I  try and it did not work:</h2>
 
 <ul>
-<li>1. Create a repo with the name username.github.io for the hugo content.</li>
-<li>2. Create a repo with the name username.github.io-hugo for the generated static website.</li>
-<li>3. Build by using :  hugo in the cmd.  Since the theme is defined in config.toml, there is no need to use the argument -t theme.</li>
-<li>4. Delete the public folder that was created.</li>
-<li>5. &ldquo;git submodule add -b master <a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a> public&rdquo;.  this line allows you to keep username.github.io repository in a subdirectory of username.github.io-hugo.</li>
-<li>6. add a deploy.sh and copy the content from <a href="https://gohugo.io/tutorials/github-pages-blog/">Hugo website</a>. <strong><em>IMPORTANT</em></strong>  change  hugo to ./hugo in order the script to work.</li>
-<li>7. add and commit all the related files to hugo and push them to username.github.io-hugo</li>
-<li>8. open cmd and use &ldquo;icacls deploy.sh /reset&rdquo; in order to remove any permission on this script. Or use <a href="http://cmder.net/">cmder</a> and execute the command : &ldquo;chmod +x deploy.sh&rdquo;.</li>
-<li>9. deploy.sh &ldquo;Your optional commit message&rdquo; Note: you need to have bash installed. I am using git bash which was installed together with git. *** IMPORTANT*** you need to place the hugo.exe in the same folder as the deploy.sh.</li>
+<li>Made sure that the required ports of firewall were open.</li>
+<li>Increased the timeout of the httpclient.</li>
+
+<li><p>Made sure that the android manifest included the following lines:</p>
+
+<pre><code>    &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot; /&gt; 
+    &lt;uses-permission android:name=&quot;android.permission.ACCESS_NETWORK_STATE&quot;/&gt;
+</code></pre></li>
 </ul>
 
-<h2 id="ending-notes">ENDING NOTES</h2>
+<h2 id="how-did-i-solve-the-problem">How did I solve the problem</h2>
 
-<ul>
-<li>I preferred to have two separate repo for separation of concern.One repo responsible for code and repo for hosting.</li>
-<li>I used the hugo version <a href="https://github.com/gohugoio/hugo/releases/tag/v0.23">0.23</a>.</li>
-<li>The source code of blog can be found on <a href="https://github.com/lsimopoulos/lsimopoulos.github.io-hugo">GitHub</a>.</li>
-</ul>
+<p>After googling around, I found in the official android <a href="https://developer.android.com/studio/run/emulator-networking.html">website</a>  that :</p>
 
-<pre><code>public class Application
-{
-	static void Main(string[] args)
-	{
-		Console.WriteLine(&quot;I posted my first post. yay !!&quot;);
-	}
-}
-</code></pre>
+
+
+<p>Since I was using my local IP on the address, the emulator could not access it and got the connection timeout error. If I had used the external IP  and  the port was open I would not have gotten this error but it&rsquo;s not the best approach.
+Therefore whenever you want to access the server that is hosted on the same machine, just use <code>10.0.2.2</code>.</p>
+
+<p><img src="/images/android.png" alt="Android" /></p>
 
             <ul class="share-buttons">
     <li></li>
     <li>
-        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title=""></a>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title=""></a>
     </li>
     <li>
-        <a class="icon-twitter" href="https://twitter.com/share?text=Host%20Hugo%20on%20github%20pages&amp;url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title=""></a>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Android%3a%20connection%20timeout%20error%20on%20emulator&amp;url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title=""></a>
     </li>
     <li>
-        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title=""></a>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title=""></a>
     </li>
     <li>
-        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f&title=Host%20Hugo%20on%20github%20pages" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title=""></a>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f&title=Android%3a%20connection%20timeout%20error%20on%20emulator" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title=""></a>
     </li>
 </ul>
 
@@ -122,9 +113,9 @@ Then I decided to separate the hugo code and generated output in two different r
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'lsimopoulos';
-    var disqus_identifier = 'https:\/\/lsimopoulos.github.io\/post\/hosting_hugo_on_github_pages\/';
-    var disqus_title = 'Host Hugo on github pages';
-    var disqus_url = 'https:\/\/lsimopoulos.github.io\/post\/hosting_hugo_on_github_pages\/';
+    var disqus_identifier = 'https:\/\/lsimopoulos.github.io\/post\/android_emulator_connection_timeout\/';
+    var disqus_title = 'Android: connection timeout error on emulator';
+    var disqus_url = 'https:\/\/lsimopoulos.github.io\/post\/android_emulator_connection_timeout\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -3,19 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lsimopoulos.github.io/post/android_emulator_connection_timeout/</loc>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/</loc>
     <lastmod>2017-06-14T17:35:12+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/blog/</loc>
-    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/categories/android/</loc>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/android/</loc>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/categories/</loc>
-    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/connection-timeout-error/</loc>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/emulator/</loc>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -32,6 +55,12 @@
   </url>
   
   <url>
+    <loc>https://lsimopoulos.github.io/categories/hugo/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
     <lastmod>2017-06-14T17:35:12+02:00</lastmod>
     <priority>0</priority>
@@ -39,19 +68,19 @@
   
   <url>
     <loc>https://lsimopoulos.github.io/</loc>
-    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/post/</loc>
-    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/tags/</loc>
-    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
+    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
