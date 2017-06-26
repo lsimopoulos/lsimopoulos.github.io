@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Leonidas Simopoulos&#39;s blog</title>
+    <link>https://lsimopoulos.github.io/categories/hugo/</link>
+    <description>Recent content in Hugo on Leonidas Simopoulos&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <lastBuildDate>Wed, 14 Jun 2017 17:35:12 +0200</lastBuildDate>
+    
+	<atom:link href="https://lsimopoulos.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Host Hugo on github pages</title>
+      <link>https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/</link>
+      <pubDate>Wed, 14 Jun 2017 17:35:12 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/</guid>
+      <description>This is my first post. I used hugo to make this blog. I totally recommend it. It&amp;rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
+It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&amp;rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.</description>
+    </item>
+    
+  </channel>
+</rss>
