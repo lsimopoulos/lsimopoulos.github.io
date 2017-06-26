@@ -18,13 +18,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/android/</loc>
+    <loc>https://lsimopoulos.github.io/categories/android/</loc>
     <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/android/</loc>
+    <loc>https://lsimopoulos.github.io/tags/android/</loc>
     <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -60,13 +60,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
+    <loc>https://lsimopoulos.github.io/categories/hugo/</loc>
     <lastmod>2017-06-14T17:35:12+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/hugo/</loc>
+    <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
     <lastmod>2017-06-14T17:35:12+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -78,13 +78,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/mvvm/</loc>
+    <loc>https://lsimopoulos.github.io/categories/mvvm/</loc>
     <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/mvvm/</loc>
+    <loc>https://lsimopoulos.github.io/tags/mvvm/</loc>
     <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -102,25 +102,25 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/uwp/</loc>
-    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lsimopoulos.github.io/categories/uwp/</loc>
     <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/wpf/</loc>
+    <loc>https://lsimopoulos.github.io/tags/uwp/</loc>
     <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/categories/wpf/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/wpf/</loc>
     <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
