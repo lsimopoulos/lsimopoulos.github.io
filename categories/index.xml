@@ -30,5 +30,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Mvvm</title>
+      <link>https://lsimopoulos.github.io/categories/mvvm/</link>
+      <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/categories/mvvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uwp</title>
+      <link>https://lsimopoulos.github.io/categories/uwp/</link>
+      <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/categories/uwp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wpf</title>
+      <link>https://lsimopoulos.github.io/categories/wpf/</link>
+      <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/categories/wpf/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

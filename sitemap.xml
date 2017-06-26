@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/post/android_emulator_connection_timeout/</loc>
     <lastmod>2017-06-24T13:20:43+02:00</lastmod>
   </url>
@@ -68,19 +73,61 @@
   
   <url>
     <loc>https://lsimopoulos.github.io/</loc>
-    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/mvvm/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/mvvm/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/post/</loc>
-    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/tags/</loc>
     <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/uwp/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/uwp/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/wpf/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/wpf/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/xamarin/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   

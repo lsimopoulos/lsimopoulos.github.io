@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Posts &middot; Leonidas Simopoulos&#39;s blog</title>
+        <title>Leonidas Simopoulos&#39;s blog</title>
         <meta name="author">
         <meta name="description" content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery. ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,13 +39,12 @@
           </div>
         </header>
 
+
 <div class="container clearfix">
     <main role="main" class="content">
-        <a class="btn home" href="https://lsimopoulos.github.io/" title="">&laquo; </a>
-        
-        
-            <article class="post">
-    
+        <article class="post">
+            <a class="btn home" href="https://lsimopoulos.github.io/" title="">&laquo; </a>
+            
 <h1><a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" title="Supervising controller pattern and MVVM">Supervising controller pattern and MVVM</a></h1>
 
 <footer class="post-info"> <span class="post-meta"><time datetime="2017.06.26">2017.06.26</time>
@@ -67,73 +66,107 @@
 </span>
 </footer>
 
-    <p>I have been familiar with MVVM framework since the era of Silverlight. Since then I am always try to follow the approach clean code behind when it&rsquo;s achievable. One of the big benefits of mvvm is that ,except of the separation of concern, you can make unit tests covering all the logics in the ViewModels.
-When using the mvvm pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.&hellip;</p>
-    <a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" title="Supervising controller pattern and MVVM"> &raquo;</a>
-</article>
+            <p>I have been familiar with MVVM framework since the era of Silverlight. Since then I am always try to follow the approach clean code behind when it&rsquo;s achievable.
+One of the big benefits of mvvm is that ,except of the separation of concern, you can make unit tests covering all the logics in the ViewModels.</p>
 
-        
-            <article class="post">
+<p>When using the mvvm pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.
+In these cases  you need to try to separate the logic from the code behind and move the it to the VM.</p>
+
+<p>Martin Fowler introduced the design pattern called <a href="https://martinfowler.com/eaaDev/SupervisingPresenter.html">Supervising Controller</a>.</p>
+
+<p>&ldquo;Factor the UI into a view and controller where the view handles simple mapping to the underlying model and the the controller handles input response and complex view logic.&rdquo;</p>
+
+<p>I am going to present  how can you implement the Supervising Controller pattern on MVVM and tackle the aforementioned challenges.</p>
+
+<ul>
+<li>First create an interface  <code>IInterface.cs</code></li>
+</ul>
+
+<pre><code>public interface IInterface
+{
+    void DoSomething();
+}
+</code></pre>
+
+<ul>
+<li>In the code behind of the view :</li>
+</ul>
+
+<pre><code>public partial class View : UserControl, IInterface
+{
+    public View()
+    {
+        ((ViewModel)DataContext).View = this as IInterface;
+    }
     
-<h1><a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" title="Android: connection timeout error on emulator">Android: connection timeout error on emulator</a></h1>
+    public void DoSomething()
+    {
+        //implement the gui related functionality here
+    }
+}
+</code></pre>
 
-<footer class="post-info"> <span class="post-meta"><time datetime="2017.06.24">2017.06.24</time>
+<ul>
+<li>In the viewmodel :</li>
+</ul>
 
-    &middot; 
-        
-        <a href="https://lsimopoulos.github.io/tags/android">android</a>, 
-        
-        <a href="https://lsimopoulos.github.io/tags/emulator">emulator</a>, 
-        
-        <a href="https://lsimopoulos.github.io/tags/connection-timeout-error">connection timeout error</a>
-        
-    
+<pre><code>
+public IInterface View
+{
+    get; set;
+}
 
-</span>
-</footer>
+//You can invoke the method of View from VM
+// and implement the logic here
+public void DoSomething()
+{
+    if (View == null) return;
+        View.DoSomething();
+    //implement the logic here
+}
+</code></pre>
 
-    <p>Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&rsquo;m developing the android app. When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.
-What did I try and it did not work:  Made sure that the required ports of firewall were open.&hellip;</p>
-    <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" title="Android: connection timeout error on emulator"> &raquo;</a>
-</article>
+<p><strong><em>Conclusion</em></strong></p>
 
-        
-            <article class="post">
-    
-<h1><a href="https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/" title="Host Hugo on github pages">Host Hugo on github pages</a></h1>
+<p>By applying this design pattern , the logic ,that is tightly coupled with the functionality on the code behind(Probably an event), can be targeted by unit test now and have the logic on the ViewModel. This can be handy at specific cases but of course this should not be applied for every case.
+ The disadvantage is that this implementation violates the &ldquo;rule&rdquo; : the View should not be aware of the ViewModel and vice versa.</p>
 
-<footer class="post-info"> <span class="post-meta"><time datetime="2017.06.14">2017.06.14</time>
+            <ul class="share-buttons">
+    <li></li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Supervising%20controller%20pattern%20and%20MVVM&amp;url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f&title=Supervising%20controller%20pattern%20and%20MVVM" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title=""></a>
+    </li>
+</ul>
 
-    &middot; 
-        
-        <a href="https://lsimopoulos.github.io/tags/hugo">hugo</a>, 
-        
-        <a href="https://lsimopoulos.github.io/tags/git-hub-pages">git hub pages</a>, 
-        
-        <a href="https://lsimopoulos.github.io/tags/hosting">hosting</a>
-        
-    
+        </article>
+        <div class="comments">
+            <h3></h3>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'lsimopoulos';
+    var disqus_identifier = 'https:\/\/lsimopoulos.github.io\/post\/mvvm_supervising_controller_pattern\/';
+    var disqus_title = 'Supervising controller pattern and MVVM';
+    var disqus_url = 'https:\/\/lsimopoulos.github.io\/post\/mvvm_supervising_controller_pattern\/';
 
-</span>
-</footer>
-
-    <p>This is my first post. I used hugo to make this blog. I totally recommend it. It&rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
-It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.&hellip;</p>
-    <a href="https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/" title="Host Hugo on github pages"> &raquo;</a>
-</article>
-
-        
-        <div class="pagination">
-<nav>
-
-	<p class="counter"> 1  1</p>
-
-
-</nav>
-</div>
-
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
     </main>
-
     <aside class="author">
   <img class="profile-image" src="https://lsimopoulos.github.io/img/profile-image.jpg" alt="Leonidas Simopoulos" />
   <p class="name"> 
@@ -172,6 +205,7 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
 </aside>
 
 </div>
+
 <footer class="main-footer">
   <div class="container clearfix">
         <a class="icon-rss" href="https://lsimopoulos.github.io/post/index.xml" title="RSS"></a>
