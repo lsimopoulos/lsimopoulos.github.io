@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Wpf &middot; Leonidas Simopoulos&#39;s blog</title>
+        <title>Leonidas Simopoulos&#39;s blog</title>
         <meta name="author">
         <meta name="description" content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery. ">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,13 +39,12 @@
           </div>
         </header>
 
+
 <div class="container clearfix">
     <main role="main" class="content">
-        <a class="btn home" href="https://lsimopoulos.github.io/" title="">&laquo; </a>
-        
-        
-            <article class="post">
-    
+        <article class="post">
+            <a class="btn home" href="https://lsimopoulos.github.io/" title="">&laquo; </a>
+            
 <h1><a href="https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/" title="Integrate Autofac with MVVM Light">Integrate Autofac with MVVM Light</a></h1>
 
 <footer class="post-info"> <span class="post-meta"><time datetime="2017.07.03">2017.07.03</time>
@@ -69,50 +68,106 @@
 </span>
 </footer>
 
-    <p>I am going to show how to integrate Autofac with the Mvvm Light easy and quick for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
-1.Create a new project from mvvm light templates in the visual studio
-2.Install Autofac and Autofac.Extras.CommonServiceLocator as NuGet packages.
-3.Expand the folder ViewModel on the SolutionExplorer in the Visual Studio and open the file ViewModelLocator.&hellip;</p>
-    <a href="https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/" title="Integrate Autofac with MVVM Light"> &raquo;</a>
-</article>
+            <p>I am going to show how to integrate <a href="https://autofac.org/">Autofac</a> with the <a href="http://www.mvvmlight.net/">Mvvm Light</a> easy and quick for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.</p>
 
-        
-            <article class="post">
-    
-<h1><a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" title="Supervising controller pattern and MVVM">Supervising controller pattern and MVVM</a></h1>
+<p>1.Create a new project from mvvm light templates in the visual studio</p>
 
-<footer class="post-info"> <span class="post-meta"><time datetime="2017.06.26">2017.06.26</time>
+<p><img src="/images/mvvmlight_project_templates.JPG" alt="Project Templates" /></p>
 
-    &middot; 
-        
-        <a href="https://lsimopoulos.github.io/tags/mvvm">mvvm</a>, 
-        
-        <a href="https://lsimopoulos.github.io/tags/wpf">wpf</a>, 
-        
-        <a href="https://lsimopoulos.github.io/tags/uwp">uwp</a>
-        
-    
+<p>2.Install <a href="https://www.nuget.org/packages/Autofac/">Autofac</a> and  <a href="https://www.nuget.org/packages/Autofac.Extras.CommonServiceLocator/">Autofac.Extras.CommonServiceLocator</a> as NuGet packages.</p>
 
-</span>
-</footer>
+<p>3.Expand the folder ViewModel on the SolutionExplorer in the Visual Studio and open the file ViewModelLocator.</p>
 
-    <p>I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &ldquo;clean code behind&rdquo; when it&rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
-When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.&hellip;</p>
-    <a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" title="Supervising controller pattern and MVVM"> &raquo;</a>
-</article>
+<p><img src="/images/ViewmodelLocatorSolutionExplorer.JPG" alt="Solution Explorer" /></p>
 
-        
-        <div class="pagination">
-<nav>
+<p>4.Mvvvm Light uses its own IOC container called SimpleIoc. The constructor of the  ViewModelLocator is defined:</p>
 
-	<p class="counter"> 1  1</p>
+<pre><code>static ViewModelLocator()
+{
+    ServiceLocator.SetLocatorProvider(() =&gt; SimpleIoc.Default);
 
+    if (!ViewModelBase.IsInDesignModeStatic
+        &amp;&amp; !UseDesignTimeData)
+    {
+        // Use this service in production.
+        SimpleIoc.Default.Register&lt;IDataService, DataService&gt;();
+    }
+    else
+    {
+        // Use this service in Blend or when forcing the use of design time data.
+        SimpleIoc.Default.Register&lt;IDataService, DesignDataService&gt;();
+    }
 
-</nav>
-</div>
+    SimpleIoc.Default.Register&lt;MainViewModel&gt;();
+}
+</code></pre>
 
+<p>Before the replacement of the SimpleIoc with Autofac, create a folder &ldquo;Config&rdquo; and a new c# class called  AutofacConfig :</p>
+
+<pre><code>using Autofac;
+using SolutionName.ViewModel;
+
+namespace SolutionName.Config
+{
+    public static class AutofacConfig
+    {
+        public static IContainer Config()
+        {
+            var builder = new ContainerBuilder();
+            builder.RegisterType&lt;DataService&gt;().As&lt;IDataService&gt;();
+            builder.RegisterType&lt;MainViewModel&gt;();
+            return builder.Build();
+        }
+
+    }
+}
+
+</code></pre>
+
+<p>5.On the ViewModelLocator.cs replace the constructor with following code:</p>
+
+<pre><code>static ViewModelLocator()
+{
+    ServiceLocator.SetLocatorProvider(() =&gt; new AutofacServiceLocator(AutofacConfig.Config()));
+}
+</code></pre>
+
+            <ul class="share-buttons">
+    <li></li>
+    <li>
+        <a class="icon-facebook-squared" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-twitter" href="https://twitter.com/share?text=Integrate%20Autofac%20with%20MVVM%20Light&amp;url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-gplus" href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title=""></a>
+    </li>
+    <li>
+        <a class="icon-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f&title=Integrate%20Autofac%20with%20MVVM%20Light" onclick="window.open(this.href, 'linkedin-share', 'width=600,height=494');return false;" title=""></a>
+    </li>
+</ul>
+
+        </article>
+        <div class="comments">
+            <h3></h3>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'lsimopoulos';
+    var disqus_identifier = 'https:\/\/lsimopoulos.github.io\/post\/integrating_autofac_with_mvvmlight\/';
+    var disqus_title = 'Integrate Autofac with MVVM Light';
+    var disqus_url = 'https:\/\/lsimopoulos.github.io\/post\/integrating_autofac_with_mvvmlight\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
     </main>
-
     <aside class="author">
   <img class="profile-image" src="https://lsimopoulos.github.io/img/profile-image.jpg" alt="Leonidas Simopoulos" />
   <p class="name"> 
@@ -151,6 +206,7 @@ When using the MVVM pattern sometimes you encounter some challenges. Some functi
 </aside>
 
 </div>
+
 <footer class="main-footer">
   <div class="container clearfix">
         <a class="icon-rss" href="https://lsimopoulos.github.io/post/index.xml" title="RSS"></a>

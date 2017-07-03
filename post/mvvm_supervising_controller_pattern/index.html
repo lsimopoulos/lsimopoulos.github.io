@@ -62,7 +62,7 @@
 </span>
 </footer>
 
-            <p>I have been familiar with MVVM framework since the era of Silverlight. Since then I am always trying to follow the approach clean code behind when it&rsquo;s achievable.
+            <p>I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &ldquo;clean code behind&rdquo; when it&rsquo;s achievable.
 One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.</p>
 
 <p>When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.
@@ -124,7 +124,7 @@ public void DoSomething()
 
 <p><strong><em>Conclusion</em></strong></p>
 
-<p>By applying this design pattern , the logic ,that is tightly coupled with the functionality on the code behind(Probably an event), can be targeted by unit test now and have the logic on the ViewModel. This can be handy at specific cases but of course this should not be applied for every case.
+<p>By applying this design pattern , the logic ,that is tightly coupled with the functionality on the code behind(Probably an event),cab be moved to the ViewModel and be targeted by unit tests now. This pattern can be handy at specific cases but of course this should not be applied for every case.
  The disadvantage is that this implementation violates the &ldquo;rule&rdquo; : the View should not be aware of the ViewModel and vice versa.</p>
 
             <ul class="share-buttons">

@@ -22,11 +22,29 @@
     </item>
     
     <item>
+      <title>Autofac</title>
+      <link>https://lsimopoulos.github.io/tags/autofac/</link>
+      <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/tags/autofac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Connection Timeout Error</title>
       <link>https://lsimopoulos.github.io/tags/connection-timeout-error/</link>
       <pubDate>Sat, 24 Jun 2017 13:20:43 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/tags/connection-timeout-error/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dependency Injection</title>
+      <link>https://lsimopoulos.github.io/tags/dependency-injection/</link>
+      <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/tags/dependency-injection/</guid>
       <description></description>
     </item>
     
@@ -76,9 +94,18 @@
     </item>
     
     <item>
+      <title>Mvvm Light</title>
+      <link>https://lsimopoulos.github.io/tags/mvvm-light/</link>
+      <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/tags/mvvm-light/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Uwp</title>
       <link>https://lsimopoulos.github.io/tags/uwp/</link>
-      <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
+      <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/tags/uwp/</guid>
       <description></description>
@@ -87,9 +114,18 @@
     <item>
       <title>Wpf</title>
       <link>https://lsimopoulos.github.io/tags/wpf/</link>
-      <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
+      <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/tags/wpf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Xamarin</title>
+      <link>https://lsimopoulos.github.io/tags/xamarin/</link>
+      <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/tags/xamarin/</guid>
       <description></description>
     </item>
     
