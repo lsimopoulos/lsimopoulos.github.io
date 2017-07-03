@@ -41,6 +41,12 @@
   </url>
   
   <url>
+    <loc>https://lsimopoulos.github.io/categories/autofac/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/categories/</loc>
     <lastmod>2017-06-24T13:20:43+02:00</lastmod>
     <priority>0</priority>
@@ -113,6 +119,12 @@
   </url>
   
   <url>
+    <loc>https://lsimopoulos.github.io/categories/mvvm-light/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/post/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
@@ -132,7 +144,7 @@
   
   <url>
     <loc>https://lsimopoulos.github.io/categories/uwp/</loc>
-    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   

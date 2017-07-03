@@ -72,7 +72,7 @@ In these cases  you need to try to separate the logic from the code behind and m
 
 <p>&ldquo;Factor the UI into a view and controller where the view handles simple mapping to the underlying model and the the controller handles input response and complex view logic.&rdquo;</p>
 
-<p>I am going to present  how can you implement the Supervising Controller pattern on MVVM and tackle the aforementioned challenges.</p>
+<p>I am going to present  how you can implement the Supervising Controller pattern on the MVVM and tackle the aforementioned challenges.</p>
 
 <ul>
 <li>First create an interface  <code>IInterface.cs</code></li>
@@ -124,7 +124,7 @@ public void DoSomething()
 
 <p><strong><em>Conclusion</em></strong></p>
 
-<p>By applying this design pattern , the logic ,that is tightly coupled with the functionality on the code behind(Probably an event),cab be moved to the ViewModel and be targeted by unit tests now. This pattern can be handy at specific cases but of course this should not be applied for every case.
+<p>By applying this design pattern , the logic ,that is tightly coupled with the functionality on the code behind(Probably an event),can be moved to the ViewModel and be targeted by the unit tests now. This pattern can be handy at specific cases but of course this should not be applied for every case.
  The disadvantage is that this implementation violates the &ldquo;rule&rdquo; : the View should not be aware of the ViewModel and vice versa.</p>
 
             <ul class="share-buttons">
