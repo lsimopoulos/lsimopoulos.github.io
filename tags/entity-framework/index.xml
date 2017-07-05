@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Tue, 25 Jul 2017 19:02:53 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 05 Jul 2017 19:02:53 +0200</lastBuildDate>
     
 	<atom:link href="https://lsimopoulos.github.io/tags/entity-framework/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Configure an Index on many properties in entity framework 6.1</title>
       <link>https://lsimopoulos.github.io/post/entity_index_many_properties/</link>
-      <pubDate>Tue, 25 Jul 2017 19:02:53 +0200</pubDate>
+      <pubDate>Wed, 05 Jul 2017 19:02:53 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/post/entity_index_many_properties/</guid>
       <description>There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
