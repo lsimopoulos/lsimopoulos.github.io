@@ -18,7 +18,7 @@
       <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</guid>
-      <description>I am going to show how to integrate Autofac with the Mvvm Light easy and quick for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
+      <description>I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
 1.Create a new project from mvvm light templates in the visual studio
 2.Install Autofac and Autofac.Extras.CommonServiceLocator as NuGet packages.
 3.Expand the folder ViewModel on the SolutionExplorer in the Visual Studio and open the file ViewModelLocator.</description>

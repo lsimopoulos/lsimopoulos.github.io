@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Mon, 03 Jul 2017 20:11:26 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jul 2017 19:02:53 +0200</lastBuildDate>
     
 	<atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Configure an Index on many properties in entity framework 6.1</title>
+      <link>https://lsimopoulos.github.io/post/entity_index_many_properties/</link>
+      <pubDate>Tue, 25 Jul 2017 19:02:53 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/post/entity_index_many_properties/</guid>
+      <description>There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
+1.Attributes
+For this tutorial I am going to create two models: Server and Instance.
+public class Server { public int Id { get; set; } public string Name { get; set; } } public class Instance { public int Id { get; set; } public string Name { get; set; } }   Modify the ApplicationUser class:  public class ApplicationUser : IdentityUser { public async Task&amp;lt;ClaimsIdentity&amp;gt; GenerateUserIdentityAsync(UserManager&amp;lt;ApplicationUser&amp;gt; manager) { // Note the authenticationType must match the one defined in CookieAuthenticationOptions.</description>
+    </item>
     
     <item>
       <title>Integrate Autofac with MVVM Light</title>
@@ -18,7 +30,7 @@
       <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</guid>
-      <description>I am going to show how to integrate Autofac with the Mvvm Light easy and quick for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
+      <description>I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
 1.Create a new project from mvvm light templates in the visual studio
 2.Install Autofac and Autofac.Extras.CommonServiceLocator as NuGet packages.
 3.Expand the folder ViewModel on the SolutionExplorer in the Visual Studio and open the file ViewModelLocator.</description>
