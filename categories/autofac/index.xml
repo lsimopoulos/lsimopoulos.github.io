@@ -6,11 +6,9 @@
     <description>Recent content in Autofac on Leonidas Simopoulos&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
+    <copyright>Copyright</copyright>
     <lastBuildDate>Mon, 03 Jul 2017 20:11:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://lsimopoulos.github.io/categories/autofac/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://lsimopoulos.github.io/categories/autofac/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Integrate Autofac with MVVM Light</title>

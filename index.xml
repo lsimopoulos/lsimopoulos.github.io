@@ -6,11 +6,18 @@
     <description>Recent content on Leonidas Simopoulos&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Hugo](http://gohugo.io).</copyright>
-    <lastBuildDate>Wed, 05 Jul 2017 19:02:53 +0200</lastBuildDate>
+    <copyright>Copyright</copyright>
+    <lastBuildDate>Wed, 12 Jul 2017 21:39:00 +0200</lastBuildDate>
+    <atom:link href="https://lsimopoulos.github.io/" rel="self" type="application/rss+xml" />
     
-	<atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>About</title>
+      <link>https://lsimopoulos.github.io/about/</link>
+      <pubDate>Wed, 12 Jul 2017 21:39:00 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/about/</guid>
+      <description>About Leonidas Simopoulos My name is Leonidas. I am from Greece. The past 9 years I am living in Sweden. Currently working on RCO Security AB, a security access control company. I love programming and I am doing it a lot in my free time( having usually too many projects).Except of programming I spend my time watching movies, tv series and playing games(if I have time :P). Lastly I love bears and I have obsession with them(maybe too much information).</description>
+    </item>
     
     <item>
       <title>Configure an Index on many properties in entity framework 6.1</title>
