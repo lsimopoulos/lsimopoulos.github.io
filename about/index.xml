@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Abouts on Leonidas Simopoulos&#39;s blog</title>
+    <link>https://lsimopoulos.github.io/about/</link>
+    <description>Recent content in Abouts on Leonidas Simopoulos&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Wed, 12 Jul 2017 21:39:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://lsimopoulos.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>https://lsimopoulos.github.io/about/about/</link>
+      <pubDate>Wed, 12 Jul 2017 21:39:00 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/about/about/</guid>
+      <description>About Leonidas Simopoulos My name is Leonidas. I am from Greece. The past 9 years I am living in Sweden. Currently working on RCO Security AB, a security access control company. I love programming and I am doing it a lot in my free time( having usually too many projects).Except of programming I spend my time watching movies, tv series and playing games(if I have time :P). Lastly I love bears and I have obsession with them(maybe too much information).</description>
+    </item>
+    
+  </channel>
+</rss>

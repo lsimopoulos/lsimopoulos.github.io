@@ -6,25 +6,27 @@
     <description>Recent content on Leonidas Simopoulos&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright</copyright>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Wed, 12 Jul 2017 21:39:00 +0200</lastBuildDate>
-    <atom:link href="https://lsimopoulos.github.io/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>About</title>
-      <link>https://lsimopoulos.github.io/about/</link>
+      <link>https://lsimopoulos.github.io/about/about/</link>
       <pubDate>Wed, 12 Jul 2017 21:39:00 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/about/</guid>
+      <guid>https://lsimopoulos.github.io/about/about/</guid>
       <description>About Leonidas Simopoulos My name is Leonidas. I am from Greece. The past 9 years I am living in Sweden. Currently working on RCO Security AB, a security access control company. I love programming and I am doing it a lot in my free time( having usually too many projects).Except of programming I spend my time watching movies, tv series and playing games(if I have time :P). Lastly I love bears and I have obsession with them(maybe too much information).</description>
     </item>
     
     <item>
       <title>Configure an Index on many properties in entity framework 6.1</title>
-      <link>https://lsimopoulos.github.io/post/entity_index_many_properties/</link>
+      <link>https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/</link>
       <pubDate>Wed, 05 Jul 2017 19:02:53 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/entity_index_many_properties/</guid>
+      <guid>https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/</guid>
       <description>There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
 1.Attributes
 For this tutorial I am going to create two models: Server and Instance.
@@ -33,10 +35,10 @@ public class Server { public int Id { get; set; } public string Name { get; set;
     
     <item>
       <title>Integrate Autofac with MVVM Light</title>
-      <link>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</link>
+      <link>https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/</link>
       <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</guid>
+      <guid>https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/</guid>
       <description>I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
 1.Create a new project from mvvm light templates in the visual studio
 2.Install Autofac and Autofac.Extras.CommonServiceLocator as NuGet packages.
@@ -45,30 +47,30 @@ public class Server { public int Id { get; set; } public string Name { get; set;
     
     <item>
       <title>Supervising controller pattern and MVVM</title>
-      <link>https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/</link>
+      <link>https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/</link>
       <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/</guid>
+      <guid>https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/</guid>
       <description>I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &amp;ldquo;clean code behind&amp;rdquo; when it&amp;rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
 When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.</description>
     </item>
     
     <item>
       <title>Android: connection timeout error on emulator</title>
-      <link>https://lsimopoulos.github.io/post/android_emulator_connection_timeout/</link>
+      <link>https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/</link>
       <pubDate>Sat, 24 Jun 2017 13:20:43 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/android_emulator_connection_timeout/</guid>
+      <guid>https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/</guid>
       <description>Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&amp;rsquo;m developing the android app. When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.
 What did I try and it did not work:  Made sure that the required ports of firewall were open.</description>
     </item>
     
     <item>
       <title>Host Hugo on github pages</title>
-      <link>https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/</link>
+      <link>https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/</link>
       <pubDate>Wed, 14 Jun 2017 17:35:12 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/</guid>
+      <guid>https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/</guid>
       <description>This is my first post. I used hugo to make this blog. I totally recommend it. It&amp;rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
 It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&amp;rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.</description>
     </item>

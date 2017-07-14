@@ -6,16 +6,18 @@
     <description>Recent content in Wpf on Leonidas Simopoulos&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright</copyright>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Mon, 03 Jul 2017 20:11:26 +0200</lastBuildDate>
-    <atom:link href="https://lsimopoulos.github.io/categories/wpf/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://lsimopoulos.github.io/categories/wpf/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Integrate Autofac with MVVM Light</title>
-      <link>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</link>
+      <link>https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/</link>
       <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</guid>
+      <guid>https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/</guid>
       <description>I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
 1.Create a new project from mvvm light templates in the visual studio
 2.Install Autofac and Autofac.Extras.CommonServiceLocator as NuGet packages.
@@ -24,10 +26,10 @@
     
     <item>
       <title>Supervising controller pattern and MVVM</title>
-      <link>https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/</link>
+      <link>https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/</link>
       <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/</guid>
+      <guid>https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/</guid>
       <description>I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &amp;ldquo;clean code behind&amp;rdquo; when it&amp;rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
 When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.</description>
     </item>

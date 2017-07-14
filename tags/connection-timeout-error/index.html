@@ -1,438 +1,749 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-
-<title>Connection Timeout Error - Leonidas Simopoulos&#39;s blog </title>
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script id="dsq-count-scr" src="https://lsimopoulos.disqus.com/count.js" async></script>
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/lsimopoulos.github.io\/\/js\/wp-emoji-release.min.js"}};
-			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-		<link rel='stylesheet' id='dashicons-css'  href="https://lsimopoulos.github.io/css/dashicons.min.css" type='text/css' media='all' />
-		<link rel='stylesheet' id='font-awesome-css'  href="https://lsimopoulos.github.io/css/font-awesome.min.css" type='text/css' media='all' />
-		<link rel="apple-touch-icon" href="https://lsimopoulos.github.io/apple-touch-icon.png" />
-		<link rel="stylesheet" href="https://lsimopoulos.github.io/fancybox/jquery.fancybox.css">
-<link rel='stylesheet' id='admin-bar-css'  href="https://lsimopoulos.github.io/css/admin-bar.min.css" type='text/css' media='all' />
-<link rel='stylesheet' id='travelify_style-css'  href="https://lsimopoulos.github.io/css/style.css" type='text/css' media='all' />
-<link rel='stylesheet' id='travelify_style-css'  href="https://lsimopoulos.github.io/css/jetpack.css" type='text/css' media='all' />
-<link rel='stylesheet' id='google_font_ubuntu-css'  href="//fonts.googleapis.com/css?family=Ubuntu" type='text/css' media='all' />
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/jquery.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/jquery-migrate.min.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/functions.min.js"></script>
-
-    <style type="text/css">
-        a { color: #57AD68; }
-        #site-title a { color: ; }
-        #site-title a:hover { color: ; }
-        .wrapper { background: #F8F8F8; }
-        .social-icons ul li a { color: #d0d0d0; }
-        #main-nav a, #main-nav a:hover,  #main-nav a:focus, #main-nav ul li.current-menu-item a,#main-nav ul li.current_page_ancestor a,#main-nav ul li.current-menu-ancestor a,#main-nav ul li.current_page_item a,#main-nav ul li:hover > a { color: #fff; }
-        .widget, article { background: #fff; }
-        .entry-title, .entry-title a, .entry-title a:focus, h1, h2, h3, h4, h5, h6, .widget-title  { color: #1b1e1f; }
-        a:focus, a:active, a:hover, .tags a:hover, .custom-gallery-title a, .widget-title a, #content ul a:hover,#content ol a:hover, .widget ul li a:hover, .entry-title a:hover, .entry-meta a:hover, #site-generator .copyright a:hover { color: #439f55; }
-        #main-nav { background: #57ad68; border-color: #57ad68; }
-        #main-nav ul li ul, body { border-color: #439f55; }
-        #main-nav a:hover,#main-nav ul li.current-menu-item a,#main-nav ul li.current_page_ancestor a,#main-nav ul li.current-menu-ancestor a,#main-nav ul li.current_page_item a,#main-nav ul li:hover > a, #main-nav li:hover > a,#main-nav ul ul :hover > a,#main-nav a:focus { background: #439f55; }
-        #main-nav ul li ul li a:hover,#main-nav ul li ul li:hover > a,#main-nav ul li.current-menu-item ul li a:hover { color: #439f55; }
-        .entry-content { color: #1D1D1D; }
-        input[type="reset"], input[type="button"], input[type="submit"], .entry-meta-bar .readmore, #controllers a:hover, #controllers a.active, .pagination span, .pagination a:hover span, .wp-pagenavi .current, .wp-pagenavi a:hover { background: #57ad68; border-color: #57ad68 !important; }
-        ::selection { background: #57ad68; }
-        blockquote { border-color: #439f55; }
-        #controllers a:hover, #controllers a.active { color:  #439f55; }
-        input[type="reset"]:hover,input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:active,input[type="button"]:active,input[type="submit"]:active, .entry-meta-bar .readmore:hover, .entry-meta-bar .readmore:active, ul.default-wp-page li a:hover, ul.default-wp-page li a:active { background: #439f55; border-color: #439f55; }
-    </style>
-    <style type="text/css" id="custom-background-css">
-body.custom-background { background-image: url("https://lsimopoulos.github.io/images/background.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
-</style>
-<style type="text/css" media="print">#wpadminbar { display:none; }</style>
-<style type="text/css" media="screen">
-	* html body { margin-top: 32px !important; }
-	@media screen and ( max-width: 782px ) {
-		html { margin-top: 26px !important; }
-		* html body { margin-top: 26px !important; }
-	}
-</style>
+<html lang="en-us">
+<head>
+    <title>Connection Timeout Error &middot; Leonidas Simopoulos&#39;s blog</title>
+    <meta name="generator" content="Hugo 0.25.1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Leonidas Simopoulos">
+    
+      <meta name="description" content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery.">
+    
+    
+      <link href="https://lsimopoulos.github.io/tags/connection-timeout-error/index.xml" rel="alternate" type="application/rss+xml" title="Leonidas Simopoulos&#39;s blog" />
+      <link href="https://lsimopoulos.github.io/tags/connection-timeout-error/index.xml" rel="feed" type="application/rss+xml" title="Leonidas Simopoulos&#39;s blog" />
+    
+    <link rel="canonical" href="https://lsimopoulos.github.io/tags/connection-timeout-error/"/>
+    <link rel="icon" href="https://lsimopoulos.github.io/favicon.ico">
+    <link rel="apple-touch-icon" href="https://lsimopoulos.github.io/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/style.css">
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/monokai.css">
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Connection Timeout Error" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lsimopoulos.github.io/tags/connection-timeout-error/" />
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-61788978-2', 'auto');
-  ga('send', 'pageview');
+<meta property="og:updated_time" content="2017-06-24T13:20:43&#43;02:00"/>
 
-</script>
 
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Connection Timeout Error">
+<meta itemprop="description" content="">
+
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
-
-  <body class="home blog logged-in admin-bar no-customize-support custom-background ">
-    <div class="wrapper">
-      <header id="branding" >
-	
-<div class="container clearfix">
-  <div class="hgroup-wrap clearfix">
-
-    <section class="hgroup-right">
-      <div class="social-icons clearfix">
-	<ul>
-	  
-	  
-	  <li class="twitter">
-	    <a href="https://twitter.com/leonsim83" title="Follow us on Twitter" target="_blank"></a>
-	  </li>
-	  
-	  <li class="rss">
-	    <a href="" title="Subscribe to our feed" target="_blank"></a>
-	  </li>
-	  
-	  
-	  <li class="pinterest">
-	    <a href="https://www.pinterest.com/sim_leon" title="Follow us on Pinterest" target="_blank"></a>
-	  </li>
-	  
-	  
-	  <li class="linkedin">
-	    <a href="https://www.linkedin.com/in/leonidassimopoulos" title="Follow us on LinkedIn" target="_blank"></a>
-	  </li>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  <li class="github">
-	    <a href="https://www.github.com/lsimopoulos" title="Follow us on GitHub" target="_blank"></a>
-	  </li>
-	  
-	</ul>
-      </div>
-    </section>
-    
-    
-    <hgroup id="site-logo" class="clearfix">
-      <h1 id="site-title">
-	<a href="https://lsimopoulos.github.io/" rel="home">
-	  Leonidas Simopoulos&#39;s blog
-	</a>
-      </h1>
-      <h2 id="site-description">As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery.</h2>
-    </hgroup>
-    
-  </div>
-</div>
+<body>
+<div class="container">
 
 
-	<nav id="main-nav" class="clearfix">
-  <div class="container clearfix">
-    <ul class="root">
-      
-      
-      <li class="menu-item menu-item-type-post_type menu-item-object-page ">
-	<a href="https://lsimopoulos.github.io/about/">About</a>
-	
-      </li>
-      
-    </ul>
-  </div>
-</nav>
-
-	<div class="page-title-wrap">
-	    		<div class="container clearfix">
-	    							   <h3 class="page-title">Connection Timeout Error </h3>
-				</div>
-	    	</div>
-	
-      </header>
-      <div id="main" class="container clearfix">
-	<div id="container">
-	  <div id="primary" class="no-margin-left">
-	    <div id="content">
-	      <section class="post type-post status-publish format-standard has-post-thumbnail hentry ">
-		
-		
-		<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
-  <article>
-    
-    <figure class="post-featured-image">
-      <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" itemprop="url">
-	<img src="https://lsimopoulos.github.io/banners/android.jpg" class="attachment-featured size-featured wp-post-image"/>
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://lsimopoulos.github.io/" id="logo">
+          
+          <i class="logo" style="background-image: url('https://lsimopoulos.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">Leonidas Simopoulos&#39;s blog</span>
       </a>
-    </figure> 
-    
-    
-    <header class="entry-header">
-    <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/">
-    <h2 class="entry-title" itemprop="name">
-        Android: connection timeout error on emulator
-    </h2>
-    </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/categories/">Categories</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/about/">About</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://lsimopoulos.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://lsimopoulos.github.io/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/categories/">Categories</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/about/">About</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://lsimopoulos.github.io/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </header>
 
-    <div class="article-entry entry-content clearfix" itemprop="articleBody">
-      <p>
-        Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&rsquo;m developing the android app. When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.
-What did I try and it did not work:  Made sure that the required ports of firewall were open.
-        <br>
-      </p>
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/42897f787394d97a42fe3e5a09ce90a1?s=100&d=identicon"/>
+      
+      <h2 id="name">Leonidas Simopoulos</h2>
+      <h3 id="title">Blogger - Programmer - Bear enthusiasist</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Sweden</span>
+      
+          <a id="follow" href="https://twitter.com/leonsim83">
+              Follow
+          </a>
+      
     </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        5
+        <span>Posts</span>
+      </div>
+      <div class="article-info-block">
+        
+          14
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/lsimopoulos" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
 
-    
-    
-<div class="entry-meta-bar clearfix">
-  <div class="entry-meta">
-    
 
-    
-    
-    <span class="posted-on">
-      <time class="entry-date published" datetime="2017-06-24 13:20:43 &#43;0200 CEST" itemprop="datePublished">June 24, 2017</time>
-    </span>
-    
-    
-    
-    
-    
-    <span class="category">
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">Android</a>
-      
-      
-    </span>
-    
-    
-    
-    <span class="comments">
-      <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/#disqus_thread">Comments
-      </a>
-    </span>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//pinterest.com/sim_leon" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></td>
+
+
+
+<td><a href="//plus.google.com/+https://plus.google.com/u/0/111373413352934032664" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+
+
+<td><a href="//twitter.com/leonsim83" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="https://lsimopoulos.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
   </div>
-  
+</aside>
 
-      <span>
-    <a class="readmore" href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/">
-      Read More
-    </a>
-  </span>
-  
-</div>
+    
 
-
-  </article>
-</section>
+    <section id="main">
+    
+    
+    
+    
+    <section class="archives-wrap">
+        <div class="archive-category-wrap">
+            <span class="archive-category">Connection Timeout Error</span>
+        </div>
+        <div class="archives">
+            
+            
+                <article class="archive-article archive-type-post">
+    <div class="archive-article-inner">
+        <div class="archive-article-thumbnail">
+            
+            <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" class="thumbnail">
+                <span style="background-image:url(https://lsimopoulos.github.io/banners/android.jpg)" alt="Android: connection timeout error on emulator" class="thumbnail-image"></span>
+            </a>
+            
+        </div>
+        <header class="archive-article-header">
+            <h1 itemprop="name">
+            <a class="archive-article-title" href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/">Android: connection timeout error on emulator</a>
+            </h1>
+            <div class="archive-article-date">
+                <i class="fa fa-calendar"></i>
+                <time datetime="2017-06-24 13:20:43 &#43;0200 CEST" itemprop="datePublished">2017-06-24</time>
+            </div>
+        </header>
+    </div>
+</article>
  
-		
-	      </section>
-	      <ul class="default-wp-page clearfix">
-  
-</ul>
+            
+        </div>
+    </section>
+    <nav id="page-nav">
 
-	    </div>
-	  </div>
-	</div>
-	
-<div id="secondary">
-  
-
-<aside id="search-3" class="widget widget_search">
-  <form method="get" action="https://duckduckgo.com/">
-    <input type="search" name="q" maxlength="255" placeholder="Search the site">
-    <input type="hidden" name="sites" value="https://lsimopoulos.github.io/"/>
-    <input type="hidden" name="k7" value="#faf8f8"/>
-    <input type="hidden" name="kj" value="#b33"/>
-    <input type="hidden" name="ky" value="#fafafa"/>
-    <input type="hidden" name="kx" value="b"/>
-    <input type="hidden" name="ko" value="-1"/>
-    <input type="hidden" name="k1" value="-1"/>
-    <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
-  </form>
-</aside>
-
-
-
-  
-
-
-<aside id="categories-3" class="widget widget_categories">
-  <h3 class="widget-title">Categories</h3>
-  <ul>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/android">Android</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/autofac">Autofac</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/entity-framework">Entity-Framework</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/hugo">Hugo</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/mvvm">Mvvm</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/mvvm-light">Mvvm-Light</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/uwp">Uwp</a> (2)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/wpf">Wpf</a> (2)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/xamarin">Xamarin</a> (1)
-    </li>
-    
-  </ul>
-</aside>
-
-
-
-
-  
-
-  
-
-
-
-<aside id="tag_cloud-2" class="widget widget_tag_cloud">
-  <h3 class="widget-title">        Tag cloud</h3>
-  <div class="tagcloud">
-
-
+</nav>
 
     
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    <a href="https://lsimopoulos.github.io/tags/uwp" style="font-size: 8px;" title="2 topics">
-      
-      Uwp
-      
-      
-    
-    <a href="https://lsimopoulos.github.io/tags/wpf" style="font-size: 8px;" title="2 topics">
-      
-      Wpf
-      
-      
-    
-      
-  </div>
-  
-</aside>
 
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/entity-framework.png)" alt="Connection Timeout Error" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/entity-framework">
+                        Entity Framework
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" class="title">Configure an Index on many properties in entity framework 6.1</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-07-05 19:02:53 &#43;0200 CEST" itemprop="datePublished">2017-07-05</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/xamarin">
+                        Xamarin
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/" class="title">Integrate Autofac with MVVM Light</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-07-03 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-07-03</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/MVVM.jpg)" alt="Connection Timeout Error" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/mvvm">
+                        MVVM
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" class="title">Supervising controller pattern and MVVM</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-06-26 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-06-26</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/android.jpg)" alt="Connection Timeout Error" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">
+                        Android
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" class="title">Android: connection timeout error on emulator</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-06-24 13:20:43 &#43;0200 CEST" itemprop="datePublished">2017-06-24</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/hugo">
+                        hugo
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/" class="title">Host Hugo on github pages</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-06-14 17:35:12 &#43;0200 CEST" itemprop="datePublished">2017-06-14</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
 </div>
 
 
-      </div>   
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/autofac">
+                    autofac
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/entity-framework">
+                    entity-framework
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/mvvm">
+                    mvvm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/mvvm-light">
+                    mvvm-light
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/uwp">
+                    uwp
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/wpf">
+                    wpf
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/xamarin">
+                    xamarin
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
     </div>
-    <footer id="footerarea" class="clearfix">
-  <div class="widget-wrap">
-    <div class="container">
-      <div class="widget-area clearfix">
-      </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/autofac">
+                    autofac
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/connection-timeout-error">
+                    connection-timeout-error
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/dependency-injection">
+                    dependency-injection
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/emulator">
+                    emulator
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/entity-framework">
+                    entity-framework
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/git-hub-pages">
+                    git-hub-pages
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/hosting">
+                    hosting
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/mvvm">
+                    mvvm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/mvvm-light">
+                    mvvm-light
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/uwp">
+                    uwp
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/wpf">
+                    wpf
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/xamarin">
+                    xamarin
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
     </div>
-  </div>
-  
-  <div id="site-generator">
-    <div class="container">
-      <div class="copyright">&copy; 2017
-      Copyright Powered by <a href="http://gohugo.io">Hugo</a>. Original theme by <a href="http://colorlib.com/wp/travelify/">Colorlib</a> adapted for Hugo by <a href="http://balaramadurai.net">Dr. Bala Ramadurai</a>.</div><div class="footer-right"></div><div style="clear:both;">
-      </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/autofac" style="font-size: 12px;">autofac</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/connection-timeout-error" style="font-size: 12px;">connection-timeout-error</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/dependency-injection" style="font-size: 12px;">dependency-injection</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/emulator" style="font-size: 12px;">emulator</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/entity-framework" style="font-size: 12px;">entity-framework</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/git-hub-pages" style="font-size: 12px;">git-hub-pages</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/hosting" style="font-size: 12px;">hosting</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/mvvm" style="font-size: 12px;">mvvm</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/mvvm-light" style="font-size: 12px;">mvvm-light</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/uwp" style="font-size: 12px;">uwp</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/wpf" style="font-size: 12px;">wpf</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/xamarin" style="font-size: 12px;">xamarin</a>
+        
     </div>
-  </div>
-  <div class="back-to-top">
-    <a href="#branding"></a>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
   </div>
 </footer>
-</div>
-
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/admin-bar.min.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/jquery.cycle.all.min.js"></script>
-<script type='text/javascript'>
-   
-var travelify_slider_value = {"transition_effect":"fade","transition_delay":"4000","transition_duration":"1000"};
- 
-</script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/slider-settings.min.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/wp-embed.min.js"></script>
 
 
-    <script type="text/javascript">
-      (function() {
-      var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
-      
-						request = true;
-      
-      b[c] = b[c].replace( rcs, ' ' );
-      
-      b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
-      }());
-		</script>
-    
-
-    
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -457,9 +768,10 @@ MathJax.Hub.Config({
     inlineMath: [['$','$'], ['\\(','\\)']]}
   });
 </script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 
-  </body>
+
+</body>
 </html>

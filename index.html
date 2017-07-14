@@ -1,996 +1,1528 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-	<meta name="generator" content="Hugo 0.25.1" />
-
-<title>Leonidas Simopoulos&#39;s blog  - As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery.  </title>
-<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-<link rel='dns-prefetch' href='//s.w.org' />
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<script id="dsq-count-scr" src="https://lsimopoulos.disqus.com/count.js" async></script>
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.2.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/lsimopoulos.github.io\/\/js\/wp-emoji-release.min.js"}};
-			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),!(j.toDataURL().length<3e3)&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,65039,8205,55356,57096),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57331,55356,57096),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55357,56425,55356,57341,8205,55357,56507),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55357,56425,55356,57341,55357,56507),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-		<link rel='stylesheet' id='dashicons-css'  href="https://lsimopoulos.github.io/css/dashicons.min.css" type='text/css' media='all' />
-		<link rel='stylesheet' id='font-awesome-css'  href="https://lsimopoulos.github.io/css/font-awesome.min.css" type='text/css' media='all' />
-		<link rel="apple-touch-icon" href="https://lsimopoulos.github.io/apple-touch-icon.png" />
-		<link rel="stylesheet" href="https://lsimopoulos.github.io/fancybox/jquery.fancybox.css">
-<link rel='stylesheet' id='admin-bar-css'  href="https://lsimopoulos.github.io/css/admin-bar.min.css" type='text/css' media='all' />
-<link rel='stylesheet' id='travelify_style-css'  href="https://lsimopoulos.github.io/css/style.css" type='text/css' media='all' />
-<link rel='stylesheet' id='travelify_style-css'  href="https://lsimopoulos.github.io/css/jetpack.css" type='text/css' media='all' />
-<link rel='stylesheet' id='google_font_ubuntu-css'  href="//fonts.googleapis.com/css?family=Ubuntu" type='text/css' media='all' />
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/jquery.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/jquery-migrate.min.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/functions.min.js"></script>
-
-    <style type="text/css">
-        a { color: #57AD68; }
-        #site-title a { color: ; }
-        #site-title a:hover { color: ; }
-        .wrapper { background: #F8F8F8; }
-        .social-icons ul li a { color: #d0d0d0; }
-        #main-nav a, #main-nav a:hover,  #main-nav a:focus, #main-nav ul li.current-menu-item a,#main-nav ul li.current_page_ancestor a,#main-nav ul li.current-menu-ancestor a,#main-nav ul li.current_page_item a,#main-nav ul li:hover > a { color: #fff; }
-        .widget, article { background: #fff; }
-        .entry-title, .entry-title a, .entry-title a:focus, h1, h2, h3, h4, h5, h6, .widget-title  { color: #1b1e1f; }
-        a:focus, a:active, a:hover, .tags a:hover, .custom-gallery-title a, .widget-title a, #content ul a:hover,#content ol a:hover, .widget ul li a:hover, .entry-title a:hover, .entry-meta a:hover, #site-generator .copyright a:hover { color: #439f55; }
-        #main-nav { background: #57ad68; border-color: #57ad68; }
-        #main-nav ul li ul, body { border-color: #439f55; }
-        #main-nav a:hover,#main-nav ul li.current-menu-item a,#main-nav ul li.current_page_ancestor a,#main-nav ul li.current-menu-ancestor a,#main-nav ul li.current_page_item a,#main-nav ul li:hover > a, #main-nav li:hover > a,#main-nav ul ul :hover > a,#main-nav a:focus { background: #439f55; }
-        #main-nav ul li ul li a:hover,#main-nav ul li ul li:hover > a,#main-nav ul li.current-menu-item ul li a:hover { color: #439f55; }
-        .entry-content { color: #1D1D1D; }
-        input[type="reset"], input[type="button"], input[type="submit"], .entry-meta-bar .readmore, #controllers a:hover, #controllers a.active, .pagination span, .pagination a:hover span, .wp-pagenavi .current, .wp-pagenavi a:hover { background: #57ad68; border-color: #57ad68 !important; }
-        ::selection { background: #57ad68; }
-        blockquote { border-color: #439f55; }
-        #controllers a:hover, #controllers a.active { color:  #439f55; }
-        input[type="reset"]:hover,input[type="button"]:hover,input[type="submit"]:hover,input[type="reset"]:active,input[type="button"]:active,input[type="submit"]:active, .entry-meta-bar .readmore:hover, .entry-meta-bar .readmore:active, ul.default-wp-page li a:hover, ul.default-wp-page li a:active { background: #439f55; border-color: #439f55; }
-    </style>
-    <style type="text/css" id="custom-background-css">
-body.custom-background { background-image: url("https://lsimopoulos.github.io/images/background.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
-</style>
-<style type="text/css" media="print">#wpadminbar { display:none; }</style>
-<style type="text/css" media="screen">
-	* html body { margin-top: 32px !important; }
-	@media screen and ( max-width: 782px ) {
-		html { margin-top: 26px !important; }
-		* html body { margin-top: 26px !important; }
-	}
-</style>
+<html lang="en-us">
+<head>
+    <title>Leonidas Simopoulos&#39;s blog</title>
+    <meta name="generator" content="Hugo 0.25.1" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Leonidas Simopoulos">
+    
+      <meta name="description" content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery.">
+    
+    
+      <link href="https://lsimopoulos.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Leonidas Simopoulos&#39;s blog" />
+      <link href="https://lsimopoulos.github.io/index.xml" rel="feed" type="application/rss+xml" title="Leonidas Simopoulos&#39;s blog" />
+    
+    <link rel="canonical" href="https://lsimopoulos.github.io/"/>
+    <link rel="icon" href="https://lsimopoulos.github.io/favicon.ico">
+    <link rel="apple-touch-icon" href="https://lsimopoulos.github.io/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/style.css">
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/monokai.css">
+    <link rel="stylesheet" href="https://lsimopoulos.github.io/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Leonidas Simopoulos&#39;s blog" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lsimopoulos.github.io/" />
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-61788978-2', 'auto');
-  ga('send', 'pageview');
+<meta property="og:updated_time" content="2017-07-12T21:39:00&#43;02:00"/>
 
-</script>
 
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="Leonidas Simopoulos&#39;s blog">
+<meta itemprop="description" content="">
+
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
+<body>
+<div class="container">
 
-  <body class="home blog logged-in admin-bar no-customize-support custom-background ">
-    <div class="wrapper">
-      <header id="branding" >
-	
-<div class="container clearfix">
-  <div class="hgroup-wrap clearfix">
 
-    <section class="hgroup-right">
-      <div class="social-icons clearfix">
-	<ul>
-	  
-	  
-	  <li class="twitter">
-	    <a href="https://twitter.com/leonsim83" title="Follow us on Twitter" target="_blank"></a>
-	  </li>
-	  
-	  <li class="rss">
-	    <a href="" title="Subscribe to our feed" target="_blank"></a>
-	  </li>
-	  
-	  
-	  <li class="pinterest">
-	    <a href="https://www.pinterest.com/sim_leon" title="Follow us on Pinterest" target="_blank"></a>
-	  </li>
-	  
-	  
-	  <li class="linkedin">
-	    <a href="https://www.linkedin.com/in/leonidassimopoulos" title="Follow us on LinkedIn" target="_blank"></a>
-	  </li>
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  <li class="github">
-	    <a href="https://www.github.com/lsimopoulos" title="Follow us on GitHub" target="_blank"></a>
-	  </li>
-	  
-	</ul>
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://lsimopoulos.github.io/" id="logo">
+          
+          <i class="logo" style="background-image: url('https://lsimopoulos.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">Leonidas Simopoulos&#39;s blog</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/">Home</a>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/tags/">Tags</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/categories/">Categories</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://lsimopoulos.github.io/about/">About</a>
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://lsimopoulos.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://lsimopoulos.github.io/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/">Home</a></td>
+          
+          
+          
+          
+          
+          
+          
+          
+
+          
+
+          
+          
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/tags/">Tags</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/categories/">Categories</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/about/">About</a></td>
+          
+          
+          <td>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://lsimopoulos.github.io/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/42897f787394d97a42fe3e5a09ce90a1?s=100&d=identicon"/>
+      
+      <h2 id="name">Leonidas Simopoulos</h2>
+      <h3 id="title">Blogger - Programmer - Bear enthusiasist</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Sweden</span>
+      
+          <a id="follow" href="https://twitter.com/leonsim83">
+              Follow
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        5
+        <span>Posts</span>
       </div>
-    </section>
-    
-    
-    <hgroup id="site-logo" class="clearfix">
-      <h1 id="site-title">
-	<a href="https://lsimopoulos.github.io/" rel="home">
-	  Leonidas Simopoulos&#39;s blog
-	</a>
-      </h1>
-      <h2 id="site-description">As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery.</h2>
-    </hgroup>
-    
-  </div>
-</div>
-
-
-	<nav id="main-nav" class="clearfix">
-  <div class="container clearfix">
-    <ul class="root">
-      
-      
-      <li class="menu-item menu-item-type-post_type menu-item-object-page ">
-	<a href="https://lsimopoulos.github.io/about/">About</a>
-	
-      </li>
-      
-    </ul>
-  </div>
-</nav>
-
-	
-
-
-<section class="featured-slider">
-  <div class="slider-cycle">
-    
-    
-    <div class="slides  displayblock ">
-      <figure>
-	<a href="https://lsimopoulos.github.io/post/entity_index_many_properties/" title="Configure an Index on many properties in entity framework 6.1">
-	  <img src="banners/entity-framework.png" class="pngfix wp-post-image" alt="Configure an Index on many properties in entity framework 6.1" title="Configure an Index on many properties in entity framework 6.1">
-	</a>
-      </figure>
-      <article class="featured-text">
-	<div class="featured-title">
-	  <a href="https://lsimopoulos.github.io/post/entity_index_many_properties/" title="Configure an Index on many properties in entity framework 6.1">Configure an Index on many properties in entity framework 6.1</a>
-	</div>
-	<div class="featured-content">There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
-1.Attributes
-For this tutorial I am going to create two models: Server and Instance.
-public class Server { public int Id { get; set; } public string Name { get; set; } } public class Instance { public int Id { get; set; } public string Name { get; set; } }   Modify the ApplicationUser class:  public class ApplicationUser : IdentityUser { public async Task&lt;ClaimsIdentity&gt; GenerateUserIdentityAsync(UserManager&lt;ApplicationUser&gt; manager) { // Note the authenticationType must match the one defined in CookieAuthenticationOptions.
-	</div>
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div class="slides  displaynone ">
-      <figure>
-	<a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" title="Supervising controller pattern and MVVM">
-	  <img src="banners/MVVM.jpg" class="pngfix wp-post-image" alt="Supervising controller pattern and MVVM" title="Supervising controller pattern and MVVM">
-	</a>
-      </figure>
-      <article class="featured-text">
-	<div class="featured-title">
-	  <a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" title="Supervising controller pattern and MVVM">Supervising controller pattern and MVVM</a>
-	</div>
-	<div class="featured-content">I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &ldquo;clean code behind&rdquo; when it&rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
-When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.
-	</div>
-      </article>
-    </div>
-    
-    
-    
-    <div class="slides  displaynone ">
-      <figure>
-	<a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" title="Android: connection timeout error on emulator">
-	  <img src="banners/android.jpg" class="pngfix wp-post-image" alt="Android: connection timeout error on emulator" title="Android: connection timeout error on emulator">
-	</a>
-      </figure>
-      <article class="featured-text">
-	<div class="featured-title">
-	  <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" title="Android: connection timeout error on emulator">Android: connection timeout error on emulator</a>
-	</div>
-	<div class="featured-content">Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&rsquo;m developing the android app. When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.
-What did I try and it did not work:  Made sure that the required ports of firewall were open.
-	</div>
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    
-  </div>
-  <nav id="controllers" class="clearfix">
-  </nav>
-  
-</section>		
-
-
-
-
-
-
-      </header>
-      <div id="main" class="container clearfix">
-	<div id="container">
-	  <div id="primary" class="no-margin-left">
-	    <div id="content">
-	      
-
-
-
-
-
-<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
-  <article>
-    
-    <figure class="post-featured-image">
-      <a href="https://lsimopoulos.github.io/post/entity_index_many_properties/" itemprop="url">
-	<img src="banners/entity-framework.png" class="attachment-featured size-featured wp-post-image"/>
-      </a>
-    </figure> 
-    
-    
-    <header class="entry-header">
-    <a href="https://lsimopoulos.github.io/post/entity_index_many_properties/">
-    <h2 class="entry-title" itemprop="name">
-        Configure an Index on many properties in entity framework 6.1
-    </h2>
-    </a>
-</header>
-
-    <div class="article-entry entry-content clearfix" itemprop="articleBody">
-      <p>
-        There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
-1.Attributes
-For this tutorial I am going to create two models: Server and Instance.
-public class Server { public int Id { get; set; } public string Name { get; set; } } public class Instance { public int Id { get; set; } public string Name { get; set; } }   Modify the ApplicationUser class:  public class ApplicationUser : IdentityUser { public async Task&lt;ClaimsIdentity&gt; GenerateUserIdentityAsync(UserManager&lt;ApplicationUser&gt; manager) { // Note the authenticationType must match the one defined in CookieAuthenticationOptions.
-        <br>
-      </p>
-      <div class="social-icons">
-  <ul id="blog">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fentity_index_many_properties%2f" title="https://lsimopoulos.github.io/post/entity_index_many_properties/" target="_blank">Share</a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=Configure%20an%20Index%20on%20many%20properties%20in%20entity%20framework%206.1&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fentity_index_many_properties%2f" title="Configure an Index on many properties in entity framework 6.1" target="_blank">Tweet</a>
-    </li>
-    <li class="google-plus">
-      <a href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fentity_index_many_properties%2f" title="Configure an Index on many properties in entity framework 6.1" target="_blank">+1</a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/cws/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fentity_index_many_properties%2f" title="Configure an Index on many properties in entity framework 6.1" target="_blank">Share</a>
-    </li>  
-  </ul>
-</div>
-
-    </div>
-    
-    
-<div class="entry-meta-bar clearfix">
-  <div class="entry-meta">
-    
-    <span class="byline">
-      <span class="author vcard">
+      <div class="article-info-block">
         
- leonidas simopoulos
-      </span>
-    </span>
-    
+          14
+        
+        <span>
+            Tags
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/lsimopoulos" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
 
-    
-    
-    <span class="posted-on">
-      <time class="entry-date published" datetime="2017-07-05 19:02:53 &#43;0200 CEST" itemprop="datePublished">July 05, 2017</time>
-    </span>
-    
-    
-    
-    
-    
-    <span class="category">
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/entity-framework">Entity Framework</a>
-      
-      
-    </span>
-    
-    
-    
-    <span class="comments">
-      <a href="https://lsimopoulos.github.io/post/entity_index_many_properties/#disqus_thread">Comments
-      </a>
-    </span>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//pinterest.com/sim_leon" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></td>
+
+
+
+<td><a href="//plus.google.com/+https://plus.google.com/u/0/111373413352934032664" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
+
+
+
+
+
+<td><a href="//twitter.com/leonsim83" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
+
+
+          <td><a href="https://lsimopoulos.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
   </div>
-  
+</aside>
 
-    <span>
-      <a class="readmore" href="https://lsimopoulos.github.io/post/entity_index_many_properties/">
-	Read More
-      </a>
-    </span>
     
-</div>
 
-
-</article>
-</section>
-
-<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
-  <article>
+    <section id="main">
     
     
-    <header class="entry-header">
-    <a href="https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/">
-    <h2 class="entry-title" itemprop="name">
-        Integrate Autofac with MVVM Light
-    </h2>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" itemprop="url">
+            <img src="https://lsimopoulos.github.io/banners/entity-framework.png" class="article-banner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/">
+    <h1 class="article-title" itemprop="name">
+        Configure an Index on many properties in entity framework 6.1
+    </h1>
     </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-07-05 19:02:53 &#43;0200 CEST" itemprop="datePublished">2017-07-05</time>
+            &middot;
+            380
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/entity-framework">Entity Framework</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/entity-framework">entity framework</a>
+                
+                
+            </div>
+            
+        
+    </div>
 </header>
 
-    <div class="article-entry entry-content clearfix" itemprop="articleBody">
-      <p>
-        I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
+1.Attributes
+For this tutorial I am going to create two models: Server and Instance.
+public class Server { public int Id { get; set; } public string Name { get; set; } } public class Instance { public int Id { get; set; } public string Name { get; set; } }   Modify the ApplicationUser class:  public class ApplicationUser : IdentityUser { public async Task&lt;ClaimsIdentity&gt; GenerateUserIdentityAsync(UserManager&lt;ApplicationUser&gt; manager) { // Note the authenticationType must match the one defined in CookieAuthenticationOptions.
+            </p>
+            <p class="article-more-link">
+                <a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" data-id="18cf4bc4c2508a15a490cfe9ec34624c" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/">
+    <h1 class="article-title" itemprop="name">
+        Integrate Autofac with MVVM Light
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-07-03 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-07-03</time>
+            &middot;
+            195
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/xamarin">Xamarin</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/wpf">WPF</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/autofac">Autofac</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/uwp">UWP</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/mvvm-light">MVVM Light</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/mvvm-light">mvvm light</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/autofac">autofac</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/dependency-injection">dependency injection</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/wpf">wpf</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/xamarin">xamarin</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/uwp">uwp</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
 1.Create a new project from mvvm light templates in the visual studio
 2.Install Autofac and Autofac.Extras.CommonServiceLocator as NuGet packages.
 3.Expand the folder ViewModel on the SolutionExplorer in the Visual Studio and open the file ViewModelLocator.
-        <br>
-      </p>
-      <div class="social-icons">
-  <ul id="blog">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f" title="https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/" target="_blank">Share</a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=Integrate%20Autofac%20with%20MVVM%20Light&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f" title="Integrate Autofac with MVVM Light" target="_blank">Tweet</a>
-    </li>
-    <li class="google-plus">
-      <a href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f" title="Integrate Autofac with MVVM Light" target="_blank">+1</a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/cws/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fintegrating_autofac_with_mvvmlight%2f" title="Integrate Autofac with MVVM Light" target="_blank">Share</a>
-    </li>  
-  </ul>
-</div>
+            </p>
+            <p class="article-more-link">
+                <a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/" data-id="fce06d7d4fab3ce2bea5435969e06fb1" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
 
     </div>
-    
-    
-<div class="entry-meta-bar clearfix">
-  <div class="entry-meta">
-    
-    <span class="byline">
-      <span class="author vcard">
-        
- leonidas simopoulos
-      </span>
-    </span>
-    
-
-    
-    
-    <span class="posted-on">
-      <time class="entry-date published" datetime="2017-07-03 20:11:26 &#43;0200 CEST" itemprop="datePublished">July 03, 2017</time>
-    </span>
-    
-    
-    
-    
-    
-    <span class="category">
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/xamarin">Xamarin</a>
-      ,
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/wpf">WPF</a>
-      ,
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/autofac">Autofac</a>
-      ,
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/uwp">UWP</a>
-      ,
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/mvvm-light">MVVM Light</a>
-      
-      
-    </span>
-    
-    
-    
-    <span class="comments">
-      <a href="https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/#disqus_thread">Comments
-      </a>
-    </span>
-    
-  </div>
-  
-
-    <span>
-      <a class="readmore" href="https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/">
-	Read More
-      </a>
-    </span>
-    
-</div>
-
-
 </article>
-</section>
 
-<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
-  <article>
-    
-    <figure class="post-featured-image">
-      <a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" itemprop="url">
-	<img src="banners/MVVM.jpg" class="attachment-featured size-featured wp-post-image"/>
-      </a>
-    </figure> 
-    
-    
-    <header class="entry-header">
-    <a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/">
-    <h2 class="entry-title" itemprop="name">
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" itemprop="url">
+            <img src="https://lsimopoulos.github.io/banners/MVVM.jpg" class="article-banner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/">
+    <h1 class="article-title" itemprop="name">
         Supervising controller pattern and MVVM
-    </h2>
+    </h1>
     </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-06-26 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-06-26</time>
+            &middot;
+            331
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/mvvm">MVVM</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/wpf">WPF</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/uwp">UWP</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/mvvm">mvvm</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/wpf">wpf</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/uwp">UWP</a>
+                
+                
+            </div>
+            
+        
+    </div>
 </header>
 
-    <div class="article-entry entry-content clearfix" itemprop="articleBody">
-      <p>
-        I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &ldquo;clean code behind&rdquo; when it&rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &ldquo;clean code behind&rdquo; when it&rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
 When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.
-        <br>
-      </p>
-      <div class="social-icons">
-  <ul id="blog">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f" title="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/" target="_blank">Share</a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=Supervising%20controller%20pattern%20and%20MVVM&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f" title="Supervising controller pattern and MVVM" target="_blank">Tweet</a>
-    </li>
-    <li class="google-plus">
-      <a href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f" title="Supervising controller pattern and MVVM" target="_blank">+1</a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/cws/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fmvvm_supervising_controller_pattern%2f" title="Supervising controller pattern and MVVM" target="_blank">Share</a>
-    </li>  
-  </ul>
-</div>
+            </p>
+            <p class="article-more-link">
+                <a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" data-id="0d34998345f4f88cc2036714d05c294e" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
 
     </div>
-    
-    
-<div class="entry-meta-bar clearfix">
-  <div class="entry-meta">
-    
-    <span class="byline">
-      <span class="author vcard">
-        
- leonidas simopoulos
-      </span>
-    </span>
-    
-
-    
-    
-    <span class="posted-on">
-      <time class="entry-date published" datetime="2017-06-26 20:11:26 &#43;0200 CEST" itemprop="datePublished">June 26, 2017</time>
-    </span>
-    
-    
-    
-    
-    
-    <span class="category">
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/mvvm">MVVM</a>
-      ,
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/wpf">WPF</a>
-      ,
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/uwp">UWP</a>
-      
-      
-    </span>
-    
-    
-    
-    <span class="comments">
-      <a href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/#disqus_thread">Comments
-      </a>
-    </span>
-    
-  </div>
-  
-
-    <span>
-      <a class="readmore" href="https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/">
-	Read More
-      </a>
-    </span>
-    
-</div>
-
-
 </article>
-</section>
 
-<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
-  <article>
-    
-    <figure class="post-featured-image">
-      <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" itemprop="url">
-	<img src="banners/android.jpg" class="attachment-featured size-featured wp-post-image"/>
-      </a>
-    </figure> 
-    
-    
-    <header class="entry-header">
-    <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/">
-    <h2 class="entry-title" itemprop="name">
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" itemprop="url">
+            <img src="https://lsimopoulos.github.io/banners/android.jpg" class="article-banner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/">
+    <h1 class="article-title" itemprop="name">
         Android: connection timeout error on emulator
-    </h2>
+    </h1>
     </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-06-24 13:20:43 &#43;0200 CEST" itemprop="datePublished">2017-06-24</time>
+            &middot;
+            257
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">Android</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/android">Android</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/emulator">emulator</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/connection-timeout-error">connection timeout error</a>
+                
+                
+            </div>
+            
+        
+    </div>
 </header>
 
-    <div class="article-entry entry-content clearfix" itemprop="articleBody">
-      <p>
-        Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&rsquo;m developing the android app. When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&rsquo;m developing the android app. When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.
 What did I try and it did not work:  Made sure that the required ports of firewall were open.
-        <br>
-      </p>
-      <div class="social-icons">
-  <ul id="blog">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f" title="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/" target="_blank">Share</a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=Android%3a%20connection%20timeout%20error%20on%20emulator&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f" title="Android: connection timeout error on emulator" target="_blank">Tweet</a>
-    </li>
-    <li class="google-plus">
-      <a href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f" title="Android: connection timeout error on emulator" target="_blank">+1</a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/cws/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fandroid_emulator_connection_timeout%2f" title="Android: connection timeout error on emulator" target="_blank">Share</a>
-    </li>  
-  </ul>
-</div>
+            </p>
+            <p class="article-more-link">
+                <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" data-id="ca134c67c282761e5de98d2fed4b24e7" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
 
     </div>
-    
-    
-<div class="entry-meta-bar clearfix">
-  <div class="entry-meta">
-    
-
-    
-    
-    <span class="posted-on">
-      <time class="entry-date published" datetime="2017-06-24 13:20:43 &#43;0200 CEST" itemprop="datePublished">June 24, 2017</time>
-    </span>
-    
-    
-    
-    
-    
-    <span class="category">
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">Android</a>
-      
-      
-    </span>
-    
-    
-    
-    <span class="comments">
-      <a href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/#disqus_thread">Comments
-      </a>
-    </span>
-    
-  </div>
-  
-
-    <span>
-      <a class="readmore" href="https://lsimopoulos.github.io/post/android_emulator_connection_timeout/">
-	Read More
-      </a>
-    </span>
-    
-</div>
-
-
 </article>
-</section>
 
-<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
-  <article>
-    
-    
-    <header class="entry-header">
-    <a href="https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/">
-    <h2 class="entry-title" itemprop="name">
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/">
+    <h1 class="article-title" itemprop="name">
         Host Hugo on github pages
-    </h2>
+    </h1>
     </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-06-14 17:35:12 &#43;0200 CEST" itemprop="datePublished">2017-06-14</time>
+            &middot;
+            363
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/hugo">hugo</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/hugo">hugo</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/git-hub-pages">git hub pages</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/hosting">hosting</a>
+                
+                
+            </div>
+            
+        
+    </div>
 </header>
 
-    <div class="article-entry entry-content clearfix" itemprop="articleBody">
-      <p>
-        This is my first post. I used hugo to make this blog. I totally recommend it. It&rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                This is my first post. I used hugo to make this blog. I totally recommend it. It&rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
 It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.
-        <br>
-      </p>
-      <div class="social-icons">
-  <ul id="blog">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f" title="https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/" target="_blank">Share</a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=Host%20Hugo%20on%20github%20pages&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f" title="Host Hugo on github pages" target="_blank">Tweet</a>
-    </li>
-    <li class="google-plus">
-      <a href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f" title="Host Hugo on github pages" target="_blank">+1</a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/cws/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2fhosting_hugo_on_github_pages%2f" title="Host Hugo on github pages" target="_blank">Share</a>
-    </li>  
-  </ul>
-</div>
-
-    </div>
-    
-    
-<div class="entry-meta-bar clearfix">
-  <div class="entry-meta">
-    
-    <span class="byline">
-      <span class="author vcard">
-        
- leonidas simopoulos
-      </span>
-    </span>
-    
-
-    
-    
-    <span class="posted-on">
-      <time class="entry-date published" datetime="2017-06-14 17:35:12 &#43;0200 CEST" itemprop="datePublished">June 14, 2017</time>
-    </span>
-    
-    
-    
-    
-    
-    <span class="category">
-      
-      
-      <a class="article-category-link" href="https://lsimopoulos.github.io/categories/hugo">hugo</a>
-      
-      
-    </span>
-    
-    
-    
-    <span class="comments">
-      <a href="https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/#disqus_thread">Comments
-      </a>
-    </span>
-    
-  </div>
-  
-
-    <span>
-      <a class="readmore" href="https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/">
-	Read More
-      </a>
-    </span>
-    
-</div>
-
-
-</article>
-</section>
-
-<section id="main" class="post type-post status-publish format-standard has-post-thumbnail hentry">
-  <article>
-    
-    
-    <header class="entry-header">
-    <a href="https://lsimopoulos.github.io/post/">
-    <h2 class="entry-title" itemprop="name">
-        Posts
-    </h2>
+            </p>
+            <p class="article-more-link">
+                <a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/" data-id="7604e6f0ba7d1fb06c1bab0ee56643e8" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
     </a>
-</header>
+    
+    <a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
 
-    <div class="article-entry entry-content clearfix" itemprop="articleBody">
-      <p>
+    <script>
+    (function ($) {
         
-        <br>
-      </p>
-      <div class="social-icons">
-  <ul id="blog">
-    <li class="facebook">
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2flsimopoulos.github.io%2fpost%2f" title="https://lsimopoulos.github.io/post/" target="_blank">Share</a>
-    </li>
-    <li class="twitter">
-      <a href="https://twitter.com/intent/tweet?text=Posts&url=https%3a%2f%2flsimopoulos.github.io%2fpost%2f" title="Posts" target="_blank">Tweet</a>
-    </li>
-    <li class="google-plus">
-      <a href="https://plus.google.com/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2f" title="Posts" target="_blank">+1</a>
-    </li>
-    <li class="linkedin">
-      <a href="https://www.linkedin.com/cws/share?url=https%3a%2f%2flsimopoulos.github.io%2fpost%2f" title="Posts" target="_blank">Share</a>
-    </li>  
-  </ul>
-</div>
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
 
     </div>
-    
-    
-<div class="entry-meta-bar clearfix">
-  <div class="entry-meta">
-    
-
-    
-    
-    <span class="posted-on">
-      <time class="entry-date published" datetime="2017-07-05 19:02:53 &#43;0200 CEST" itemprop="datePublished">July 05, 2017</time>
-    </span>
-    
-    
-    
-    
-    <span class="comments">
-      <a href="https://lsimopoulos.github.io/post/#disqus_thread">Comments
-      </a>
-    </span>
-    
-  </div>
-  
-
-    <span>
-      <a class="readmore" href="https://lsimopoulos.github.io/post/">
-	Read More
-      </a>
-    </span>
-    
-</div>
-
-
 </article>
-</section>
-
-<ul class="default-wp-page clearfix">
-  
-</ul>
 
 
-	    </div>
-	  </div>
-	</div>
-	
-<div id="secondary">
-  
+<nav id="page-nav">
 
-<aside id="search-3" class="widget widget_search">
-  <form method="get" action="https://duckduckgo.com/">
-    <input type="search" name="q" maxlength="255" placeholder="Search the site">
-    <input type="hidden" name="sites" value="https://lsimopoulos.github.io/"/>
-    <input type="hidden" name="k7" value="#faf8f8"/>
-    <input type="hidden" name="kj" value="#b33"/>
-    <input type="hidden" name="ky" value="#fafafa"/>
-    <input type="hidden" name="kx" value="b"/>
-    <input type="hidden" name="ko" value="-1"/>
-    <input type="hidden" name="k1" value="-1"/>
-    <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
-  </form>
-</aside>
+</nav>
 
 
+    </section>
 
-  
-
-
-<aside id="categories-3" class="widget widget_categories">
-  <h3 class="widget-title">Categories</h3>
-  <ul>
+   	
+    	<aside id="sidebar">
     
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/android">Android</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/autofac">Autofac</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/entity-framework">Entity-Framework</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/hugo">Hugo</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/mvvm">Mvvm</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/mvvm-light">Mvvm-Light</a> (1)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/uwp">Uwp</a> (2)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/wpf">Wpf</a> (2)
-    </li>
-    
-    <li class="cat-item">
-      
-      <a href="https://lsimopoulos.github.io/categories/xamarin">Xamarin</a> (1)
-    </li>
-    
-  </ul>
-</aside>
-
-
-
-
-  
-
-  
-
-
-
-<aside id="tag_cloud-2" class="widget widget_tag_cloud">
-  <h3 class="widget-title">        Tag cloud</h3>
-  <div class="tagcloud">
-
-
-
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-    <a href="https://lsimopoulos.github.io/tags/uwp" style="font-size: 8px;" title="2 topics">
-      
-      Uwp
-      
-      
-    
-    <a href="https://lsimopoulos.github.io/tags/wpf" style="font-size: 8px;" title="2 topics">
-      
-      Wpf
-      
-      
-    
-      
-  </div>
-  
-</aside>
-
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Recents
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/entity-framework.png)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/entity-framework">
+                        Entity Framework
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" class="title">Configure an Index on many properties in entity framework 6.1</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-07-05 19:02:53 &#43;0200 CEST" itemprop="datePublished">2017-07-05</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/xamarin">
+                        Xamarin
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/" class="title">Integrate Autofac with MVVM Light</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-07-03 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-07-03</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/MVVM.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/mvvm">
+                        MVVM
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" class="title">Supervising controller pattern and MVVM</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-06-26 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-06-26</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/android.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">
+                        Android
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" class="title">Android: connection timeout error on emulator</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-06-24 13:20:43 &#43;0200 CEST" itemprop="datePublished">2017-06-24</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/" class="thumbnail">
+                    
+                        <span class="thumbnail-image thumbnail-none"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/hugo">
+                        hugo
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/" class="title">Host Hugo on github pages</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-06-14 17:35:12 &#43;0200 CEST" itemprop="datePublished">2017-06-14</time>
+                    </p>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
 </div>
 
 
-      </div>   
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/autofac">
+                    autofac
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/entity-framework">
+                    entity-framework
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/mvvm">
+                    mvvm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/mvvm-light">
+                    mvvm-light
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/uwp">
+                    uwp
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/wpf">
+                    wpf
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/xamarin">
+                    xamarin
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
     </div>
-    <footer id="footerarea" class="clearfix">
-  <div class="widget-wrap">
-    <div class="container">
-      <div class="widget-area clearfix">
-      </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tags
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/android">
+                    android
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/autofac">
+                    autofac
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/connection-timeout-error">
+                    connection-timeout-error
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/dependency-injection">
+                    dependency-injection
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/emulator">
+                    emulator
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/entity-framework">
+                    entity-framework
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/git-hub-pages">
+                    git-hub-pages
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/hosting">
+                    hosting
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/mvvm">
+                    mvvm
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/mvvm-light">
+                    mvvm-light
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/uwp">
+                    uwp
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/wpf">
+                    wpf
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/xamarin">
+                    xamarin
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
     </div>
-  </div>
-  
-  <div id="site-generator">
-    <div class="container">
-      <div class="copyright">&copy; 2017
-      Copyright Powered by <a href="http://gohugo.io">Hugo</a>. Original theme by <a href="http://colorlib.com/wp/travelify/">Colorlib</a> adapted for Hugo by <a href="http://balaramadurai.net">Dr. Bala Ramadurai</a>.</div><div class="footer-right"></div><div style="clear:both;">
-      </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        Tag cloud
+    </h3>
+    <div class="widget tagcloud">
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/android" style="font-size: 12px;">android</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/autofac" style="font-size: 12px;">autofac</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/connection-timeout-error" style="font-size: 12px;">connection-timeout-error</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/dependency-injection" style="font-size: 12px;">dependency-injection</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/emulator" style="font-size: 12px;">emulator</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/entity-framework" style="font-size: 12px;">entity-framework</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/git-hub-pages" style="font-size: 12px;">git-hub-pages</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/hosting" style="font-size: 12px;">hosting</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/hugo" style="font-size: 12px;">hugo</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/mvvm" style="font-size: 12px;">mvvm</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/mvvm-light" style="font-size: 12px;">mvvm-light</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/uwp" style="font-size: 12px;">uwp</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/wpf" style="font-size: 12px;">wpf</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/xamarin" style="font-size: 12px;">xamarin</a>
+        
     </div>
-  </div>
-  <div class="back-to-top">
-    <a href="#branding"></a>
+</div>
+
+
+
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017
+      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
   </div>
 </footer>
-</div>
-
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/admin-bar.min.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/jquery.cycle.all.min.js"></script>
-<script type='text/javascript'>
-   
-var travelify_slider_value = {"transition_effect":"fade","transition_delay":"4000","transition_duration":"1000"};
- 
-</script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/slider-settings.min.js"></script>
-<script type='text/javascript' src="https://lsimopoulos.github.io/js/wp-embed.min.js"></script>
 
 
-    <script type="text/javascript">
-      (function() {
-      var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
-      
-						request = true;
-      
-      b[c] = b[c].replace( rcs, ' ' );
-      
-      b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
-      }());
-		</script>
-    
-
-    
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -1015,9 +1547,10 @@ MathJax.Hub.Config({
     inlineMath: [['$','$'], ['\\(','\\)']]}
   });
 </script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
 
-  </body>
+
+</body>
 </html>

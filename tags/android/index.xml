@@ -6,16 +6,18 @@
     <description>Recent content in Android on Leonidas Simopoulos&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright</copyright>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Sat, 24 Jun 2017 13:20:43 +0200</lastBuildDate>
-    <atom:link href="https://lsimopoulos.github.io/tags/android/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://lsimopoulos.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Android: connection timeout error on emulator</title>
-      <link>https://lsimopoulos.github.io/post/android_emulator_connection_timeout/</link>
+      <link>https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/</link>
       <pubDate>Sat, 24 Jun 2017 13:20:43 +0200</pubDate>
       
-      <guid>https://lsimopoulos.github.io/post/android_emulator_connection_timeout/</guid>
+      <guid>https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/</guid>
       <description>Usually when I am developing mobile apps, I host the server on the cloud. But this time I decided to host it locally on the same machine where I&amp;rsquo;m developing the android app. When I tried to connect to the local webserver from the android emulator by using the local ip, I got connection timeout error after few seconds.
 What did I try and it did not work:  Made sure that the required ports of firewall were open.</description>
     </item>
