@@ -53,7 +53,7 @@ public class Server { public int Id { get; set; } public string Name { get; set;
 
 
 <meta itemprop="dateModified" content="2017-07-05T19:02:53&#43;02:00" />
-<meta itemprop="wordCount" content="380">
+<meta itemprop="wordCount" content="414">
 
 
 
@@ -205,12 +205,12 @@ public class Server { public int Id { get; set; } public string Name { get; set;
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        5
+        6
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          14
+          15
         
         <span>
             Tags
@@ -310,7 +310,7 @@ public class Server { public int Id { get; set; } public string Name { get; set;
             <i class="fa fa-calendar"></i>
             <time datetime="2017-07-05 19:02:53 &#43;0200 CEST" itemprop="datePublished">2017-07-05</time>
             &middot;
-            380
+            414
             words
             &middot;
             2
@@ -394,6 +394,17 @@ public class Instance
     [Index(&quot;IX_ServerInstance&quot;, 2, IsUnique = true)]
     public int InstanceId { get; set; }
 }
+</code></pre>
+
+<p><strong>IMPORTANT NOTE</strong></p>
+
+<p>If the property  &ldquo;instaceId&rdquo; was a string , the [MaxLength(somenumber)] attribute would be needed to be applied.</p>
+
+<p>For example:</p>
+
+<pre><code>    [MaxLength(50)]
+    [Index(&quot;IX_ServerInstance&quot;, 2, IsUnique = true)]
+    public string InstanceName { get; set; }
 </code></pre>
 
 <p>2.<strong>Fluent Api</strong></p>
@@ -560,6 +571,13 @@ CreateIndex(&quot;dbo.AspNetUsers&quot;, new []{ &quot;ServerId&quot;, &quot;Ins
     
 
     
+    <a href="https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          Newer
+      </strong>
+      <div class="article-nav-title">Create GUID: The command is not a valid executable</div>
+    </a>
+    
 </nav>
 
 
@@ -603,6 +621,32 @@ CreateIndex(&quot;dbo.AspNetUsers&quot;, new []{ &quot;ServerId&quot;, &quot;Ins
     </h3>
     <div class="widget">
         <ul id="recent-post">
+            
+            <li>
+                <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/vstudio.jpg)" alt="Configure an Index on many properties in entity framework 6.1" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/visual-studio">
+                        Visual Studio
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/" class="title">Create GUID: The command is not a valid executable</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-07-15 22:08:32 &#43;0200 CEST" itemprop="datePublished">2017-07-15</time>
+                    </p>
+                </div>
+            </li>
             
             <li>
                 <div class="item-thumbnail">
@@ -708,32 +752,6 @@ CreateIndex(&quot;dbo.AspNetUsers&quot;, new []{ &quot;ServerId&quot;, &quot;Ins
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/hugo">
-                        hugo
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/" class="title">Host Hugo on github pages</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-06-14 17:35:12 &#43;0200 CEST" itemprop="datePublished">2017-06-14</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -801,6 +819,14 @@ CreateIndex(&quot;dbo.AspNetUsers&quot;, new []{ &quot;ServerId&quot;, &quot;Ins
                     uwp
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/visual-studio">
+                    visual-studio
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -934,6 +960,14 @@ CreateIndex(&quot;dbo.AspNetUsers&quot;, new []{ &quot;ServerId&quot;, &quot;Ins
             
             <li class="category-list-item">
                 
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/visual-studio">
+                    visual-studio
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
                 <a class="category-list-link" href="https://lsimopoulos.github.io/tags/wpf">
                     wpf
                 </a>
@@ -999,6 +1033,9 @@ CreateIndex(&quot;dbo.AspNetUsers&quot;, new []{ &quot;ServerId&quot;, &quot;Ins
         
         
         <a href="https://lsimopoulos.github.io/tags/uwp" style="font-size: 12px;">uwp</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/visual-studio" style="font-size: 12px;">visual-studio</a>
         
         
         <a href="https://lsimopoulos.github.io/tags/wpf" style="font-size: 12px;">wpf</a>

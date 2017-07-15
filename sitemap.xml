@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/</loc>
+    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/about/about/</loc>
     <lastmod>2017-07-12T21:39:00+02:00</lastmod>
   </url>
@@ -124,7 +129,7 @@
   
   <url>
     <loc>https://lsimopoulos.github.io/</loc>
-    <lastmod>2017-07-12T21:39:00+02:00</lastmod>
+    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -154,7 +159,7 @@
   
   <url>
     <loc>https://lsimopoulos.github.io/post/</loc>
-    <lastmod>2017-07-05T19:02:53+02:00</lastmod>
+    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -173,6 +178,18 @@
   <url>
     <loc>https://lsimopoulos.github.io/categories/uwp/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/visual-studio/</loc>
+    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/visual-studio/</loc>
+    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual Studio on Leonidas Simopoulos&#39;s blog</title>
+    <link>https://lsimopoulos.github.io/categories/visual-studio/</link>
+    <description>Recent content in Visual Studio on Leonidas Simopoulos&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Sat, 15 Jul 2017 22:08:32 +0200</lastBuildDate>
+    
+	<atom:link href="https://lsimopoulos.github.io/categories/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Create GUID: The command is not a valid executable</title>
+      <link>https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/</link>
+      <pubDate>Sat, 15 Jul 2017 22:08:32 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/</guid>
+      <description>My hdd died two days ago and I re-installed windows 10 Pro(64 bit) and Visual Studio 2017. While I was programming today for one project I came across with the following error : &amp;ldquo;The command is not a valid executable&amp;rdquo;. I did try to find the &amp;ldquo;genguid.exe&amp;rdquo; on the path &amp;ldquo;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\&amp;rdquo; but the exe was not there.
+I googled around and I found this site. Apparently you need to install the Desktop Developement with C++ in order the CreateGuid to work(see the above image).</description>
+    </item>
+    
+  </channel>
+</rss>
