@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-07-15T22:08:32&#43;02:00"/>
+<meta property="og:updated_time" content="2017-07-16T19:47:48&#43;02:00"/>
 
 
 
@@ -180,7 +180,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        6
+        7
         <span>Posts</span>
       </div>
       <div class="article-info-block">
@@ -267,6 +267,158 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/" itemprop="url">
+            <img src="https://lsimopoulos.github.io/banners/autofac.jpg" class="article-banner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/">
+    <h1 class="article-title" itemprop="name">
+        Injecting classes that inherit from a generic one in Autofac
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-07-16 19:47:48 &#43;0200 CEST" itemprop="datePublished">2017-07-16</time>
+            &middot;
+            210
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/autofac">Autofac</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/autofac">Autofac</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                Lets say we have a generic class defined like :
+public class Foundation&lt;TClass&gt; where TClass : class { private readonly InjectedClass _injectedClass; protected Foundation(InjectedClass injectedClass) { _injectedClass = injectedClass; } }  Autofac has a method : RegisterGeneric() we can use in order to register generic classes.
+Usage :
+builder.RegisterGeneric(typeof(Foundation&lt;&gt;)).InstancePerLifetimeScope();  This works perfectly but what about the classes that inherit from this generic class? For example:
+public class CustomFoundation&lt;TClass&gt; : Foundation&lt;TClass&gt; where TClass :class { public CustomFoundation(InjectedClass injectedClass) : base(injectedClass) { } }  Using &ldquo;RegisterGeneric()&rdquo; wont work.
+            </p>
+            <p class="article-more-link">
+                <a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/" data-id="4a1fb5e8a61c5cba93c901588742b0fb" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1248,6 +1400,32 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/autofac.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/autofac">
+                        Autofac
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/" class="title">Injecting classes that inherit from a generic one in Autofac</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-07-16 19:47:48 &#43;0200 CEST" itemprop="datePublished">2017-07-16</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/" class="thumbnail">
                     
                         <span style="background-image:url(https://lsimopoulos.github.io/banners/vstudio.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
@@ -1350,32 +1528,6 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://lsimopoulos.github.io/banners/android.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">
-                        Android
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/24/android-connection-timeout-error-on-emulator/" class="title">Android: connection timeout error on emulator</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-06-24 13:20:43 &#43;0200 CEST" itemprop="datePublished">2017-06-24</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1402,7 +1554,7 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
                 <a class="category-list-link" href="https://lsimopoulos.github.io/categories/autofac">
                     autofac
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -1499,7 +1651,7 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
                 <a class="category-list-link" href="https://lsimopoulos.github.io/tags/autofac">
                     autofac
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
