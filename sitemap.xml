@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/</loc>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/</loc>
     <lastmod>2017-07-16T19:47:48+02:00</lastmod>
   </url>
@@ -49,20 +54,20 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/android/</loc>
-    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lsimopoulos.github.io/categories/android/</loc>
-    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/autofac/</loc>
-    <lastmod>2017-07-16T19:47:48+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/tags/android/</loc>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/android-studio/</loc>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,8 +78,20 @@
   </url>
   
   <url>
+    <loc>https://lsimopoulos.github.io/tags/autofac/</loc>
+    <lastmod>2017-07-16T19:47:48+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/categories/</loc>
-    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/client-not-ready-yet-error/</loc>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -97,13 +114,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/entity-framework/</loc>
+    <loc>https://lsimopoulos.github.io/categories/entity-framework/</loc>
     <lastmod>2017-07-05T19:02:53+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/entity-framework/</loc>
+    <loc>https://lsimopoulos.github.io/tags/entity-framework/</loc>
     <lastmod>2017-07-05T19:02:53+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -121,26 +138,20 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
-    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lsimopoulos.github.io/categories/hugo/</loc>
     <lastmod>2017-06-14T17:35:12+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/</loc>
-    <lastmod>2017-07-16T19:47:48+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
+    <lastmod>2017-06-14T17:35:12+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/mvvm/</loc>
-    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/</loc>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -151,8 +162,8 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/mvvm-light/</loc>
-    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/tags/mvvm/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -163,20 +174,20 @@
   </url>
   
   <url>
+    <loc>https://lsimopoulos.github.io/tags/mvvm-light/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://lsimopoulos.github.io/post/</loc>
-    <lastmod>2017-07-16T19:47:48+02:00</lastmod>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/tags/</loc>
-    <lastmod>2017-06-24T13:20:43+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lsimopoulos.github.io/tags/uwp/</loc>
-    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -187,8 +198,8 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/visual-studio/</loc>
-    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/tags/uwp/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -199,8 +210,8 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/wpf/</loc>
-    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/tags/visual-studio/</loc>
+    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -211,13 +222,19 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/xamarin/</loc>
+    <loc>https://lsimopoulos.github.io/tags/wpf/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/categories/xamarin/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/tags/xamarin/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Sat, 24 Jun 2017 13:20:43 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 20 Jul 2017 22:13:55 +0200</lastBuildDate>
     
 	<atom:link href="https://lsimopoulos.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,18 @@
     <item>
       <title>Android</title>
       <link>https://lsimopoulos.github.io/tags/android/</link>
-      <pubDate>Sat, 24 Jun 2017 13:20:43 +0200</pubDate>
+      <pubDate>Thu, 20 Jul 2017 22:13:55 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android Studio</title>
+      <link>https://lsimopoulos.github.io/tags/android-studio/</link>
+      <pubDate>Thu, 20 Jul 2017 22:13:55 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/tags/android-studio/</guid>
       <description></description>
     </item>
     
@@ -27,6 +36,15 @@
       <pubDate>Sun, 16 Jul 2017 19:47:48 +0200</pubDate>
       
       <guid>https://lsimopoulos.github.io/tags/autofac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Client Not Ready Yet Error</title>
+      <link>https://lsimopoulos.github.io/tags/client-not-ready-yet-error/</link>
+      <pubDate>Thu, 20 Jul 2017 22:13:55 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/tags/client-not-ready-yet-error/</guid>
       <description></description>
     </item>
     

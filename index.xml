@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Sun, 16 Jul 2017 19:47:48 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 20 Jul 2017 22:13:55 +0200</lastBuildDate>
     
 	<atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android: Client not ready yet</title>
+      <link>https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/</link>
+      <pubDate>Thu, 20 Jul 2017 22:13:55 +0200</pubDate>
+      
+      <guid>https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/</guid>
+      <description>I started developing an android app on my surface but then I decided to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc. I started the Android Studio and got an error dialog that it was warning me that the android sdk root path(that it was declared on the project) is not valid and I was propmpted to verify so the Android Studio points to the actual and correct path.</description>
+    </item>
     
     <item>
       <title>Injecting classes that inherit from a generic one in Autofac</title>

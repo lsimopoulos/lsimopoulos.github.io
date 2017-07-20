@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:updated_time" content="2017-07-16T19:47:48&#43;02:00"/>
+<meta property="og:updated_time" content="2017-07-20T22:13:55&#43;02:00"/>
 
 
 
@@ -180,12 +180,12 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        7
+        8
         <span>Posts</span>
       </div>
       <div class="article-info-block">
         
-          15
+          17
         
         <span>
             Tags
@@ -267,6 +267,162 @@
     <section id="main">
     
     
+
+<article class="article article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/" itemprop="url">
+            <img src="https://lsimopoulos.github.io/banners/android.jpg" class="article-banner">
+        
+        </a>
+
+        <header class="article-header">
+    <a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/">
+    <h1 class="article-title" itemprop="name">
+        Android: Client not ready yet
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-07-20 22:13:55 &#43;0200 CEST" itemprop="datePublished">2017-07-20</time>
+            &middot;
+            296
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">Android</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/android">Android</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/client-not-ready-yet-error">Client not ready yet error</a>
+                &middot;
+                
+                
+                <a class="article-category-link" href="https://lsimopoulos.github.io/tags/android-studio">Android Studio</a>
+                
+                
+            </div>
+            
+        
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p>
+                I started developing an android app on my surface but then I decided to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc. I started the Android Studio and got an error dialog that it was warning me that the android sdk root path(that it was declared on the project) is not valid and I was propmpted to verify so the Android Studio points to the actual and correct path.
+            </p>
+            <p class="article-more-link">
+                <a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/">
+                    Read more
+                </a>
+            </p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/" data-id="8d3ad1c0f3e3857bd0de831eb918a9ab" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+    
+    <a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/#disqus_thread" class="article-comment-link">
+        Comments
+    </a>
+    
+
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+</article>
 
 <article class="article article-type-post" itemscope="" itemprop="blogPost">
     <div class="article-inner">
@@ -1400,6 +1556,32 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
             
             <li>
                 <div class="item-thumbnail">
+                    <a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/" class="thumbnail">
+                    
+                        <span style="background-image:url(https://lsimopoulos.github.io/banners/android.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
+                    
+                    </a>
+                </div>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category">
+                        
+                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">
+                        Android
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/" class="title">Android: Client not ready yet</a></p>
+                    <p class="item-date">
+                        <time datetime="2017-07-20 22:13:55 &#43;0200 CEST" itemprop="datePublished">2017-07-20</time>
+                    </p>
+                </div>
+            </li>
+            
+            <li>
+                <div class="item-thumbnail">
                     <a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/" class="thumbnail">
                     
                         <span style="background-image:url(https://lsimopoulos.github.io/banners/autofac.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
@@ -1502,32 +1684,6 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
                 </div>
             </li>
             
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://lsimopoulos.github.io/banners/MVVM.jpg)" alt="Leonidas Simopoulos&#39;s blog" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/mvvm">
-                        MVVM
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/" class="title">Supervising controller pattern and MVVM</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-06-26 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-06-26</time>
-                    </p>
-                </div>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -1546,7 +1702,7 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
                 <a class="category-list-link" href="https://lsimopoulos.github.io/categories/android">
                     android
                 </a>
-                <span class="category-list-count">1</span>
+                <span class="category-list-count">2</span>
             </li>
             
             <li class="category-list-item">
@@ -1643,6 +1799,14 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
                 <a class="category-list-link" href="https://lsimopoulos.github.io/tags/android">
                     android
                 </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/android-studio">
+                    android-studio
+                </a>
                 <span class="category-list-count">1</span>
             </li>
             
@@ -1652,6 +1816,14 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
                     autofac
                 </a>
                 <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/client-not-ready-yet-error">
+                    client-not-ready-yet-error
+                </a>
+                <span class="category-list-count">1</span>
             </li>
             
             <li class="category-list-item">
@@ -1778,7 +1950,13 @@ It took me soIme time to figure out how to host the blog on github pages. I was 
         <a href="https://lsimopoulos.github.io/tags/android" style="font-size: 12px;">android</a>
         
         
+        <a href="https://lsimopoulos.github.io/tags/android-studio" style="font-size: 12px;">android-studio</a>
+        
+        
         <a href="https://lsimopoulos.github.io/tags/autofac" style="font-size: 12px;">autofac</a>
+        
+        
+        <a href="https://lsimopoulos.github.io/tags/client-not-ready-yet-error" style="font-size: 12px;">client-not-ready-yet-error</a>
         
         
         <a href="https://lsimopoulos.github.io/tags/connection-timeout-error" style="font-size: 12px;">connection-timeout-error</a>
