@@ -47,7 +47,7 @@
 
 
 <meta itemprop="dateModified" content="2017-07-20T22:13:55&#43;02:00" />
-<meta itemprop="wordCount" content="296">
+<meta itemprop="wordCount" content="345">
 
 
 
@@ -301,7 +301,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-07-20 22:13:55 &#43;0200 CEST" itemprop="datePublished">2017-07-20</time>
             &middot;
-            296
+            345
             words
             &middot;
             2
@@ -347,7 +347,9 @@
 </header>
 
         <div class="article-entry" itemprop="articleBody">
-            <p>I started developing an android app on my surface but then I decided  to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc.
+            
+
+<p>I started developing an android app on my surface but then I decided  to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc.
 I started the Android Studio and got an error dialog that it was warning me that the android sdk root path(that it was declared on the project) is not valid and I was propmpted to verify so the Android Studio points to the actual and correct path.
 After that, I built the project successfully and then I ran the app in the emulator.</p>
 
@@ -366,7 +368,7 @@ After that, I built the project successfully and then I ran the app in the emula
 <ol>
 <li><p>Restarted the pc.</p></li>
 
-<li><p>Deleted the emulator and created new image.</p></li>
+<li><p>Deleted the app from emulator.</p></li>
 
 <li><p>I did not add <code>android:exported=&quot;true&quot;</code> on the MainActivity due to the fact that it had nested intent and it&rsquo;s exported by default.</p></li>
 
@@ -388,7 +390,10 @@ After that, I built the project successfully and then I ran the app in the emula
 
 <li><p>I enabled the Instant Run  but i got again the same error.</p></li>
 
-<li><p>I clicked on the &ldquo;Clean Project&rdquo; and it was working now even with the Instant Run enabled.</p></li>
+<li><p>Removed some comments from AndroidManifest.xml so I can trigger a full build.  <a href="https://medium.com/google-developers/instant-run-how-does-it-work-294a1633367f">Instant Deploy</a> builds and deploy only the incremental changes.
+It doesn’t reinstall the app, neither restart the app nor restart the Activity.</p></li>
+
+<li><p>I clicked on the &ldquo;Clean Project&rdquo; and then on &ldquo;Run app&rdquo;. It was working now even with the Instant Run enabled.</p></li>
 </ol>
 
 <p><strong>Notes</strong></p>
@@ -396,6 +401,10 @@ After that, I built the project successfully and then I ran the app in the emula
 <p>*I had the same error when I tried to deploy the app on my Samsung S8.</p>
 
 <p>*Android Studio Version : 2.3.3</p>
+
+<h2 id="references">References</h2>
+
+<p>This <a href="https://medium.com/google-developers/instant-run-how-does-it-work-294a1633367f">link</a> is really useful. I learned a lot about Instant Run.</p>
 
         </div>
         <footer class="article-footer">

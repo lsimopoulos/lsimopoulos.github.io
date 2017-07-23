@@ -54,13 +54,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/android/</loc>
+    <loc>https://lsimopoulos.github.io/tags/android/</loc>
     <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/android/</loc>
+    <loc>https://lsimopoulos.github.io/categories/android/</loc>
     <lastmod>2017-07-20T22:13:55+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -72,13 +72,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/autofac/</loc>
+    <loc>https://lsimopoulos.github.io/tags/autofac/</loc>
     <lastmod>2017-07-16T19:47:48+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/autofac/</loc>
+    <loc>https://lsimopoulos.github.io/categories/autofac/</loc>
     <lastmod>2017-07-16T19:47:48+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -114,13 +114,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/entity-framework/</loc>
+    <loc>https://lsimopoulos.github.io/tags/entity-framework/</loc>
     <lastmod>2017-07-05T19:02:53+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/entity-framework/</loc>
+    <loc>https://lsimopoulos.github.io/categories/entity-framework/</loc>
     <lastmod>2017-07-05T19:02:53+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -138,13 +138,13 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/hugo/</loc>
+    <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
     <lastmod>2017-06-14T17:35:12+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/tags/hugo/</loc>
+    <loc>https://lsimopoulos.github.io/categories/hugo/</loc>
     <lastmod>2017-06-14T17:35:12+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -156,25 +156,25 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/mvvm/</loc>
-    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lsimopoulos.github.io/tags/mvvm/</loc>
     <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/mvvm-light/</loc>
-    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/categories/mvvm/</loc>
+    <lastmod>2017-06-26T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/tags/mvvm-light/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/mvvm-light/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -192,20 +192,14 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/uwp/</loc>
-    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://lsimopoulos.github.io/tags/uwp/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/visual-studio/</loc>
-    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/categories/uwp/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -216,8 +210,8 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/wpf/</loc>
-    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <loc>https://lsimopoulos.github.io/categories/visual-studio/</loc>
+    <lastmod>2017-07-15T22:08:32+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -228,13 +222,19 @@
   </url>
   
   <url>
-    <loc>https://lsimopoulos.github.io/categories/xamarin/</loc>
+    <loc>https://lsimopoulos.github.io/categories/wpf/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lsimopoulos.github.io/tags/xamarin/</loc>
+    <lastmod>2017-07-03T20:11:26+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://lsimopoulos.github.io/categories/xamarin/</loc>
     <lastmod>2017-07-03T20:11:26+02:00</lastmod>
     <priority>0</priority>
   </url>
