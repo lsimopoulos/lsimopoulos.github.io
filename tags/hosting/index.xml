@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Hosting on Leonidas Simopoulos&#39;s blog</title>
-    <link>https://lsimopoulos.github.io/tags/hosting/</link>
-    <description>Recent content in Hosting on Leonidas Simopoulos&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Wed, 14 Jun 2017 17:35:12 +0200</lastBuildDate>
-    
-	<atom:link href="https://lsimopoulos.github.io/tags/hosting/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Host Hugo on github pages</title>
-      <link>https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/</link>
-      <pubDate>Wed, 14 Jun 2017 17:35:12 +0200</pubDate>
-      
-      <guid>https://lsimopoulos.github.io/2017/06/14/host-hugo-on-github-pages/</guid>
-      <description>This is my first post. I used hugo to make this blog. I totally recommend it. It&amp;rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
-It took me soIme time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&amp;rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hosting on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/hosting/</link><description>Recent content in hosting on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 14 Jun 2017 17:35:12 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/hosting/index.xml" rel="self" type="application/rss+xml"/><item><title>Host Hugo on github pages</title><link>https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/</link><pubDate>Wed, 14 Jun 2017 17:35:12 +0200</pubDate><guid>https://lsimopoulos.github.io/post/hosting_hugo_on_github_pages/</guid><description>This is my first post. I used hugo to make this blog. I totally recommend it. It&amp;rsquo;s really quick to create a blog without the need to install anything extra(no plugins etc).
+It took me some time to figure out how to host the blog on github pages. I was struggling to deploy the hugo generated static website in github via /docs folder on master branch. It didn&amp;rsquo;t work. Apparently it does not work having docs folder and hugo code on the same branch.</description></item></channel></rss>

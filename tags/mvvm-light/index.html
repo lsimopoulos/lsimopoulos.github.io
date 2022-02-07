@@ -1,848 +1,269 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html><html lang=en class=dark>
 <head>
-    <title>Mvvm Light &middot; Leonidas Simopoulos&#39;s blog</title>
-    <meta name="generator" content="Hugo 0.25.1" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Leonidas Simopoulos">
-    
-      <meta name="description" content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery.">
-    
-    
-      <link href="https://lsimopoulos.github.io/tags/mvvm-light/index.xml" rel="alternate" type="application/rss+xml" title="Leonidas Simopoulos&#39;s blog" />
-      <link href="https://lsimopoulos.github.io/tags/mvvm-light/index.xml" rel="feed" type="application/rss+xml" title="Leonidas Simopoulos&#39;s blog" />
-    
-    <link rel="canonical" href="https://lsimopoulos.github.io/tags/mvvm-light/"/>
-    <link rel="icon" href="https://lsimopoulos.github.io/favicon.ico">
-    <link rel="apple-touch-icon" href="https://lsimopoulos.github.io/apple-touch-icon.png"/>
-    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/style.css">
-    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://lsimopoulos.github.io/css/monokai.css">
-    <link rel="stylesheet" href="https://lsimopoulos.github.io/fancybox/jquery.fancybox.css">
-    
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Mvvm Light" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://lsimopoulos.github.io/tags/mvvm-light/" />
-
-
-
-<meta property="og:updated_time" content="2017-07-03T20:11:26&#43;02:00"/>
-
-
-
-
-
-
-
-
-
-
-    
-    
-<meta itemprop="name" content="Mvvm Light">
-<meta itemprop="description" content="">
-
-
-    
-    
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-</head>
-<body>
-<div class="container">
-
-
-<div id="container">
-	<header id="header">
-  <div id="header-main" class="header-inner">
-    <div class="outer">
-      <a href="https://lsimopoulos.github.io/" id="logo">
-          
-          <i class="logo" style="background-image: url('https://lsimopoulos.github.io/css/images/logo.png')"></i>
-          
-          <span class="site-title">Leonidas Simopoulos&#39;s blog</span>
-      </a>
-      <nav id="main-nav">
-          
-          
-          <a class="main-nav-link" href="https://lsimopoulos.github.io/">Home</a>
-          
-          
-          
-          
-          
-          
-          
-          
-
-          
-
-          
-          
-          
-          
-          <a class="main-nav-link" href="https://lsimopoulos.github.io/tags/">Tags</a>
-          
-          
-          
-          <a class="main-nav-link" href="https://lsimopoulos.github.io/categories/">Categories</a>
-          
-          
-          
-          <a class="main-nav-link" href="https://lsimopoulos.github.io/about/about">About</a>
-          
-          
-      </nav>
-        <nav id="sub-nav">
-          <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://lsimopoulos.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
-          </div>
-        </nav>
-        <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-              <input type="search" name="q" class="search-form-input" placeholder="Search">
-              <button type="submit" class="search-form-submit">
-              </button>
-              <input type="hidden" name="sitesearch" value="https://lsimopoulos.github.io/" />
-         </form>
-        </div>
-    </div>
-  </div>
-  <div id="main-nav-mobile" class="header-sub header-inner">
-    <table class="menu outer">
-      <tbody>
-          <tr>
-          
-          
-          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/">Home</a></td>
-          
-          
-          
-          
-          
-          
-          
-          
-
-          
-
-          
-          
-          
-          
-          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/tags/">Tags</a></td>
-          
-          
-          
-          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/categories/">Categories</a></td>
-          
-          
-          
-          <td><a class="main-nav-link" href="https://lsimopoulos.github.io/about/about">About</a></td>
-          
-          
-          <td>
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
-          <input type="search" name="q" class="search-form-input" placeholder="Search">
-          <input type="hidden" name="sitesearch" value="https://lsimopoulos.github.io/" />
-          </form>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</header>
-
-   	
-   	<div class="outer">
-   	
-    	<aside id="profile">
-  <div class="inner profile-inner">
-    <div class="base-info profile-block">
-      
-      <img id="avatar" src="https://www.gravatar.com/avatar/42897f787394d97a42fe3e5a09ce90a1?s=100&d=identicon"/>
-      
-      <h2 id="name">Leonidas Simopoulos</h2>
-      <h3 id="title">Blogger - Programmer - Bear enthusiasist</h3>
-      <span id="location"><i class="fa fa-map-marker"></i>Sweden</span>
-      
-          <a id="follow" href="https://twitter.com/leonsim83">
-              Follow
-          </a>
-      
-    </div>
-    <div class="article-info profile-block">
-      <div class="article-info-block">
-        9
-        <span>Posts</span>
-      </div>
-      <div class="article-info-block">
-        
-          19
-        
-        <span>
-            Tags
-        </span>
-      </div>
-    </div>
-    <div class="profile-block social-links">
-      <table>
-        <tr>
-          
-<td><a href="//github.com/lsimopoulos" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<td><a href="//pinterest.com/sim_leon" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></td>
-
-
-
-<td><a href="//plus.google.com/+https://plus.google.com/u/0/111373413352934032664" target="_blank" title="Google+"><i class="fa fa-google-plus"></i></a></td>
-
-
-
-
-
-<td><a href="//twitter.com/leonsim83" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></td>
-
-
-          <td><a href="https://lsimopoulos.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</aside>
-
-    
-
-    <section id="main">
-    
-    
-    
-    
-    <section class="archives-wrap">
-        <div class="archive-category-wrap">
-            <span class="archive-category">Mvvm Light</span>
-        </div>
-        <div class="archives">
-            
-            
-                <article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <div class="archive-article-thumbnail">
-            
-            <a href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/" class="thumbnail">
-                <span class="thumbnail-image thumbnail-none"></span>
-            </a>
-            
-        </div>
-        <header class="archive-article-header">
-            <h1 itemprop="name">
-            <a class="archive-article-title" href="https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/">Integrate Autofac with MVVM Light</a>
-            </h1>
-            <div class="archive-article-date">
-                <i class="fa fa-calendar"></i>
-                <time datetime="2017-07-03 20:11:26 &#43;0200 CEST" itemprop="datePublished">2017-07-03</time>
-            </div>
-        </header>
-    </div>
-</article>
- 
-            
-        </div>
-    </section>
-    <nav id="page-nav">
-
+<title>Leonidas Simopoulos's blog | mvvm light</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=/favicon/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon/favicon-16x16.png>
+<link rel=manifest href=/favicon/site.webmanifest>
+<link rel=mask-icon href=/favicon/safari-pinned-tab.svg color=#5bbad5>
+<link rel="shortcut icon" href=/favicon/favicon.ico>
+<meta name=theme-color content="#ffffff">
+<meta property="og:title" content="Leonidas Simopoulos's blog | mvvm light">
+<link rel=stylesheet href="/css/style.min.0815796fd0f9908bb4176d0f087883af95a91d562cd46834ba912ec673e5abf2.css">
+<link href=/css/blonde.min.css rel=stylesheet type=text/css media=print onload="this.media=' all'">
+<meta name=description content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery. ">
+<meta property="og:site_name" content="Leonidas Simopoulos's blog">
+<meta property="og:description" content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery. ">
+<meta property="og:url" content="https://lsimopoulos.github.io/tags/mvvm-light/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:site content>
+<link rel=canonical href=https://lsimopoulos.github.io/tags/mvvm-light/>
+<meta name=twitter:description content="As I set out for programming,I hope the voyage is a long one, full of adventure, full of discovery. ">
+<meta property="article:published_time" content="2017-07-03T20:11:26+02:00">
+<meta property="article:updated_time" content="2017-07-03T20:11:26+02:00">
+<meta property="og:image" content="https://lsimopoulos.github.io/">
+<meta property="og:image:url" content="https://lsimopoulos.github.io/">
+<link rel=stylesheet href=/css/custom.css>
+<i class="dark hidden"></i>
+</head><body class=font-sans>
+<div class="min-h-screen flex flex-col bg-gray-100 dark:bg-warmgray-800"><div class=bg-gray-800>
+<div class="container max-w-screen-xl mr-auto ml-auto">
+<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+<div class="flex items-center flex-no-shrink bg-gray-800 text-white mr-6">
+<a href=https://lsimopoulos.github.io/><span class="font-semibold text-2xl tracking-tight">Leonidas Simopoulos's blog</span></a>
+</div>
+<div class="flex md:hidden">
+<div class=py-2>
+<button onclick=toggleDarkMode() class="focus:outline-none mr-1" aria-label="Darkmode Toggle Button"><i id=icon class="icon-moon inline-flex align-middle leading-normal text-lg text-white"></i></button>
+<span class=text-white>|</span>
+</div>
+<button id=hamburgerbtn class="flex items-center px-3 py-1 text-white hover:opacity-50" aria-label="Hamburger Button">
+<span class="icon-menu text-2xl"></span>
+</button>
+</div>
+<div class="hidden w-full md:flex md:flex-row sm:items-center md:w-auto" id=mobileMenu>
+<div class="text-sm lg:flex-grow">
+</div>
+<div class=navmenu>
+<a href=/ class="no-underline duration-200 block mt-4 sm:inline-block sm:mt-0 text-white hover:opacity-50 mr-4">
+Home
+</a>
+<a href=/about class="no-underline duration-200 block mt-4 sm:inline-block sm:mt-0 text-white hover:opacity-50 mr-4">
+About
+</a>
+</div>
+<div class="text-white invisible md:visible">
+<span>|</span>
+<button onclick=toggleDarkMode() class=focus:outline-none aria-label="Darkmode Toggle Button"><i id=icon2 class="icon-moon hover:opacity-50 duration-200 inline-flex align-middle leading-normal text-lg ml-2"></i></button>
+</div>
+</div>
 </nav>
-
-    
-
-    </section>
-
-   	
-    	<aside id="sidebar">
-    
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Recents
-    </h3>
-    <div class="widget">
-        <ul id="recent-post">
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/07/25/introspection-of-an-access-token/" class="thumbnail">
-                    
-                        <span class="thumbnail-image thumbnail-none"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/identity-server">
-                        Identity Server
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/25/introspection-of-an-access-token/" class="title">Introspection of an access token</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-07-25 18:39:10 &#43;0200 CEST" itemprop="datePublished">2017-07-25</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://lsimopoulos.github.io/banners/android.jpg)" alt="Mvvm Light" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/android">
-                        Android
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/20/android-client-not-ready-yet/" class="title">Android: Client not ready yet</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-07-20 22:13:55 &#43;0200 CEST" itemprop="datePublished">2017-07-20</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://lsimopoulos.github.io/banners/autofac.jpg)" alt="Mvvm Light" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/autofac">
-                        Autofac
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/16/injecting-classes-that-inherit-from-a-generic-one-in-autofac/" class="title">Injecting classes that inherit from a generic one in Autofac</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-07-16 19:47:48 &#43;0200 CEST" itemprop="datePublished">2017-07-16</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://lsimopoulos.github.io/banners/vstudio.jpg)" alt="Mvvm Light" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/visual-studio">
-                        Visual Studio
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/15/create-guid-the-command-is-not-a-valid-executable/" class="title">Create GUID: The command is not a valid executable</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-07-15 22:08:32 &#43;0200 CEST" itemprop="datePublished">2017-07-15</time>
-                    </p>
-                </div>
-            </li>
-            
-            <li>
-                <div class="item-thumbnail">
-                    <a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" class="thumbnail">
-                    
-                        <span style="background-image:url(https://lsimopoulos.github.io/banners/entity-framework.png)" alt="Mvvm Light" class="thumbnail-image"></span>
-                    
-                    </a>
-                </div>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category">
-                        
-                        <a class="article-category-link" href="https://lsimopoulos.github.io/categories/entity-framework">
-                        Entity Framework
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://lsimopoulos.github.io/2017/07/05/configure-an-index-on-many-properties-in-entity-framework-6.1/" class="title">Configure an Index on many properties in entity framework 6.1</a></p>
-                    <p class="item-date">
-                        <time datetime="2017-07-05 19:02:53 &#43;0200 CEST" itemprop="datePublished">2017-07-05</time>
-                    </p>
-                </div>
-            </li>
-            
-        </ul>
-    </div>
 </div>
-
-
-    
-
-
-<div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-        <ul class="category-list">
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/android">
-                    android
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/autofac">
-                    autofac
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/entity-framework">
-                    entity-framework
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/hugo">
-                    hugo
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/identity-server">
-                    identity-server
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/mvvm">
-                    mvvm
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/mvvm-light">
-                    mvvm-light
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/uwp">
-                    uwp
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/visual-studio">
-                    visual-studio
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/wpf">
-                    wpf
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/categories/xamarin">
-                    xamarin
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-        </ul>
-    </div>
 </div>
-
-
-
-
-    
-
-
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Tags
-    </h3>
-    <div class="widget">
-        <ul class="category-list">
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/android">
-                    android
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/android-studio">
-                    android-studio
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/autofac">
-                    autofac
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/client-not-ready-yet-error">
-                    client-not-ready-yet-error
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/connection-timeout-error">
-                    connection-timeout-error
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/dependency-injection">
-                    dependency-injection
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/emulator">
-                    emulator
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/entity-framework">
-                    entity-framework
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/git-hub-pages">
-                    git-hub-pages
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/hosting">
-                    hosting
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/hugo">
-                    hugo
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/identity-server">
-                    identity-server
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/introspection-of-access-token">
-                    introspection-of-access-token
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/mvvm">
-                    mvvm
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/mvvm-light">
-                    mvvm-light
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/uwp">
-                    uwp
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/visual-studio">
-                    visual-studio
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/wpf">
-                    wpf
-                </a>
-                <span class="category-list-count">2</span>
-            </li>
-            
-            <li class="category-list-item">
-                
-                <a class="category-list-link" href="https://lsimopoulos.github.io/tags/xamarin">
-                    xamarin
-                </a>
-                <span class="category-list-count">1</span>
-            </li>
-            
-        </ul>
-    </div>
+<style>.active{display:block}</style>
+<script>let hamburger=document.getElementById('hamburgerbtn'),mobileMenu=document.getElementById('mobileMenu');hamburger.addEventListener('click',function(){mobileMenu.classList.toggle('active')})</script>
+<div class="container max-w-screen-xl mx-auto mt-4 flex-grow px-5 lg:px-0" id=content>
+<div class=lg:mx-5>
+<div class="grid grid-cols-3 gap-4">
+<div class="col-span-3 lg:col-span-2 mb-3">
+<h2 class="text-4xl dark:text-white">Mvvm light</h2>
+<a href=/post/integrating_autofac_with_mvvmlight/>
+<div class="bg-white w-full p-3 lg:max-w-full lg:flex mt-5 transform hover:-translate-y-1 hover:shadow-md duration-500 dark:bg-warmgray-900">
+<img alt=thumbnail id=thumb class="lg:w-auto lg:h-44" src=/banners/autofac.jpg>
+<div class="relative pl-4 p-2 justify-between leading-normal max-w-full w-full">
+<div class="text-gray-900 font-bold text-xl mb-2 dark:text-white">Integrate Autofac with MVVM Light</div>
+<p class="text-gray-700 text-base pb-5 dark:text-gray-300">I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerf...</p>
+<p class="text-sm text-gray-600 absolute items-center right-0 bottom-0 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/07/03</time>
+</p>
 </div>
-
-
-
-
-    
-
-
-<div class="widget-wrap">
-    <h3 class="widget-title">
-        Tag cloud
-    </h3>
-    <div class="widget tagcloud">
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/android" style="font-size: 12px;">android</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/android-studio" style="font-size: 12px;">android-studio</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/autofac" style="font-size: 12px;">autofac</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/client-not-ready-yet-error" style="font-size: 12px;">client-not-ready-yet-error</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/connection-timeout-error" style="font-size: 12px;">connection-timeout-error</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/dependency-injection" style="font-size: 12px;">dependency-injection</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/emulator" style="font-size: 12px;">emulator</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/entity-framework" style="font-size: 12px;">entity-framework</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/git-hub-pages" style="font-size: 12px;">git-hub-pages</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/hosting" style="font-size: 12px;">hosting</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/hugo" style="font-size: 12px;">hugo</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/identity-server" style="font-size: 12px;">identity-server</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/introspection-of-access-token" style="font-size: 12px;">introspection-of-access-token</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/mvvm" style="font-size: 12px;">mvvm</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/mvvm-light" style="font-size: 12px;">mvvm-light</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/uwp" style="font-size: 12px;">uwp</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/visual-studio" style="font-size: 12px;">visual-studio</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/wpf" style="font-size: 12px;">wpf</a>
-        
-        
-        <a href="https://lsimopoulos.github.io/tags/xamarin" style="font-size: 12px;">xamarin</a>
-        
-    </div>
 </div>
-
-
-
-
-
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-
-    
-	</div>
+</a>
 </div>
-
-<footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017
-      Powered by <a href="//gohugo.io">Hugo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
-    </div>
-  </div>
+<div class="hidden lg:block lg:col-span-1">
+<div class=mb-3>
+<form class=widget-search__form role=search method=get action=https://google.com/search>
+<label>
+<input class="w-full p-3 focus:outline-none dark:bg-warmgray-900 dark:text-white placeholder-gray-700 dark:placeholder-gray-300" type=search placeholder=Search... name=q aria-label=Search>
+</label>
+<input class=hidden type=submit value=Search>
+<input type=hidden name=sitesearch value=https://lsimopoulos.github.io/>
+</form>
+</div>
+<div class="bg-white panel mb-3 pb-5 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-3 px-3 dark:text-gray-300 font-bold">Archives</p>
+<div class=mx-4>
+<select class="text-center block mx-auto w-full py-2 px-4 duration-100 bg-white hover:bg-gray-200 text-gray-800 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800" name=archive onchange="location.href=value"><option>Select Archive...</option><option value=https://lsimopoulos.github.io//archives/2017/06>2017/06 (3)
+</option><option value=https://lsimopoulos.github.io//archives/2017/07>2017/07 (5)
+</option><option value=https://lsimopoulos.github.io//archives/2022/01>2022/01 (1)
+</option></select>
+</div>
+</div>
+<div class="bg-white panel mb-3 pb-5 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-5 dark:text-gray-300 font-bold">Categories</p>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/android>Android</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/autofac>Autofac</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/entity-framework>Entity framework</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/hugo>Hugo</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/identity-server>Identity server</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/mssql>Mssql</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/mvvm>Mvvm</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/mvvm-light>Mvvm light</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/uwp>Uwp</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/visual-studio>Visual studio</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/wpf>Wpf</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/xamarin>Xamarin</a>
+</div>
+<div class="bg-white panel mb-3 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-3 pl-3 dark:text-gray-300 font-bold">Tags</p>
+<div class="panel-block p-2">
+<a href=/%20/tags/android>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+android
+</span></a>
+<a href=/%20/tags/android-studio>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+android-studio
+</span></a>
+<a href=/%20/tags/autofac>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+autofac
+</span></a>
+<a href=/%20/tags/client-not-ready-yet-error>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+client-not-ready-yet-error
+</span></a>
+<a href=/%20/tags/connection-timeout-error>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+connection-timeout-error
+</span></a>
+<a href=/%20/tags/dependency-injection>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+dependency-injection
+</span></a>
+<a href=/%20/tags/emulator>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+emulator
+</span></a>
+<a href=/%20/tags/entity-framework>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+entity-framework
+</span></a>
+<a href=/%20/tags/git-hub-pages>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+git-hub-pages
+</span></a>
+<a href=/%20/tags/hosting>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+hosting
+</span></a>
+<a href=/%20/tags/hugo>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+hugo
+</span></a>
+<a href=/%20/tags/identity-server>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+identity-server
+</span></a>
+<a href=/%20/tags/introspection-of-access-token>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+introspection-of-access-token
+</span></a>
+<a href=/%20/tags/mssql>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+mssql
+</span></a>
+<a href=/%20/tags/mvvm>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+mvvm
+</span></a>
+<a href=/%20/tags/mvvm-light>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+mvvm-light
+</span></a>
+<a href=/%20/tags/uwp>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+uwp
+</span></a>
+<a href=/%20/tags/visual-studio>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+visual-studio
+</span></a>
+<a href=/%20/tags/wpf>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+wpf
+</span></a>
+<a href=/%20/tags/xamarin>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+xamarin
+</span></a>
+</div>
+</div>
+<div class="bg-white panel mb-3 pb-5 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-5 dark:text-gray-300 font-bold">Recent Posts</p>
+<div class=mx-6>
+<a href=/post/sql-tips/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">SQL Tips</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2022/01/15</time>
+</p>
+</div>
+</div>
+<a href=/post/mvvm_supervising_controller_pattern/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Supervising controller pattern and MVVM</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/06/26</time>
+</p>
+</div>
+</div>
+<a href=/post/injecting_generic_class_in_autofac/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Injecting classes that inherit from a generic one in Autofac</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/07/16</time>
+</p>
+</div>
+</div>
+<a href=/post/introspection_of_access_token/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Introspection of an access token</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/07/25</time>
+</p>
+</div>
+</div>
+<a href=/post/createguid_not_valid_command_error/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Create GUID: The command is not a valid executable</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/07/15</time>
+</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><footer class="bg-gray-800 text-white p-6">
+<div class="container max-w-screen-xl mr-auto ml-auto">
+<p>&copy; 2022 <a href=https://lsimopoulos.github.io/ class="duration-200 hover:opacity-50">Leonidas Simopoulos's blog</a></p>
+<p>Powered by <a href=https://gohugo.io/ class="duration-200 hover:opacity-50">Hugo</a>, Theme <a href=https://github.com/opera7133/Blonde class="duration-200 hover:opacity-50">Blonde</a>.</p>
+</div>
+<script>var icon=document.getElementById("icon"),icon2=document.getElementById("icon2");document.documentElement.classList.contains("dark")||localStorage.theme==='dark'||!('theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches?(icon.classList.remove("icon-moon"),icon.classList.add("icon-sun"),icon2.classList.remove("icon-moon"),icon2.classList.add("icon-sun"),document.documentElement.classList.add('dark')):document.documentElement.classList.remove('dark');function toggleDarkMode(){document.documentElement.classList.contains('dark')?(icon.classList.remove("icon-sun"),icon.classList.add("icon-moon"),icon2.classList.remove("icon-sun"),icon2.classList.add("icon-moon"),document.documentElement.classList.remove('dark'),localStorage.theme='light'):(icon.classList.remove("icon-moon"),icon.classList.add("icon-sun"),icon2.classList.remove("icon-moon"),icon2.classList.add("icon-sun"),document.documentElement.classList.add('dark'),localStorage.theme='dark')}</script>
 </footer>
-
-
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-61788978-2', 'auto');
-ga('send', 'pageview');
-</script>
-
-<script src="https://lsimopoulos.github.io/fancybox/jquery.fancybox.pack.js"></script>
-<script src="https://lsimopoulos.github.io/js/script.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
-
-<script>hljs.initHighlightingOnLoad();</script>
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']]}
-  });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-
-
-
+</div>
 </body>
 </html>

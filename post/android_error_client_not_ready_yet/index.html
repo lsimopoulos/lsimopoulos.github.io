@@ -1,0 +1,353 @@
+<!doctype html><html lang=en class=dark>
+<head>
+<title>Leonidas Simopoulos's blog | Android: Client not ready yet</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1">
+<link rel=apple-touch-icon sizes=180x180 href=/favicon/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon/favicon-16x16.png>
+<link rel=manifest href=/favicon/site.webmanifest>
+<link rel=mask-icon href=/favicon/safari-pinned-tab.svg color=#5bbad5>
+<link rel="shortcut icon" href=/favicon/favicon.ico>
+<meta name=theme-color content="#ffffff">
+<meta property="og:title" content="Leonidas Simopoulos's blog | Android: Client not ready yet">
+<link rel=stylesheet href="/css/style.min.0815796fd0f9908bb4176d0f087883af95a91d562cd46834ba912ec673e5abf2.css">
+<link href=/css/blonde.min.css rel=stylesheet type=text/css media=print onload="this.media=' all'">
+<meta name=description content="I started developing an android app on my surface but then I decided to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc. I started the Android Studio and got an error dialog that it was warning me that the android sdk root path(that it was declared on the project) is not valid and I was propmpted to verify so the Android Studio points to the actual and correct path.">
+<meta property="og:site_name" content="Leonidas Simopoulos's blog">
+<meta property="og:description" content="I started developing an android app on my surface but then I decided to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc. I started the Android Studio and got an error dialog that it was warning me that the android sdk root path(that it was declared on the project) is not valid and I was propmpted to verify so the Android Studio points to the actual and correct path.">
+<meta property="og:url" content="https://lsimopoulos.github.io/post/android_error_client_not_ready_yet/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:site content>
+<link rel=canonical href=https://lsimopoulos.github.io/post/android_error_client_not_ready_yet/>
+<meta name=twitter:description content="I started developing an android app on my surface but then I decided to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc. I started the Android Studio and got an error dialog that it was warning me that the android sdk root path(that it was declared on the project) is not valid and I was propmpted to verify so the Android Studio points to the actual and correct path.">
+<meta property="article:published_time" content="2017-07-20T22:13:55+02:00">
+<meta property="article:updated_time" content="2017-07-20T22:13:55+02:00">
+<meta property="og:image" content="https://lsimopoulos.github.io/banners/android.jpg">
+<meta property="og:image:url" content="https://lsimopoulos.github.io/banners/android.jpg">
+<link rel=stylesheet href=/css/custom.css>
+<i class="dark hidden"></i>
+</head><body class=font-sans>
+<div class="min-h-screen flex flex-col bg-gray-100 dark:bg-warmgray-800"><div class=bg-gray-800>
+<div class="container max-w-screen-xl mr-auto ml-auto">
+<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+<div class="flex items-center flex-no-shrink bg-gray-800 text-white mr-6">
+<a href=https://lsimopoulos.github.io/><span class="font-semibold text-2xl tracking-tight">Leonidas Simopoulos's blog</span></a>
+</div>
+<div class="flex md:hidden">
+<div class=py-2>
+<button onclick=toggleDarkMode() class="focus:outline-none mr-1" aria-label="Darkmode Toggle Button"><i id=icon class="icon-moon inline-flex align-middle leading-normal text-lg text-white"></i></button>
+<span class=text-white>|</span>
+</div>
+<button id=hamburgerbtn class="flex items-center px-3 py-1 text-white hover:opacity-50" aria-label="Hamburger Button">
+<span class="icon-menu text-2xl"></span>
+</button>
+</div>
+<div class="hidden w-full md:flex md:flex-row sm:items-center md:w-auto" id=mobileMenu>
+<div class="text-sm lg:flex-grow">
+</div>
+<div class=navmenu>
+<a href=/ class="no-underline duration-200 block mt-4 sm:inline-block sm:mt-0 text-white hover:opacity-50 mr-4">
+Home
+</a>
+<a href=/about class="no-underline duration-200 block mt-4 sm:inline-block sm:mt-0 text-white hover:opacity-50 mr-4">
+About
+</a>
+</div>
+<div class="text-white invisible md:visible">
+<span>|</span>
+<button onclick=toggleDarkMode() class=focus:outline-none aria-label="Darkmode Toggle Button"><i id=icon2 class="icon-moon hover:opacity-50 duration-200 inline-flex align-middle leading-normal text-lg ml-2"></i></button>
+</div>
+</div>
+</nav>
+</div>
+</div>
+<style>.active{display:block}</style>
+<script>let hamburger=document.getElementById('hamburgerbtn'),mobileMenu=document.getElementById('mobileMenu');hamburger.addEventListener('click',function(){mobileMenu.classList.toggle('active')})</script>
+<div class="container max-w-screen-xl mx-auto mt-4 flex-grow px-5 lg:px-0" id=content>
+<div class=lg:mx-5>
+<div class="grid grid-cols-3 gap-4">
+<div class="col-span-3 lg:col-span-2 dark:text-white">
+<div class="bg-white dark:bg-warmgray-900 p-5 my-4">
+<h1 class="mb-2 text-4xl font-bold">Android: Client not ready yet</h1>
+<aside id=meta>
+<div>
+<section>
+<h4 id=date><span class="icon-access_time mr-2"></span>2017/07/20
+</h4>
+</section>
+<div id=tags>
+<span class="icon-local_offer mr-1"></span>
+<a href=https://lsimopoulos.github.io/%20tags/android>Android</a> |
+<a href=https://lsimopoulos.github.io/%20tags/client-not-ready-yet-error>Client not ready yet error</a> |
+<a href=https://lsimopoulos.github.io/%20tags/android-studio>Android Studio</a> |
+</div>
+</div>
+</aside>
+<img class=py-4 src=https://lsimopoulos.github.io/banners/android.jpg>
+<div class="prose md:prose-lg lg:prose-xl max-w-none dark:prose-invert mt-5"><p>I started developing an android app on my surface but then I decided to move the code to my stationary pc. I copied the whole source on a USB stick and pasted it on the other pc.
+I started the Android Studio and got an error dialog that it was warning me that the android sdk root path(that it was declared on the project) is not valid and I was propmpted to verify so the Android Studio points to the actual and correct path.
+After that, I built the project successfully and then I ran the app in the emulator.</p>
+<p>I noticed first on the emulator that the app crashed on the deployment</p>
+<p><img src=/images/emulator_crash.jpg alt="emulator crash error"></p>
+<p>and I saw on the run tab on the Android Studio :</p>
+<p><img src=/images/error.JPG alt="Android studio"></p>
+<p>The message &ldquo;Client not ready yet..&rdquo; is not the most indicative.</p>
+<p>#What I tried and it did not work</p>
+<ol>
+<li>
+<p>Restarted the pc.</p>
+</li>
+<li>
+<p>Deleted the app from emulator.</p>
+</li>
+<li>
+<p>I did not add <code>android:exported="true"</code> on the MainActivity due to the fact that it had nested intent and it&rsquo;s exported by default.</p>
+</li>
+<li>
+<p>I Cleaned the project and rebuilt it.</p>
+</li>
+<li>
+<p>Went through AndroidManifest.xml but I did not find any error or &ldquo;strange&rdquo; setting that could explain this erroneous behaviour.</p>
+</li>
+</ol>
+<p><strong>Solution</strong></p>
+<ol>
+<li>I presssed Ctrl + Alt + S to open the settings of the Android Studio.I navigated to Build,Execution,Deployment>Instant Run I disabled the instant run.</li>
+</ol>
+<p><img src=/images/AndroidStudioSettings.JPG alt="Android Studio Settings"></p>
+<ol start=2>
+<li>
+<p>I ran the app and it was deployed successfully on the emulator and was running wihhout any problem.</p>
+</li>
+<li>
+<p>I enabled the Instant Run but i got again the same error.</p>
+</li>
+<li>
+<p>Removed some comments from AndroidManifest.xml so I can trigger a full build. <a href=https://medium.com/google-developers/instant-run-how-does-it-work-294a1633367f>Instant Deploy</a> builds and deploy only the incremental changes.
+It doesn’t reinstall the app, neither restart the app nor restart the Activity.</p>
+</li>
+<li>
+<p>I clicked on the &ldquo;Clean Project&rdquo; and then on &ldquo;Run app&rdquo;. It was working now even with the Instant Run enabled.</p>
+</li>
+</ol>
+<p><strong>Notes</strong></p>
+<p>*I had the same error when I tried to deploy the app on my Samsung S8.</p>
+<p>*Android Studio Version : 2.3.3</p>
+<h2 id=references>References</h2>
+<p>This <a href=https://medium.com/google-developers/instant-run-how-does-it-work-294a1633367f>link</a> is really useful. I learned a lot about Instant Run.</p>
+</div>
+<aside id=meta>
+<hr class=py-2>
+<div id=categories>
+<span class="icon-folder text-xl mr-1"></span>
+<span class="inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-200 justify-center h-8 px-3 text-blue-500 duration-200 hover:text-black dark:bg-warmgray-800"><a href=https://lsimopoulos.github.io/%20categories/android>Android</a></span>
+</div>
+</aside>
+</div>
+<div class="bg-white dark:bg-warmgray-900 p-5 my-4">
+<div class="grid grid-cols-2">
+<div class=col-span-1>
+<a class="previous lg:text-2xl" href=https://lsimopoulos.github.io/post/injecting_generic_class_in_autofac/>
+<div class="transition-colors duration-300 border border-gray-600 hover:border-black h-auto m-3 text-center py-3 lg:py-1">
+<span class=icon-keyboard_arrow_left></span> Injecting classes that inherit from a generic one in Autofac
+</div>
+</a>
+</div>
+<a class="next lg:text-2xl" href=https://lsimopoulos.github.io/post/introspection_of_access_token/>
+<div class="transition-colors duration-300 col-span-1 border border-gray-600 hover:border-black h-auto m-3 text-center py-3 lg:py-1">
+Introspection of an access token <span class=icon-keyboard_arrow_right></span>
+</div>
+</a>
+</div>
+</div>
+<div class="bg-white dark:bg-warmgray-900 p-5 my-4">
+<div class=mb-3>
+</div>
+</div>
+</div>
+<div class="hidden lg:block lg:col-span-1">
+<div class=mb-3>
+<form class=widget-search__form role=search method=get action=https://google.com/search>
+<label>
+<input class="w-full p-3 focus:outline-none dark:bg-warmgray-900 dark:text-white placeholder-gray-700 dark:placeholder-gray-300" type=search placeholder=Search... name=q aria-label=Search>
+</label>
+<input class=hidden type=submit value=Search>
+<input type=hidden name=sitesearch value=https://lsimopoulos.github.io/>
+</form>
+</div>
+<div class="bg-white panel mb-3 pb-5 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-3 px-3 dark:text-gray-300 font-bold">Archives</p>
+<div class=mx-4>
+<select class="text-center block mx-auto w-full py-2 px-4 duration-100 bg-white hover:bg-gray-200 text-gray-800 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800" name=archive onchange="location.href=value"><option>Select Archive...</option><option value=https://lsimopoulos.github.io//archives/2017/06>2017/06 (3)
+</option><option value=https://lsimopoulos.github.io//archives/2017/07>2017/07 (5)
+</option><option value=https://lsimopoulos.github.io//archives/2022/01>2022/01 (1)
+</option></select>
+</div>
+</div>
+<div class="bg-white panel mb-3 pb-5 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-5 dark:text-gray-300 font-bold">Categories</p>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/android>Android</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/autofac>Autofac</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/entity-framework>Entity framework</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/hugo>Hugo</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/identity-server>Identity server</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/mssql>Mssql</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/mvvm>Mvvm</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/mvvm-light>Mvvm light</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/uwp>Uwp</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/visual-studio>Visual studio</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/wpf>Wpf</a>
+<a class="text-center block duration-100 py-2 px-4 mx-4 hover:bg-gray-100 text-gray-800 dark:text-gray-200 dark:hover:bg-warmgray-800" href=https://lsimopoulos.github.io//categories/xamarin>Xamarin</a>
+</div>
+<div class="bg-white panel mb-3 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-3 pl-3 dark:text-gray-300 font-bold">Tags</p>
+<div class="panel-block p-2">
+<a href=/%20/tags/android>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+android
+</span></a>
+<a href=/%20/tags/android-studio>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+android-studio
+</span></a>
+<a href=/%20/tags/autofac>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+autofac
+</span></a>
+<a href=/%20/tags/client-not-ready-yet-error>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+client-not-ready-yet-error
+</span></a>
+<a href=/%20/tags/connection-timeout-error>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+connection-timeout-error
+</span></a>
+<a href=/%20/tags/dependency-injection>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+dependency-injection
+</span></a>
+<a href=/%20/tags/emulator>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+emulator
+</span></a>
+<a href=/%20/tags/entity-framework>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+entity-framework
+</span></a>
+<a href=/%20/tags/git-hub-pages>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+git-hub-pages
+</span></a>
+<a href=/%20/tags/hosting>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+hosting
+</span></a>
+<a href=/%20/tags/hugo>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+hugo
+</span></a>
+<a href=/%20/tags/identity-server>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+identity-server
+</span></a>
+<a href=/%20/tags/introspection-of-access-token>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+introspection-of-access-token
+</span></a>
+<a href=/%20/tags/mssql>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+mssql
+</span></a>
+<a href=/%20/tags/mvvm>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+mvvm
+</span></a>
+<a href=/%20/tags/mvvm-light>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+mvvm-light
+</span></a>
+<a href=/%20/tags/uwp>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+uwp
+</span></a>
+<a href=/%20/tags/visual-studio>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+visual-studio
+</span></a>
+<a href=/%20/tags/wpf>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+wpf
+</span></a>
+<a href=/%20/tags/xamarin>
+<span class="duration-100 inline-flex py-2 leading-4 mr-2 mb-2 content-center bg-gray-100 justify-center h-8 px-3 text-blue-500 hover:text-blue-900 dark:bg-warmgray-800">
+xamarin
+</span></a>
+</div>
+</div>
+<div class="bg-white panel mb-3 pb-5 dark:bg-warmgray-900">
+<p class="text-xl text-center text-gray-700 py-5 dark:text-gray-300 font-bold">Recent Posts</p>
+<div class=mx-6>
+<a href=/post/android_emulator_connection_timeout/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Android: connection timeout error on emulator</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/06/24</time>
+</p>
+</div>
+</div>
+<a href=/post/injecting_generic_class_in_autofac/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Injecting classes that inherit from a generic one in Autofac</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/07/16</time>
+</p>
+</div>
+</div>
+<a href=/post/sql-tips/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">SQL Tips</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2022/01/15</time>
+</p>
+</div>
+</div>
+<a href=/post/integrating_autofac_with_mvvmlight/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Integrate Autofac with MVVM Light</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/07/03</time>
+</p>
+</div>
+</div>
+<a href=/post/mvvm_supervising_controller_pattern/>
+<div class="w-full block mt-3 bg-white hover:bg-gray-100 duration-200 dark:bg-warmgray-900 dark:text-gray-200 dark:hover:bg-warmgray-800">
+<div class=px-2>
+<div class="text-gray-900 font-bold text-xl dark:text-white">Supervising controller pattern and MVVM</div>
+<p class="text-sm text-gray-600 flex items-center pb-1 dark:text-gray-400">
+<time><span class="icon-access_time mr-1"></span>2017/06/26</time>
+</p>
+</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><footer class="bg-gray-800 text-white p-6">
+<div class="container max-w-screen-xl mr-auto ml-auto">
+<p>&copy; 2022 <a href=https://lsimopoulos.github.io/ class="duration-200 hover:opacity-50">Leonidas Simopoulos's blog</a></p>
+<p>Powered by <a href=https://gohugo.io/ class="duration-200 hover:opacity-50">Hugo</a>, Theme <a href=https://github.com/opera7133/Blonde class="duration-200 hover:opacity-50">Blonde</a>.</p>
+</div>
+<script>var icon=document.getElementById("icon"),icon2=document.getElementById("icon2");document.documentElement.classList.contains("dark")||localStorage.theme==='dark'||!('theme'in localStorage)&&window.matchMedia('(prefers-color-scheme: dark)').matches?(icon.classList.remove("icon-moon"),icon.classList.add("icon-sun"),icon2.classList.remove("icon-moon"),icon2.classList.add("icon-sun"),document.documentElement.classList.add('dark')):document.documentElement.classList.remove('dark');function toggleDarkMode(){document.documentElement.classList.contains('dark')?(icon.classList.remove("icon-sun"),icon.classList.add("icon-moon"),icon2.classList.remove("icon-sun"),icon2.classList.add("icon-moon"),document.documentElement.classList.remove('dark'),localStorage.theme='light'):(icon.classList.remove("icon-moon"),icon.classList.add("icon-sun"),icon2.classList.remove("icon-moon"),icon2.classList.add("icon-sun"),document.documentElement.classList.add('dark'),localStorage.theme='dark')}</script>
+</footer>
+</div>
+</body>
+</html>

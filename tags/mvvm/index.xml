@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Mvvm on Leonidas Simopoulos&#39;s blog</title>
-    <link>https://lsimopoulos.github.io/tags/mvvm/</link>
-    <description>Recent content in Mvvm on Leonidas Simopoulos&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Mon, 26 Jun 2017 20:11:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://lsimopoulos.github.io/tags/mvvm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Supervising controller pattern and MVVM</title>
-      <link>https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/</link>
-      <pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate>
-      
-      <guid>https://lsimopoulos.github.io/2017/06/26/supervising-controller-pattern-and-mvvm/</guid>
-      <description>I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &amp;ldquo;clean code behind&amp;rdquo; when it&amp;rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
-When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mvvm on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/mvvm/</link><description>Recent content in mvvm on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 26 Jun 2017 20:11:26 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/mvvm/index.xml" rel="self" type="application/rss+xml"/><item><title>Supervising controller pattern and MVVM</title><link>https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/</link><pubDate>Mon, 26 Jun 2017 20:11:26 +0200</pubDate><guid>https://lsimopoulos.github.io/post/mvvm_supervising_controller_pattern/</guid><description>I have been familiar with MVVM framework since the era of Silverlight. I am always trying to follow the approach of &amp;ldquo;clean code behind&amp;rdquo; when it&amp;rsquo;s achievable. One of the big benefits of MVVM is that ,except of the separation of concern, you can make unit tests covering all the logic in the ViewModels.
+When using the MVVM pattern sometimes you encounter some challenges. Some functions need to be defined on the code behind which are tight coupled with GUI and include some logic.</description></item></channel></rss>

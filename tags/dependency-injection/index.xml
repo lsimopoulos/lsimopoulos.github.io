@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Dependency Injection on Leonidas Simopoulos&#39;s blog</title>
-    <link>https://lsimopoulos.github.io/tags/dependency-injection/</link>
-    <description>Recent content in Dependency Injection on Leonidas Simopoulos&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Mon, 03 Jul 2017 20:11:26 +0200</lastBuildDate>
-    
-	<atom:link href="https://lsimopoulos.github.io/tags/dependency-injection/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Integrate Autofac with MVVM Light</title>
-      <link>https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/</link>
-      <pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate>
-      
-      <guid>https://lsimopoulos.github.io/2017/07/03/integrate-autofac-with-mvvm-light/</guid>
-      <description>I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dependency injection on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/dependency-injection/</link><description>Recent content in dependency injection on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 03 Jul 2017 20:11:26 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/dependency-injection/index.xml" rel="self" type="application/rss+xml"/><item><title>Integrate Autofac with MVVM Light</title><link>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</link><pubDate>Mon, 03 Jul 2017 20:11:26 +0200</pubDate><guid>https://lsimopoulos.github.io/post/integrating_autofac_with_mvvmlight/</guid><description>I am going to show how to integrate Autofac with the Mvvm Light easy and quickly for most simple scenarios. Autofac is very powerful IOC Container and MVVM Light is one of the best MVVM frameworks.
 1.Create a new project from mvvm light templates in the visual studio
 2.Install Autofac and Autofac.Extras.CommonServiceLocator as NuGet packages.
-3.Expand the folder ViewModel on the SolutionExplorer in the Visual Studio and open the file ViewModelLocator.</description>
-    </item>
-    
-  </channel>
-</rss>
+3.Expand the folder ViewModel on the SolutionExplorer in the Visual Studio and open the file ViewModelLocator.</description></item></channel></rss>
