@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MSSQL on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/categories/mssql/</link><description>Recent content in MSSQL on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 15 Jan 2022 10:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/categories/mssql/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL Tips</title><link>https://lsimopoulos.github.io/post/sql-tips/</link><pubDate>Sat, 15 Jan 2022 10:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/sql-tips/</guid><description> Check if a column contains a string SELECT [DatabaseId]
-,[Category]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MSSQL on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/categories/mssql/</link><description>Recent content in MSSQL on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 15 Jan 2022 10:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/categories/mssql/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL Tips</title><link>https://lsimopoulos.github.io/post/sql-tips/</link><pubDate>Sat, 15 Jan 2022 10:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/sql-tips/</guid><description>Check if a column contains a string SELECT [DatabaseId],[Category]
 FROM [dbo].[SomeTable]
 Where Category LIKE '%theString%'
 Run a sql command multiple times INSERT INTO [dbo].[SomeTable] (
@@ -9,4 +8,6 @@ VALUES
 (
 'some type',' some message', '2022-04-27 09:51:22.0000000 +01:00'
 )
-GO 10000000</description></item></channel></rss>
+GO 10000000
+Select all rows where a column value is not empty and not null SELECT *
+FROM [dbo].</description></item></channel></rss>
