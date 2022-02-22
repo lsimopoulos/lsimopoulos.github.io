@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>HttpClient on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/httpclient/</link><description>Recent content in HttpClient on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Feb 2022 13:33:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/httpclient/index.xml" rel="self" type="application/rss+xml"/><item><title>MessagePack and HttpClient</title><link>https://lsimopoulos.github.io/post/messagepack_httpclient/</link><pubDate>Tue, 22 Feb 2022 13:33:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/messagepack_httpclient/</guid><description>Controller method public async Task&amp;lt;IActionResult&amp;gt; SomeApiMethod()
+{
+try
+{
+using var ms = new MemoryStream();
+await Request.Body.CopyToAsync(ms);
+var someClass = MessagePackSerializer.Deserialize&amp;lt;SomeClass&amp;gt;(ms.ToArray());
+//do something
+} catch (Exception e)
+{
+return BadRequest(e.Message);
+}
+return Ok();
+}
+HttpClient posts a class using MessagePack for serialization using var scope = serviceProvider.CreateScope();
+var httpClientFactory = scope.ServiceProvider.GetService&amp;lt;IHttpClientFactory&amp;gt;();
+var httpClient = httpClientFactory.CreateClient();
+var someClass = new SomeClass();
+var data = MessagePackSerializer.Serialize(someClass);
+var byteArrayContent = new ByteArrayContent(data);
+await httpClient.</description></item></channel></rss>

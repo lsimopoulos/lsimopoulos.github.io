@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/</link><description>Recent content on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 16 Feb 2022 09:00:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Let's encrypt and certbot</title><link>https://lsimopoulos.github.io/post/letsnecrypt_certbot/</link><pubDate>Wed, 16 Feb 2022 09:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/letsnecrypt_certbot/</guid><description>Obtain certificate from Let&amp;rsquo;s Encrypt using Certbot in STANDALONE mode As one line
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/</link><description>Recent content on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 22 Feb 2022 13:33:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>MessagePack and HttpClient</title><link>https://lsimopoulos.github.io/post/messagepack_httpclient/</link><pubDate>Tue, 22 Feb 2022 13:33:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/messagepack_httpclient/</guid><description>Controller method public async Task&amp;lt;IActionResult&amp;gt; SomeApiMethod()
+{
+try
+{
+using var ms = new MemoryStream();
+await Request.Body.CopyToAsync(ms);
+var someClass = MessagePackSerializer.Deserialize&amp;lt;SomeClass&amp;gt;(ms.ToArray());
+//do something
+} catch (Exception e)
+{
+return BadRequest(e.Message);
+}
+return Ok();
+}
+HttpClient posts a class using MessagePack for serialization using var scope = serviceProvider.CreateScope();
+var httpClientFactory = scope.ServiceProvider.GetService&amp;lt;IHttpClientFactory&amp;gt;();
+var httpClient = httpClientFactory.CreateClient();
+var someClass = new SomeClass();
+var data = MessagePackSerializer.Serialize(someClass);
+var byteArrayContent = new ByteArrayContent(data);
+await httpClient.</description></item><item><title>Let's encrypt and certbot</title><link>https://lsimopoulos.github.io/post/letsnecrypt_certbot/</link><pubDate>Wed, 16 Feb 2022 09:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/letsnecrypt_certbot/</guid><description>Obtain certificate from Let&amp;rsquo;s Encrypt using Certbot in STANDALONE mode As one line
 sudo docker run -it --rm -p 443:443 -p 80:80 -v /home/user/someFolder/etc/letsencrypt:/etc/letsencrypt -v /home/user/someFolder/var/lib/letsencrypt:/var/lib/letsencrypt -v /home/user/someFolder/var/log/letsencrypt:/var/log/letsencrypt certbot/certbot certonly --email your.email@email.com --agree-tos --no-eff-email --rsa-key-size 4096 --authenticator standalone -d yourDnsName
 or with line breaks
 sudo docker run -it --rm -p 443:443 -p 80:80 \
