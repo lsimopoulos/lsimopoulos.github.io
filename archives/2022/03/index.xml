@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2022/03 on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/archives/2022/03/</link><description>Recent content in 2022/03 on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://lsimopoulos.github.io/archives/2022/03/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure an unique Index in entity framework core</title><link>https://lsimopoulos.github.io/post/entity_core_index/</link><pubDate>Tue, 15 Mar 2022 18:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_index/</guid><description>1.Attributes
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2022/03 on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/archives/2022/03/</link><description>Recent content in 2022/03 on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://lsimopoulos.github.io/archives/2022/03/index.xml" rel="self" type="application/rss+xml"/><item><title>DbArithmeticExpression arguments must have a numeric common type</title><link>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</link><pubDate>Wed, 30 Mar 2022 22:50:23 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</guid><description> Error System.ArgumentException: DbArithmeticExpression arguments must have a numeric common type.
+Code caused the exception ctx.Incidents
+.Where(x =&amp;gt; (DateTime.Now - x.Time).Days == 0)
+.OrderByDescending(d =&amp;gt; d.Time)
+.Take(50)
+.ToList();
+Solution: ctx.Incidents
+.Where(x =&amp;gt; DbFunctions.DiffDays(DateTime.Now ,x.Time) == 0)
+.OrderByDescending(d =&amp;gt; d.Time)
+.Take(50)
+.ToList();</description></item><item><title>Configure an unique Index in entity framework core</title><link>https://lsimopoulos.github.io/post/entity_core_index/</link><pubDate>Tue, 15 Mar 2022 18:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_index/</guid><description>1.Attributes
 [Index(nameof(Name),nameof(Uuid), IsUnique = true, Name = &amp;quot;SomeIndex&amp;quot;)]
 public class Server
 {

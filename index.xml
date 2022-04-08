@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/</link><description>Recent content on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 15 Mar 2022 18:00:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure an unique Index in entity framework core</title><link>https://lsimopoulos.github.io/post/entity_core_index/</link><pubDate>Tue, 15 Mar 2022 18:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_index/</guid><description>1.Attributes
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/</link><description>Recent content on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Apr 2022 12:10:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Nginx error : could not build the server_names_hash, you should increase server_names_hash_bucket_size</title><link>https://lsimopoulos.github.io/post/nginx_server_names_hash/</link><pubDate>Fri, 08 Apr 2022 12:10:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/nginx_server_names_hash/</guid><description> Error: [emerg]could not build the server_names_hash, you should increase server_names_hash_bucket_size
+Solution: In nginx.conf :
+http {
+include /etc/nginx/mime.types;
+default_type application/octet-stream;
+# --- Add these two lines --- server_names_hash_bucket_size 128;
+server_names_hash_max_size 1024;
+.
+. }</description></item><item><title>Android: actionbar back button is showing in preview not on mobile</title><link>https://lsimopoulos.github.io/post/android_actionbar_back_not_showing/</link><pubDate>Fri, 01 Apr 2022 20:04:12 +0200</pubDate><guid>https://lsimopoulos.github.io/post/android_actionbar_back_not_showing/</guid><description> Solution &amp;lt;android.support.v7.widget.Toolbar
+android:id=&amp;quot;@+id/toolbarId&amp;quot;
+android:layout_width=&amp;quot;match_parent&amp;quot;
+android:layout_height=&amp;quot;?attr/actionBarSize&amp;quot;
+android:focusable=&amp;quot;true&amp;quot;
+android:focusableInTouchMode=&amp;quot;true&amp;quot;
+android:theme=&amp;quot;@style/ToolBarStyle&amp;quot;
+app:navigationIcon=&amp;quot;?attr/homeAsUpIndicator&amp;quot; /&amp;gt;
+&amp;lt;style name=&amp;quot;ToolBarStyle&amp;quot; parent=&amp;quot;Theme.AppCompat.Light.NoActionBar&amp;quot;&amp;gt;
+&amp;lt;item name=&amp;quot;colorControlNormal&amp;quot;&amp;gt;@android:color/white&amp;lt;/item&amp;gt;
+&amp;lt;/style&amp;gt;</description></item><item><title>DbArithmeticExpression arguments must have a numeric common type</title><link>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</link><pubDate>Wed, 30 Mar 2022 22:50:23 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</guid><description> Error System.ArgumentException: DbArithmeticExpression arguments must have a numeric common type.
+Code caused the exception ctx.Incidents
+.Where(x =&amp;gt; (DateTime.Now - x.Time).Days == 0)
+.OrderByDescending(d =&amp;gt; d.Time)
+.Take(50)
+.ToList();
+Solution: ctx.Incidents
+.Where(x =&amp;gt; DbFunctions.DiffDays(DateTime.Now ,x.Time) == 0)
+.OrderByDescending(d =&amp;gt; d.Time)
+.Take(50)
+.ToList();</description></item><item><title>Configure an unique Index in entity framework core</title><link>https://lsimopoulos.github.io/post/entity_core_index/</link><pubDate>Tue, 15 Mar 2022 18:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_index/</guid><description>1.Attributes
 [Index(nameof(Name),nameof(Uuid), IsUnique = true, Name = &amp;quot;SomeIndex&amp;quot;)]
 public class Server
 {

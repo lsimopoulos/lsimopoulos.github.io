@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/nginx/</link><description>Recent content in Nginx on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 08 Apr 2022 12:10:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml"/><item><title>Nginx error : could not build the server_names_hash, you should increase server_names_hash_bucket_size</title><link>https://lsimopoulos.github.io/post/nginx_server_names_hash/</link><pubDate>Fri, 08 Apr 2022 12:10:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/nginx_server_names_hash/</guid><description> Error: [emerg]could not build the server_names_hash, you should increase server_names_hash_bucket_size
+Solution: In nginx.conf :
+http {
+include /etc/nginx/mime.types;
+default_type application/octet-stream;
+# --- Add these two lines --- server_names_hash_bucket_size 128;
+server_names_hash_max_size 1024;
+.
+. }</description></item></channel></rss>
