@@ -11,8 +11,7 @@ var someClass = MessagePackSerializer.Deserialize&amp;lt;SomeClass&amp;gt;(ms.To
 return BadRequest(e.Message);
 }
 return Ok();
-}
-HttpClient posts a class using MessagePack for serialization using var scope = serviceProvider.CreateScope();
+} HttpClient posts a class using MessagePack for serialization using var scope = serviceProvider.CreateScope();
 var httpClientFactory = scope.ServiceProvider.GetService&amp;lt;IHttpClientFactory&amp;gt;();
 var httpClient = httpClientFactory.CreateClient();
 var someClass = new SomeClass();

@@ -10,8 +10,7 @@ public class Instance
 {
 public int Id { get; set; }
 public string Name { get; set; }
-}
-Modify the ApplicationUser class: public class ApplicationUser : IdentityUser
+} Modify the ApplicationUser class: public class ApplicationUser : IdentityUser
 {
 public async Task&amp;lt;ClaimsIdentity&amp;gt; GenerateUserIdentityAsync(UserManager&amp;lt;ApplicationUser&amp;gt; manager)
 {

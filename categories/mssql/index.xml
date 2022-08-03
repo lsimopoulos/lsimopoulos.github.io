@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MSSQL on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/categories/mssql/</link><description>Recent content in MSSQL on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 15 Jan 2022 10:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/categories/mssql/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL Tips</title><link>https://lsimopoulos.github.io/post/sql-tips/</link><pubDate>Sat, 15 Jan 2022 10:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/sql-tips/</guid><description>Check if a column contains a string SELECT [DatabaseId],[Category]
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MSSQL on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/categories/mssql/</link><description>Recent content in MSSQL on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 20 May 2022 20:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/categories/mssql/index.xml" rel="self" type="application/rss+xml"/><item><title>SQL installation error on linux : GLIBC_2.27 not found</title><link>https://lsimopoulos.github.io/post/sql_linux_glibc/</link><pubDate>Fri, 20 May 2022 20:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/sql_linux_glibc/</guid><description> Error /opt/mssql/bin/sqlservr: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.27&amp;#39; not found (required by /opt/mssql/bin/sqlservr)
+Initial setup of Microsoft SQL Server failed. Please consult the ERRORLOG
+in /var/opt/mssql/log for more information. Solution sudo apt-get install mssql-server=15.0.4023.6-2 sudo systemctl start mssql-server</description></item><item><title>SQL Tips</title><link>https://lsimopoulos.github.io/post/sql-tips/</link><pubDate>Sat, 15 Jan 2022 10:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/sql-tips/</guid><description>Check if a column contains a string SELECT [DatabaseId],[Category]
 FROM [dbo].[SomeTable]
-Where Category LIKE '%theString%'
-Run a sql command multiple times INSERT INTO [dbo].[SomeTable] (
+Where Category LIKE &amp;#39;%theString%&amp;#39; Run a sql command multiple times INSERT INTO [dbo].[SomeTable] (
 Type, Message, Time
 )
 VALUES
 (
-'some type',' some message', '2022-04-27 09:51:22.0000000 +01:00'
+&amp;#39;some type&amp;#39;,&amp;#39; some message&amp;#39;, &amp;#39;2022-04-27 09:51:22.0000000 +01:00&amp;#39;
 )
-GO 10000000
-Select all rows where a column value is not empty and not null SELECT *
-FROM [dbo].</description></item></channel></rss>
+GO 10000000 Select all rows where a column value is not empty and not null SELECT *
+FROM [dbo].[SomeTable]
+WHERE [TextColumnName]!=&amp;#39;&amp;#39; AND [TextColumnName] IS NOT NULL Select all records where a column value occurs more than once SELECT SomeColumn, COUNT(*) FROM [dbo].</description></item></channel></rss>

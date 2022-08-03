@@ -1,27 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>entity framework core on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/entity-framework-core/</link><description>Recent content in entity framework core on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 30 Mar 2022 22:50:23 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/entity-framework-core/index.xml" rel="self" type="application/rss+xml"/><item><title>DbArithmeticExpression arguments must have a numeric common type</title><link>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</link><pubDate>Wed, 30 Mar 2022 22:50:23 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</guid><description> Error System.ArgumentException: DbArithmeticExpression arguments must have a numeric common type.
-Code caused the exception ctx.Incidents
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>entity framework core on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/entity-framework-core/</link><description>Recent content in entity framework core on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 30 May 2022 18:00:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/entity-framework-core/index.xml" rel="self" type="application/rss+xml"/><item><title>DbUpdateConcurrencyException when updating an entity</title><link>https://lsimopoulos.github.io/post/entity_core_dbupdateconcurrencyexception/</link><pubDate>Mon, 30 May 2022 18:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_dbupdateconcurrencyexception/</guid><description>Error Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: &amp;#39;The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&amp;#39; Code before foreach (var entity in entities)
+{
+ctx.Entry(entity).State = EntityState.Modified;
+}
+ctx.SaveChanges(); The problem was that some of the entities, that were residing in memory, were modified and saved in the database while their copy in memory were not updated.</description></item><item><title>DbArithmeticExpression arguments must have a numeric common type</title><link>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</link><pubDate>Wed, 30 Mar 2022 22:50:23 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_dbarithmeticexpression-/</guid><description> Error System.ArgumentException: DbArithmeticExpression arguments must have a numeric common type. Code caused the exception ctx.Incidents
 .Where(x =&amp;gt; (DateTime.Now - x.Time).Days == 0)
 .OrderByDescending(d =&amp;gt; d.Time)
 .Take(50)
-.ToList();
-Solution: ctx.Incidents
+.ToList(); Solution: ctx.Incidents
 .Where(x =&amp;gt; DbFunctions.DiffDays(DateTime.Now ,x.Time) == 0)
 .OrderByDescending(d =&amp;gt; d.Time)
 .Take(50)
 .ToList();</description></item><item><title>Configure an unique Index in entity framework core</title><link>https://lsimopoulos.github.io/post/entity_core_index/</link><pubDate>Tue, 15 Mar 2022 18:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_index/</guid><description>1.Attributes
-[Index(nameof(Name),nameof(Uuid), IsUnique = true, Name = &amp;quot;SomeIndex&amp;quot;)]
+[Index(nameof(Name),nameof(Uuid), IsUnique = true, Name = &amp;#34;SomeIndex&amp;#34;)]
 public class Server
 {
 public int Id { get; set; }
 public string Name { get; set; }
 public string SomeUid { get; set; }
-}
-2.Fluent Api
+} 2.Fluent Api
 In the ApplicationDbContext override the method OnModelCreating and add the following code: protected override void OnModelCreating(DbModelBuilder modelBuilder)
 {
 modelBuilder.Entity&amp;lt;Server&amp;gt;(entity =&amp;gt;
 entity
 .HasIndex(i =&amp;gt; new {i.Name, i.SomeUid})
 .IsUnique()
-.HasName(&amp;quot;SomeIndex&amp;quot;));
+.HasName(&amp;#34;SomeIndex&amp;#34;));
 }</description></item></channel></rss>
