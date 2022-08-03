@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Azure on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/azure/</link><description>Recent content in Azure on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 20 Jun 2022 20:43:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/azure/index.xml" rel="self" type="application/rss+xml"/><item><title>Azure Ubuntu vm: downgrade linux kernel</title><link>https://lsimopoulos.github.io/post/azure_ubuntuvm_downgrade_linux_kernel/</link><pubDate>Mon, 20 Jun 2022 20:43:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/azure_ubuntuvm_downgrade_linux_kernel/</guid><description>When moving vms on different regions it may occur that the current linux kernel version of Azure Ubuntu vm is not supported.
+The list of supported ubuntu kernel verions
+How to find the current installed kernel version:
+uname -r In my case i had installed the linux kernel version : 5.13.0-1021-azure.
+The commands for downgrade and removal of the other version:
+sudo apt install linux-image-5.4.0-1058-azure linux-tools-5.4.0-1058-azure linux-cloud-tools-5.4.0-1058-azure linux-headers-5.4.0-1058-azure linux-modules-5.4.0-1058-azure linux-modules-extra-5.4.0-1058-azure
+sudo apt remove linux-headers-5.</description></item></channel></rss>

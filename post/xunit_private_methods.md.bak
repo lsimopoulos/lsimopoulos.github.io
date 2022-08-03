@@ -1,0 +1,29 @@
++++
+date = "2022-04-30T20:47:00+02:00"
+archives = ["2022/01"]
+tags = ["Xunit"]
+categories = ["Xunit"]
+description = "Xunit: Testing private static methods"
+title = "Xunit and private static methods"
+author = "Leonidas Simopoulos"
+image = "banners/xunit.png"
++++
+
+
+* ##  Code
+
+It is not recommended to test private methods, because they should be tested indirectly through the public method calling them or make them internal(InternalsVisibleTo).
+In case there is the need for doing so then here is an example :
+
+```
+[Theory]
+[InlineData(new byte[] {0, 1, 23, 86, 95, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, "1599501168")]    
+public void DoSomethingWithByteArray( byte[] data,  string expectNumber)
+{           
+  var byteArrayHelperInstance = new PrivateType(typeof(ByteArrayHelper));
+  object[] parameters = { data,17}; //with 2 agrs
+or  object[] parameters = { data};    //with 1 arg       
+  var customId = (string)byteArrayHelperInstance.InvokeStatic("GetCustomId", parameters);
+  Assert.Equal(expectNumber, customId.Trim());
+}
+```

@@ -1,0 +1,57 @@
++++
+date = "2022-05-30T18:00:00+02:00"
+archives = ["2022/05"]
+categories = ["Entity Framework Core"]
+tags = ["entity framework core"]
+title = "DbUpdateConcurrencyException when updating an entity"
+author = "Leonidas Simopoulos"
+image = "banners/entity-framework.png"
++++
+
+
+*  ### Error ###
+```
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: 'The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.'
+```
+
+
+* ### Code before ####
+
+```
+  foreach (var entity in entities)
+  {
+     ctx.Entry(entity).State = EntityState.Modified;
+  }
+  ctx.SaveChanges();
+
+```
+
+The problem was that some of entities, that were residing in memory, were  modified and saved in database while their "copy in memory were not the updated.When savechanges trigerred there was mismatch of rowversion therefore the DbUpdateConcurrencyException.
+
+* ### Solution ###
+
+1.
+
+```
+ctx.Entities.Where(x => x.Id == entity.Id).Update(x => new Entity()
+            {
+                SomeProperty = entity.SomeProperty,
+                SomeProperty1 = entity.SomeProperty1
+            });
+
+```
+
+2. 
+
+```
+ foreach (var entity in entities)
+ {
+    var dbentity = ctx.Entities.Where(x => x.Id == entity.Id).FirstOrDefault();
+	//the property you want to update
+    if (dbentity.SomeIndex != entity.SomeIndex)
+    {
+	  dbunit.SomeIndex = entity.SomeIndex;
+    }
+ }
+ ctx.SaveChanges();
+```
