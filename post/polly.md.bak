@@ -3,8 +3,8 @@ date = "2022-07-03T22:37:00+02:00"
 archives = ["2022/07"]
 tags = ["Polly"]
 categories = ["Polly"]
-description = "IHttpClientfactory  with Polly"
-title = "IHttpClientfactory  with Polly"
+description = "IHttpClientFactory   with Polly"
+title = "IHttpClientFactory   with Polly"
 author = "Leonidas Simopoulos"
 image = "banners/polly.jpeg"
 +++
@@ -16,7 +16,7 @@ image = "banners/polly.jpeg"
 ```
 
 ### Example ####
- In this example **IHttpClientfactory** is used for:  
+ In this example **IHttpClientFactory ** is used for:  
 1. configuration of HttpClients, 
 2. setting the Bearer token if available
 3. ignoring ssl validation errors for self signed certificates
