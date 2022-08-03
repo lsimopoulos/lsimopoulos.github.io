@@ -10,10 +10,10 @@ image = "banners/polly.jpeg"
 +++
 
 
-* ##  Code  ## 
-```
+
+
 [Polly](http://www.thepollyproject.org/) is a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
-```
+
 
 ### Example ####
  In this example **IHttpClientFactory ** is used for:  
@@ -26,6 +26,7 @@ image = "banners/polly.jpeg"
 2. retry 5 times by defining how long to wait before each retry
 3. setting cirbuitbreaker is activated after 6 exceptions and duration of break is 30 seconds.
 
+* ##  Code  ## 
 
 Startup.cs
 ```
