@@ -1,0 +1,66 @@
++++
+date = "2022-07-03T22:37:00+02:00"
+archives = ["2022/07"]
+tags = ["Polly"]
+categories = ["Polly"]
+description = "IHttpClientfactory  with Polly"
+title = "IHttpClientfactory  with Polly"
+author = "Leonidas Simopoulos"
+image = "banners/polly.jpeg"
++++
+
+
+* ##  Code  ## 
+```
+[Polly](http://www.thepollyproject.org/) is a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
+```
+
+### Example ####
+ In this example **IHttpClientfactory** is used for:  
+1. configuration of HttpClients, 
+2. setting the Bearer token if available
+3. ignoring ssl validation errors for self signed certificates
+
+**Polly** is used for:
+1. setting the timeout policy
+2. retry 5 times by defining how long to wait before each retry
+3. setting cirbuitbreaker is activated after 6 exceptions and duration of break is 30 seconds.
+
+
+Startup.cs
+```
+services.AddHttpClient("Default", x =>
+                {
+					//Setting bearer token
+                    x.SetBearerToken(ServiceInfo.AccessToken);
+                    x.DefaultRequestHeaders.Add("Accept", "application/json");
+                })
+                .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+                {
+					//skip validation for ssl cets (self signed) - NOT FOR PRODUCTION
+                    ServerCertificateCustomValidationCallback =
+                        (httpRequestMessage, cert, cetChain, policyErrors) => true
+                })
+				//Setting timout policy
+                .AddPolicyHandler(Policy.TimeoutAsync<HttpResponseMessage>(180))
+				//5 retries
+                .AddTransientHttpErrorPolicy(builder =>
+                    builder.WaitAndRetryAsync(new[]
+                        {
+                            TimeSpan.FromSeconds(1),
+                            TimeSpan.FromSeconds(5),
+                            TimeSpan.FromSeconds(10),
+                            TimeSpan.FromSeconds(15),
+                            TimeSpan.FromSeconds(20)
+                        },
+                        onRetry: (result, span, retryCount, ctx)
+                            => Log.Warning($"{DateTime.Now}:The request failed.Retrying attempt :({retryCount})")))
+				//CircuitBreaked to be activated after 5 exceptions and is active for 30 secs
+                .AddTransientHttpErrorPolicy(builder => builder.CircuitBreakerAsync(6, TimeSpan.FromSeconds(30),
+                    onBreak: (result, span, ctx) =>
+
+                        Log.Warning($"{DateTime.Now}:The circuitBreaker is activated"),
+					//resetting the circuibreaker
+                    onReset: delegate (Context context) { Log.Warning("The circuitBreaker is reset"); })
+                );
+```
