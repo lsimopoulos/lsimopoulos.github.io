@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SignalR on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/signalr/</link><description>Recent content in SignalR on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 17 Jul 2022 23:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/signalr/index.xml" rel="self" type="application/rss+xml"/><item><title>Nginx and SignalR:This endpoint is only for web-socket requests' when status code '101' was expected</title><link>https://lsimopoulos.github.io/post/signalr_nginx_error/</link><pubDate>Sun, 17 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/signalr_nginx_error/</guid><description>Error The server returned status code &amp;#39;200 This endpoint is only for web-socket requests&amp;#39; when status code &amp;#39;101&amp;#39; was expected or
+The server returned status code &amp;#39;400 This endpoint is only for web-socket requests&amp;#39; when status code &amp;#39;101&amp;#39; was expected Cause and soluion location ~ ^/server(.*)$ {
+proxy_ssl_server_name on;
+proxy_ssl_session_reuse off;
+proxy_ssl_verify off;
+#the response is sent to the client synchronously.
+proxy_buffering off;
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+set $url https://serveraddress$1$is_args$args;
+proxy_pass $url;
+--&amp;gt; location /server/signalr {
+# Configure WebSockets
+proxy_pass https://serveraddress/sr;
+# Configuration for WebSockets
+proxy_set_header Upgrade $http_upgrade;
+proxy_set_header Connection $connection_upgrade;
+proxy_cache off;
+# WebSockets were implemented after http/1.</description></item><item><title>SignalR:Failed connection handshake</title><link>https://lsimopoulos.github.io/post/signalr_handshake_error/</link><pubDate>Wed, 13 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/signalr_handshake_error/</guid><description>Error Error : [Debug] Microsoft.AspNetCore.SignalR.HubConnectionContext Failed connection handshake.
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter &amp;#39;delay&amp;#39;)
+at System.Threading.CancellationTokenSource.CancelAfter(TimeSpan delay)
+at Microsoft.AspNetCore.SignalR.HubConnectionContext.HandshakeAsync(TimeSpan timeout, IReadOnlyList`1 supportedProtocols, IHubProtocolResolver protocolResolver, IUserIdProvider userIdProvider, Boolean enableDetailedErrors) Cause services.AddSignalR(options =&amp;gt;
+{
+options.EnableDetailedErrors = true;
+----&amp;gt; options.HandshakeTimeout = TimeSpan.MaxValue;
+})
+.AddMessagePackProtocol(); In my case due to network latency I had set HandshakeTimeout to TimeSpan.MaxValue, which caused the error.</description></item></channel></rss>

@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/post/</link><description>Recent content in Posts on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 10 Jul 2022 23:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Use Watchtower to update automatically the running docker containers</title><link>https://lsimopoulos.github.io/post/watchtower_docker/</link><pubDate>Sun, 10 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/watchtower_docker/</guid><description>Watchtower can be used either as standalone docker container or in docker compose.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/post/</link><description>Recent content in Posts on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 25 Jul 2022 22:43:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Azure Ubuntu vm - dpkg-deb error : paste subprocess was killed by signal (Broken pipe)</title><link>https://lsimopoulos.github.io/post/azure_ubuntuvm_dpkg-deb-error/</link><pubDate>Mon, 25 Jul 2022 22:43:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/azure_ubuntuvm_dpkg-deb-error/</guid><description>When running &amp;lsquo;sudo apt upgrade -y&amp;rsquo; on azure ubuntu vm error :
+dpkg: error processing archive /var/cache/apt/archives/linux-azure-tools-5.4.0-1058_5.4.0-1058.60_amd64.deb (--unpack):
+trying to overwrite &amp;#39;/usr/lib/libcpupower.so.5.4.0-1058&amp;#39;, which is also in package linux-azure-5.4-tools-5.4.0-1058 5.4.0-1058.60~18.04.1
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe) Soltuion: sudo dpkg -i --force-overwrite /var/cache/apt/archives/linux-azure-tools-5.4.0-1058_5.4.0-1058.60_amd64.deb
+sudo apt -f install</description></item><item><title>Nginx and SignalR:This endpoint is only for web-socket requests' when status code '101' was expected</title><link>https://lsimopoulos.github.io/post/signalr_nginx_error/</link><pubDate>Sun, 17 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/signalr_nginx_error/</guid><description>Error The server returned status code &amp;#39;200 This endpoint is only for web-socket requests&amp;#39; when status code &amp;#39;101&amp;#39; was expected or
+The server returned status code &amp;#39;400 This endpoint is only for web-socket requests&amp;#39; when status code &amp;#39;101&amp;#39; was expected Cause and soluion location ~ ^/server(.*)$ {
+proxy_ssl_server_name on;
+proxy_ssl_session_reuse off;
+proxy_ssl_verify off;
+#the response is sent to the client synchronously.
+proxy_buffering off;
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+set $url https://serveraddress$1$is_args$args;
+proxy_pass $url;
+--&amp;gt; location /server/signalr {
+# Configure WebSockets
+proxy_pass https://serveraddress/sr;
+# Configuration for WebSockets
+proxy_set_header Upgrade $http_upgrade;
+proxy_set_header Connection $connection_upgrade;
+proxy_cache off;
+# WebSockets were implemented after http/1.</description></item><item><title>SignalR:Failed connection handshake</title><link>https://lsimopoulos.github.io/post/signalr_handshake_error/</link><pubDate>Wed, 13 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/signalr_handshake_error/</guid><description>Error Error : [Debug] Microsoft.AspNetCore.SignalR.HubConnectionContext Failed connection handshake.
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter &amp;#39;delay&amp;#39;)
+at System.Threading.CancellationTokenSource.CancelAfter(TimeSpan delay)
+at Microsoft.AspNetCore.SignalR.HubConnectionContext.HandshakeAsync(TimeSpan timeout, IReadOnlyList`1 supportedProtocols, IHubProtocolResolver protocolResolver, IUserIdProvider userIdProvider, Boolean enableDetailedErrors) Cause services.AddSignalR(options =&amp;gt;
+{
+options.EnableDetailedErrors = true;
+----&amp;gt; options.HandshakeTimeout = TimeSpan.MaxValue;
+})
+.AddMessagePackProtocol(); In my case due to network latency I had set HandshakeTimeout to TimeSpan.MaxValue, which caused the error.</description></item><item><title>Use Watchtower to update automatically the running docker containers</title><link>https://lsimopoulos.github.io/post/watchtower_docker/</link><pubDate>Sun, 10 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/watchtower_docker/</guid><description>Watchtower can be used either as standalone docker container or in docker compose.
 Create config.json Before creating the config file we need to get the username and password of Container Register in base64 encoded string.Containerregister can be Dockerhub,Azure Container Register or private container register. Run on bash :
 echo -n &amp;#39;username:password&amp;#39; | base64 Or in powershell:
 $UsernamePass = ‘username:password’

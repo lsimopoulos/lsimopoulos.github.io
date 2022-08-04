@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SignalR on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/categories/signalr/</link><description>Recent content in SignalR on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 13 Jul 2022 23:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/categories/signalr/index.xml" rel="self" type="application/rss+xml"/><item><title>SignalR:Failed connection handshake</title><link>https://lsimopoulos.github.io/post/signalr_handshake_error/</link><pubDate>Wed, 13 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/signalr_handshake_error/</guid><description>Error Error : [Debug] Microsoft.AspNetCore.SignalR.HubConnectionContext Failed connection handshake.
+System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values. (Parameter &amp;#39;delay&amp;#39;)
+at System.Threading.CancellationTokenSource.CancelAfter(TimeSpan delay)
+at Microsoft.AspNetCore.SignalR.HubConnectionContext.HandshakeAsync(TimeSpan timeout, IReadOnlyList`1 supportedProtocols, IHubProtocolResolver protocolResolver, IUserIdProvider userIdProvider, Boolean enableDetailedErrors) Cause services.AddSignalR(options =&amp;gt;
+{
+options.EnableDetailedErrors = true;
+----&amp;gt; options.HandshakeTimeout = TimeSpan.MaxValue;
+})
+.AddMessagePackProtocol(); In my case due to network latency I had set HandshakeTimeout to TimeSpan.MaxValue, which caused the error.</description></item></channel></rss>

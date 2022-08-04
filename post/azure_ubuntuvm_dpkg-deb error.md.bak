@@ -1,0 +1,28 @@
++++
+date = "2022-07-20T25:43:00+02:00"
+archives = ["2022/07"]
+tags = ["Azure"]
+categories = ["Azure","Linux"]
+description = "Azure Ubuntu vm - dpkg-deb error : paste subprocess was killed by signal (Broken pipe)"
+title = "Azure Ubuntu vm - dpkg-deb error : paste subprocess was killed by signal (Broken pipe)"
+author = "Leonidas Simopoulos"
+image = "banners/Azure.png"
++++
+
+When  running 'sudo apt upgrade -y' on azure ubuntu vm  error :
+
+```
+dpkg: error processing archive /var/cache/apt/archives/linux-azure-tools-5.4.0-1058_5.4.0-1058.60_amd64.deb (--unpack):
+ trying to overwrite '/usr/lib/libcpupower.so.5.4.0-1058', which is also in package linux-azure-5.4-tools-5.4.0-1058 5.4.0-1058.60~18.04.1
+dpkg-deb: error: paste subprocess was killed by signal (Broken pipe)
+
+```
+
+
+* Soltuion:
+
+```
+sudo dpkg -i --force-overwrite   /var/cache/apt/archives/linux-azure-tools-5.4.0-1058_5.4.0-1058.60_amd64.deb
+
+sudo apt -f install
+```
