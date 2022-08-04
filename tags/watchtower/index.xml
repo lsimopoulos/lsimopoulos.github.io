@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Watchtower on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/tags/watchtower/</link><description>Recent content in Watchtower on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 10 Jul 2022 23:47:00 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/tags/watchtower/index.xml" rel="self" type="application/rss+xml"/><item><title>Use Watchtower to update automatically the running docker containers</title><link>https://lsimopoulos.github.io/post/watchtower_docker/</link><pubDate>Sun, 10 Jul 2022 23:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/watchtower_docker/</guid><description>Watchtower can be used either as standalone docker container or in docker compose.
+Create config.json Before creating the config file we need to get the username and password of Container Register in base64 encoded string.Containerregister can be Dockerhub,Azure Container Register or private container register. Run on bash :
+echo -n &amp;#39;username:password&amp;#39; | base64 Or in powershell:
+$UsernamePass = ‘username:password’
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($UsernamePass)
+$EncodedText =[Convert]::ToBase64String($Bytes)
+$EncodedText Then create config.json :
+{&amp;#34;auths&amp;#34;: {&amp;#34;mycontainerregister.</description></item></channel></rss>

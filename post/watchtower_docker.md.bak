@@ -1,0 +1,64 @@
++++
+date = "2022-07-10T23:47:00+02:00"
+archives = ["2022/07"]
+tags = ["Watchtower","Docker"]
+categories = ["Docker"]
+description = "Use Watchtower to update automatically the running docker containers"
+title = "Use Watchtower to update automatically the running docker containers"
+author = "Leonidas Simopoulos"
+image = "banners/watchtower.png"
++++
+
+
+
+[Watchtower](https://github.com/containrrr/watchtower) can be used either as standalone docker container or in docker compose.
+
+* Create config.json
+Before creating the config file we need to get the username and password of Container Register in base64 encoded string.Containerregister can be Dockerhub,Azure Container Register or private container register.
+
+
+
+Run on bash :
+```
+echo -n 'username:password' | base64
+```
+Or in powershell:
+```
+$UsernamePass = ‘username:password’
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($UsernamePass)
+$EncodedText =[Convert]::ToBase64String($Bytes)
+$EncodedText
+```
+
+
+Then create config.json : 
+```
+{"auths": {"mycontainerregister.azurecr.io":{"auth": "TheEncodedBase64string"}}}
+```
+
+* Run watchtower as standalone
+
+```
+docker run -d \ -
+-name watchtower \ 
+-v /home/<user>/.docker/config.json:/config.json \ 
+-v /var/run/docker.sock:/var/run/docker.sock \ 
+containrrr/watchtower container_to_watch --debug --interval 300 --include-restarting --cleanup
+```
+
+* Run watchtower in docker compose
+
+```
+watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /home/<user>/.docker/config.json:/config.json
+    command: --debug --interval 300 --include-restarting --cleanup
+```
+
+In both examples watchtower: 
+1. is run in debug mode 
+2. with interval 5 minutes
+2. includes restaring running containers
+3. removes the old images after updating
