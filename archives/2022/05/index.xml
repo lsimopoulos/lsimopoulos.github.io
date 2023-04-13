@@ -2,6 +2,8 @@
 {
 ctx.Entry(entity).State = EntityState.Modified;
 }
-ctx.SaveChanges(); The problem was that some of the entities, that were residing in memory, were modified and saved in the database while their copy in memory were not updated.</description></item><item><title>Android: button needs to be clicked twice</title><link>https://lsimopoulos.github.io/post/android_button_click_twice/</link><pubDate>Wed, 11 May 2022 21:54:12 +0200</pubDate><guid>https://lsimopoulos.github.io/post/android_button_click_twice/</guid><description>When the button needs to clicked twice in order to be effective:
+ctx.SaveChanges(); The problem was that some of the entities, that were residing in memory, were modified and saved in the database while their copy in memory were not updated.</description></item><item><title>SQL installation error on linux : GLIBC_2.27 not found</title><link>https://lsimopoulos.github.io/post/sql_linux_glibc/</link><pubDate>Fri, 20 May 2022 20:47:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/sql_linux_glibc/</guid><description> Error /opt/mssql/bin/sqlservr: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.27&amp;#39; not found (required by /opt/mssql/bin/sqlservr)
+Initial setup of Microsoft SQL Server failed. Please consult the ERRORLOG
+in /var/opt/mssql/log for more information. Solution sudo apt-get install mssql-server=15.0.4023.6-2 sudo systemctl start mssql-server</description></item><item><title>Android: button needs to be clicked twice</title><link>https://lsimopoulos.github.io/post/android_button_click_twice/</link><pubDate>Wed, 11 May 2022 21:54:12 +0200</pubDate><guid>https://lsimopoulos.github.io/post/android_button_click_twice/</guid><description>When the button needs to clicked twice in order to be effective:
 Solution android:focusable=&amp;#34;true&amp;#34;
 android:focusableInTouchMode=&amp;#34;true&amp;#34;</description></item></channel></rss>
