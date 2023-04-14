@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Entity Framework on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/categories/entity-framework/</link><description>Recent content in Entity Framework on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 05 Jul 2017 19:02:53 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/categories/entity-framework/index.xml" rel="self" type="application/rss+xml"/><item><title>Configure an Index on many properties in entity framework 6.1</title><link>https://lsimopoulos.github.io/post/entity_index_many_properties/</link><pubDate>Wed, 05 Jul 2017 19:02:53 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_index_many_properties/</guid><description>There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Entity Framework on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/categories/entity-framework/</link><description>Recent content in Entity Framework on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Nov 2022 19:02:53 +0200</lastBuildDate><atom:link href="https://lsimopoulos.github.io/categories/entity-framework/index.xml" rel="self" type="application/rss+xml"/><item><title>Run a raw sql query/command via EF 6</title><link>https://lsimopoulos.github.io/post/entity_run_sql_command/</link><pubDate>Tue, 01 Nov 2022 19:02:53 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_run_sql_command/</guid><description>There are different ways to run a SQL command/query via Entity framework.
+1.SqlQuery
+In the entity(table) level :
+var parentsList = context.Parents
+.SqlQuery(&amp;#34;Select * from dbo.Parents where IsRich = 0 &amp;#34;)
+.ToList(); or in the database level:
+var parentsList = context.Database.SqlQuery&amp;lt;string&amp;gt;(&amp;#34;Select * from dbo.Parents where IsRich = 0&amp;#34;)
+.ToList&amp;lt;Parents&amp;gt;(); 2.*ExecuteSqlCommand
+var numberOfAffectedEtntities = context.Database.ExecuteSqlCommand(&amp;#34; &amp;#34;DELETE FROM Parents WHERE Id = 1&amp;#34;;&amp;#34;); 3.ObjectQuery.Execute
+Old way(deprecated)
+var objectContext = ((IObjectContextAdapter)context).ObjectContext;
+var objectSet = objectContext.</description></item><item><title>Configure an Index on many properties in entity framework 6.1</title><link>https://lsimopoulos.github.io/post/entity_index_many_properties/</link><pubDate>Wed, 05 Jul 2017 19:02:53 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_index_many_properties/</guid><description>There are few ways to configure an Index on more than one property in the entity framework 6.1. I created a new WebApplication project from Visual Studio and I selected MVC.
 1.Attributes
 For this tutorial I am going to create two models: Server and Instance.
 public class Server

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2022/11 on Leonidas Simopoulos's blog</title><link>https://lsimopoulos.github.io/archives/2022/11/</link><description>Recent content in 2022/11 on Leonidas Simopoulos's blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://lsimopoulos.github.io/archives/2022/11/index.xml" rel="self" type="application/rss+xml"/><item><title>Run a raw sql query/command via EF Core</title><link>https://lsimopoulos.github.io/post/entity_core_run_raw_sql/</link><pubDate>Fri, 25 Nov 2022 10:00:00 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_core_run_raw_sql/</guid><description>There are different ways to run a SQL command/query in Entity Framework Core.
+1.DbSet.FromSqlRaw
+var parentsList = context.Parents
+.FromSqlRaw(&amp;#34;Select * from dbo.Parents where IsRich = 0 &amp;#34;)
+.ToList(); 2.*DbSet.SqlQuery
+var countOfParents = context.Database.SqlQuery&amp;lt;int&amp;gt;(&amp;#34;Select Count(*) from dbo.Parents where IsRich = 0&amp;#34;); 3.Database.ExecuteSql
+var numberOfAffectedEtntities = context.Database.ExecuteSqlCommand(&amp;#34;DELETE FROM dbo.Parents WHERE Id = 1&amp;#34;); 4.Database.Database.ExecuteSqlRaw
+var numberOfAffectedEtntities = context.Database.ExecuteSqlRaw(&amp;#34;DELETE FROM dbo.Parents WHERE Id = 1&amp;#34;);</description></item><item><title>Run a raw sql query/command via EF 6</title><link>https://lsimopoulos.github.io/post/entity_run_sql_command/</link><pubDate>Tue, 01 Nov 2022 19:02:53 +0200</pubDate><guid>https://lsimopoulos.github.io/post/entity_run_sql_command/</guid><description>There are different ways to run a SQL command/query via Entity framework.
+1.SqlQuery
+In the entity(table) level :
+var parentsList = context.Parents
+.SqlQuery(&amp;#34;Select * from dbo.Parents where IsRich = 0 &amp;#34;)
+.ToList(); or in the database level:
+var parentsList = context.Database.SqlQuery&amp;lt;string&amp;gt;(&amp;#34;Select * from dbo.Parents where IsRich = 0&amp;#34;)
+.ToList&amp;lt;Parents&amp;gt;(); 2.*ExecuteSqlCommand
+var numberOfAffectedEtntities = context.Database.ExecuteSqlCommand(&amp;#34; &amp;#34;DELETE FROM Parents WHERE Id = 1&amp;#34;;&amp;#34;); 3.ObjectQuery.Execute
+Old way(deprecated)
+var objectContext = ((IObjectContextAdapter)context).ObjectContext;
+var objectSet = objectContext.</description></item></channel></rss>
